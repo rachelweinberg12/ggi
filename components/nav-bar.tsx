@@ -15,34 +15,39 @@ const pages = [
 
 export function NavBar() {
   return (
-    <Disclosure as="nav" className="theme-sand fixed w-full">
+    <Disclosure as="nav" className="fixed w-full">
       {/* Desktop */}
-      <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12 border-b border-black">
-        <div className="flex h-16 justify-between items-center">
-          <div className="flex shrink-0 items-center">
-            <Logo />
-          </div>
-          <div className="hidden sm:flex space-x-12 justify-end">
-            {pages.map((page) => (
-              <h3 className="text-base" key={page.name}>
-                <a href={page.href}>{page.name}</a>
-              </h3>
-            ))}
-          </div>
-          <div className="-mr-2 flex items-center sm:hidden">
-            {/* Mobile menu button */}
-            <DisclosureButton className="group relative inline-flex items-center justify-center hover:cursor-pointer">
-              <span className="absolute -inset-0.5" />
-              <Bars3Icon className="block size-6 group-data-[open]:hidden stroke-[1px]" />
-              <XMarkIcon className="size-6 hidden group-data-[open]:block stroke-[1px]" />
-            </DisclosureButton>
+      <div className="border-b border-black z-10 theme-sand group-data-open:bg-white">
+        <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12">
+          <div className="flex h-16 justify-between items-center">
+            <div className="flex shrink-0 items-center">
+              <Logo />
+            </div>
+            <div className="hidden sm:flex space-x-12 justify-end">
+              {pages.map((page) => (
+                <h3 className="text-base" key={page.name}>
+                  <a href={page.href}>{page.name}</a>
+                </h3>
+              ))}
+            </div>
+            <div className="-mr-2 flex items-center sm:hidden">
+              {/* Mobile menu button */}
+              <DisclosureButton className="group relative inline-flex items-center justify-center hover:cursor-pointer">
+                <span className="absolute -inset-0.5" />
+                <Bars3Icon className="block size-6 group-data-[open]:hidden stroke-[1px]" />
+                <XMarkIcon className="size-6 hidden group-data-[open]:block stroke-[1px]" />
+              </DisclosureButton>
+            </div>
           </div>
         </div>
       </div>
 
       {/* Mobile Panel */}
-      <DisclosurePanel className="sm:hidden">
-        <div className="flex flex-col items-center justify-center space-y-12 px-6 py-6 h-dvh">
+      <DisclosurePanel
+        transition
+        className="origin-left transition duration-500 ease-out data-closed:translate-x-full -z-10 theme-sand outline outline-black"
+      >
+        <div className="flex flex-col items-center justify-center space-y-12 px-6 py-6 h-dvh overflow-hidden">
           {pages.map((page) => (
             <DisclosureButton as="a" href={page.href} key={page.name}>
               <p className="text-2xl hover:underline relative bottom-20">
