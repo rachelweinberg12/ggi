@@ -245,6 +245,31 @@
     @apply text-orange hover:underline;
     color: var(--highlight);
   }
+
+  /* Section padding (for full page sections) */
+  .section-padding {
+    @apply px-6 md:px-12 lg:px-24 py-16 md:py-24;
+  }
+
+  /* Default spacing between vertical elements */
+  .y-gap {
+    @apply space-y-6 md:space-y-8;
+  }
+
+  /* Default spacing between horizontal elements */
+  .x-gap {
+    @apply space-x-6 md:space-x-8;
+  }
+
+  /* Default padding for content blocks or cards */
+  .card-padding {
+    @apply p-6 md:p-8;
+  }
+
+  /* Standard margin bottom after a block */
+  .block-margin {
+    @apply mb-8 md:mb-12;
+  }
 }
 
 :root {
