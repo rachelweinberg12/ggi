@@ -178,6 +178,15 @@
     color: var(--primary);
   }
 
+  .theme-sand {
+    --bg: var(--color-sand);
+    --primary: var(--color-black);
+    --highlight: var(--color-orange);
+    --soft: var(--color-bley-500);
+    background-color: var(--bg);
+    color: var(--primary);
+  }
+
   .soft {
     color: var(--color-bley-500);
   }

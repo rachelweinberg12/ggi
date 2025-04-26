@@ -1,6 +1,6 @@
 export function Logo() {
   return (
-    <div className="text-2xl font-bold font-serif">
+    <div className="text-xl tracking font-bold font-serif tracking-[-0.01em]">
       Golden Gate Institute for AI
     </div>
   );
