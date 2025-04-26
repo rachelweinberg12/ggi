@@ -1,15 +1,40 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import localFont from 'next/font/local';
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
+const satoshi = localFont({
+  src: [
+    {
+      path: '../public/fonts/Satoshi/Satoshi-Variable.woff2',
+      style: 'normal',
+    },
+    {
+      path: '../public/fonts/Satoshi/Satoshi-VariableItalic.woff2',
+      style: 'italic',
+    },
+  ],
+  variable: '--font-satoshi',
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+const theSeasons = localFont({
+  src: [
+    {
+      path: '../public/fonts/TheSeasons/TheSeasons-Light.woff2',
+      weight: '300',
+      style: 'normal',
+    },
+    {
+      path: '../public/fonts/TheSeasons/TheSeasons-Regular.woff2',
+      weight: '400',
+      style: 'normal',
+    },
+    {
+      path: '../public/fonts/TheSeasons/TheSeasons-Bold.woff2',
+      weight: '700',
+      style: 'normal',
+    },
+  ],
+  variable: '--font-the-seasons',
 });
 
 export const metadata: Metadata = {
@@ -25,7 +50,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${satoshi.variable} ${theSeasons.variable} font-sans antialiased`}
       >
         {children}
       </body>
