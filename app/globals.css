@@ -1,10 +1,50 @@
 @import "tailwindcss";
 
+  @layer base {
+    h1 {
+      @apply font-bold leading-[1] tracking-[-0.025em] font-serif text-4xl md:text-5xl lg:text-6xl;
+    }
+  
+    h2 {
+      @apply font-bold leading-[1.2] tracking-[-0.01em] font-serif text-2xl md:text-3xl lg:text-4xl;
+    }
+  
+    h3 {
+      @apply font-medium leading-[1.2] tracking-[-0.002em] font-sans text-xl md:text-2xl;
+    }
+  
+    p {
+      @apply font-normal leading-[1.2] tracking-[0em] font-sans text-sm md:text-base;
+    }
+  }
+  
+  @layer components {
+    .info {
+      @apply font-normal leading-[1.4] tracking-[0em] font-sans text-xs md:text-sm text-gray-600;
+    }
+  
+    .pull-quote {
+      @apply font-normal leading-[1.2] tracking-[0em] font-sans border-l-4 pl-4 text-base md:text-lg;
+    }
+
+    .link {
+      @apply text-orange hover:underline;
+    }
+  }
+
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-serif: var(--font-the-seasons);
   --font-sans: var(--font-satoshi);
+
+  /* Font Weights */
+  --font-weight-light: 300;
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-black: 900;
 
   /* GGI White */
   --color-white: #FFFDFC;
@@ -95,5 +135,5 @@
   --color-aqua-50:  #E4F7F5;
   /* main */
   --color-aqua: #68A39D;
-
 }
+
