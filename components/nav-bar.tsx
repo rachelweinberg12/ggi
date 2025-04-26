@@ -1,17 +1,22 @@
+import { Logo } from "./logo";
+
 const pages = [
-  { name: "Writing", href: "about" },
-  { name: "Events", href: "about" },
+  { name: "Writing", href: "writing" },
+  { name: "Events", href: "events" },
   { name: "About", href: "about" },
 ];
 
 export function NavBar() {
   return (
-    <nav className="flex gap-6 items-center hidden sm:block theme-orange">
-      {pages.map((page) => (
-        <a key={page.name} href={page.href} className="link">
-          {page.name}
-        </a>
-      ))}
+    <nav className="items-center justify-between hidden sm:flex theme-orange p-6 fixed w-full">
+      <Logo />
+      <div className="flex gap-12 justify-end">
+        {pages.map((page) => (
+          <h3 className="text-lg" key={page.name}>
+            <a href={page.href}>{page.name}</a>
+          </h3>
+        ))}
+      </div>
     </nav>
   );
 }

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+import { NavBar } from "@/components/nav-bar";
 
 const satoshi = localFont({
   src: [
@@ -54,6 +55,7 @@ export default function RootLayout({
       <body
         className={`${satoshi.variable} ${theSeasons.variable} font-sans antialiased theme-classic`}
       >
+        <NavBar />
         {children}
       </body>
     </html>

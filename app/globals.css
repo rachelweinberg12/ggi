@@ -196,7 +196,7 @@
     color: var(--highlight);
   }
 
-  .link {
+  .text-link {
     @apply text-orange hover:underline;
     color: var(--highlight);
   }
