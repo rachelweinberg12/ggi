@@ -5,4 +5,95 @@
   --color-foreground: var(--foreground);
   --font-serif: var(--font-the-seasons);
   --font-sans: var(--font-satoshi);
+
+  /* GGI White */
+  --color-white: #FFFDFC;
+
+  /* GGI Black */
+  --color-black: #141312;
+
+  /* Orange (300) */
+  --color-orange-900: #200E03;
+  --color-orange-800: #391A07;
+  --color-orange-700: #602F10;
+  --color-orange-600: #7B370C;
+  --color-orange-500: #9F450C;
+  --color-orange-400: #C05C1E;
+  --color-orange-300: #E07539;
+  --color-orange-200: #F29C6B;
+  --color-orange-100: #FFBF9B;
+  --color-orange-50:  #FFEADE;
+  /* main */
+  --color-orange: #E07539;
+
+  /* Sand (50) */
+  --color-sand-900: #171107;
+  --color-sand-800: #221C12;
+  --color-sand-700: #342C1F;
+  --color-sand-600: #493D2B;
+  --color-sand-500: #6F5A40;
+  --color-sand-400: #8F7553;
+  --color-sand-300: #B79B75;
+  --color-sand-200: #D5BFA1;
+  --color-sand-100: #EADBC7;
+  --color-sand-50:  #F4ECE1;
+  /* main */
+  --color-sand: #F4ECE1;
+  
+  /* Blue Grey (100) */
+  --color-bley-900: #070708;
+  --color-bley-800: #121416;
+  --color-bley-700: #24282B;
+  --color-bley-600: #39454C;
+  --color-bley-500: #55616A;
+  --color-bley-400: #707C83;
+  --color-bley-300: #91A0A7;
+  --color-bley-200: #B2C1C9;
+  --color-bley-100: #CCDAE1;
+  --color-bley-50:  #E8F1F5;
+  /* main */
+  --color-bley: #CCDAE1;
+
+  /* Dark Air Blue (600) */
+  --color-air-900: #02131A;
+  --color-air-800: #051B24;
+  --color-air-700: #14303E;
+  --color-air-600: #2E4A57;
+  --color-air-500: #3E687B;
+  --color-air-400: #578AA1;
+  --color-air-300: #77A5BB;
+  --color-air-200: #9EC1D2;
+  --color-air-100: #BED8E9;
+  --color-air-50:  #E7F3F9;
+  /* main */
+  --color-air: #2E4A57;
+
+  /* Electric Blue (500) */
+  --color-blue-900: #0D0F1C;
+  --color-blue-800: #0E1740;
+  --color-blue-700: #192971;
+  --color-blue-600: #283D9A;
+  --color-blue-500: #3551CF;
+  --color-blue-400: #5972E2;
+  --color-blue-300: #788EF1;
+  --color-blue-200: #A2B1F4;
+  --color-blue-100: #C6D0FF;
+  --color-blue-50:  #EDF0FF;
+  /* main */
+  --color-blue: #3551CF;
+
+  /* Aqua Sky (300) */
+  --color-aqua-900: #050E0D;
+  --color-aqua-800: #132120;
+  --color-aqua-700: #1A2F2E;
+  --color-aqua-600: #264543;
+  --color-aqua-500: #356460;
+  --color-aqua-400: #4B837E;
+  --color-aqua-300: #68A39D;
+  --color-aqua-200: #9AC8C6;
+  --color-aqua-100: #C8E9E6;
+  --color-aqua-50:  #E4F7F5;
+  /* main */
+  --color-aqua: #68A39D;
+
 }
