@@ -52,7 +52,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${satoshi.variable} ${theSeasons.variable} font-sans antialiased`}
+        className={`${satoshi.variable} ${theSeasons.variable} font-sans antialiased theme-classic`}
       >
         {children}
       </body>
