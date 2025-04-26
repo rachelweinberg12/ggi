@@ -1,42 +1,42 @@
 import type { Metadata } from "next";
-import localFont from 'next/font/local';
+import localFont from "next/font/local";
 import "./globals.css";
 
 const satoshi = localFont({
   src: [
     {
-      path: '../public/fonts/Satoshi/Satoshi-Variable.woff2',
-      weight: '300 900',
-      style: 'normal',
+      path: "../public/fonts/Satoshi/Satoshi-Variable.woff2",
+      weight: "300 900",
+      style: "normal",
     },
     {
-      path: '../public/fonts/Satoshi/Satoshi-VariableItalic.woff2',
-      weight: '300 900',
-      style: 'italic',
+      path: "../public/fonts/Satoshi/Satoshi-VariableItalic.woff2",
+      weight: "300 900",
+      style: "italic",
     },
   ],
-  variable: '--font-satoshi',
+  variable: "--font-satoshi",
 });
 
 const theSeasons = localFont({
   src: [
     {
-      path: '../public/fonts/TheSeasons/TheSeasons-Light.woff2',
-      weight: '300',
-      style: 'normal',
+      path: "../public/fonts/TheSeasons/TheSeasons-Light.woff2",
+      weight: "300",
+      style: "normal",
     },
     {
-      path: '../public/fonts/TheSeasons/TheSeasons-Regular.woff2',
-      weight: '400',
-      style: 'normal',
+      path: "../public/fonts/TheSeasons/TheSeasons-Regular.woff2",
+      weight: "400",
+      style: "normal",
     },
     {
-      path: '../public/fonts/TheSeasons/TheSeasons-Bold.woff2',
-      weight: '700',
-      style: 'normal',
+      path: "../public/fonts/TheSeasons/TheSeasons-Bold.woff2",
+      weight: "700",
+      style: "normal",
     },
   ],
-  variable: '--font-the-seasons',
+  variable: "--font-the-seasons",
 });
 
 export const metadata: Metadata = {

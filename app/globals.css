@@ -15,193 +15,189 @@
   --font-weight-black: 900;
 
   /* GGI White */
-  --color-white: #FFFDFC;
+  --color-white: #fffdfc;
 
   /* GGI Black */
   --color-black: #141312;
 
   /* Orange (300) */
-  --color-orange-900: #200E03;
-  --color-orange-800: #391A07;
-  --color-orange-700: #602F10;
-  --color-orange-600: #7B370C;
-  --color-orange-500: #9F450C;
-  --color-orange-400: #C05C1E;
-  --color-orange-300: #E07539;
-  --color-orange-200: #F29C6B;
-  --color-orange-100: #FFBF9B;
-  --color-orange-50:  #FFEADE;
+  --color-orange-900: #200e03;
+  --color-orange-800: #391a07;
+  --color-orange-700: #602f10;
+  --color-orange-600: #7b370c;
+  --color-orange-500: #9f450c;
+  --color-orange-400: #c05c1e;
+  --color-orange-300: #e07539;
+  --color-orange-200: #f29c6b;
+  --color-orange-100: #ffbf9b;
+  --color-orange-50: #ffeade;
   /* main */
-  --color-orange: #E07539;
+  --color-orange: #e07539;
 
   /* Sand (50) */
   --color-sand-900: #171107;
-  --color-sand-800: #221C12;
-  --color-sand-700: #342C1F;
-  --color-sand-600: #493D2B;
-  --color-sand-500: #6F5A40;
-  --color-sand-400: #8F7553;
-  --color-sand-300: #B79B75;
-  --color-sand-200: #D5BFA1;
-  --color-sand-100: #EADBC7;
-  --color-sand-50:  #F4ECE1;
+  --color-sand-800: #221c12;
+  --color-sand-700: #342c1f;
+  --color-sand-600: #493d2b;
+  --color-sand-500: #6f5a40;
+  --color-sand-400: #8f7553;
+  --color-sand-300: #b79b75;
+  --color-sand-200: #d5bfa1;
+  --color-sand-100: #eadbc7;
+  --color-sand-50: #f4ece1;
   /* main */
-  --color-sand: #F4ECE1;
-  
+  --color-sand: #f4ece1;
+
   /* Blue Grey (100) */
   --color-bley-900: #070708;
   --color-bley-800: #121416;
-  --color-bley-700: #24282B;
-  --color-bley-600: #39454C;
-  --color-bley-500: #55616A;
-  --color-bley-400: #707C83;
-  --color-bley-300: #91A0A7;
-  --color-bley-200: #B2C1C9;
-  --color-bley-100: #CCDAE1;
-  --color-bley-50:  #E8F1F5;
+  --color-bley-700: #24282b;
+  --color-bley-600: #39454c;
+  --color-bley-500: #55616a;
+  --color-bley-400: #707c83;
+  --color-bley-300: #91a0a7;
+  --color-bley-200: #b2c1c9;
+  --color-bley-100: #ccdae1;
+  --color-bley-50: #e8f1f5;
   /* main */
-  --color-bley: #CCDAE1;
+  --color-bley: #ccdae1;
 
   /* Dark Air Blue (600) */
-  --color-air-900: #02131A;
-  --color-air-800: #051B24;
-  --color-air-700: #14303E;
-  --color-air-600: #2E4A57;
-  --color-air-500: #3E687B;
-  --color-air-400: #578AA1;
-  --color-air-300: #77A5BB;
-  --color-air-200: #9EC1D2;
-  --color-air-100: #BED8E9;
-  --color-air-50:  #E7F3F9;
+  --color-air-900: #02131a;
+  --color-air-800: #051b24;
+  --color-air-700: #14303e;
+  --color-air-600: #2e4a57;
+  --color-air-500: #3e687b;
+  --color-air-400: #578aa1;
+  --color-air-300: #77a5bb;
+  --color-air-200: #9ec1d2;
+  --color-air-100: #bed8e9;
+  --color-air-50: #e7f3f9;
   /* main */
-  --color-air: #2E4A57;
+  --color-air: #2e4a57;
 
   /* Electric Blue (500) */
-  --color-blue-900: #0D0F1C;
-  --color-blue-800: #0E1740;
+  --color-blue-900: #0d0f1c;
+  --color-blue-800: #0e1740;
   --color-blue-700: #192971;
-  --color-blue-600: #283D9A;
-  --color-blue-500: #3551CF;
-  --color-blue-400: #5972E2;
-  --color-blue-300: #788EF1;
-  --color-blue-200: #A2B1F4;
-  --color-blue-100: #C6D0FF;
-  --color-blue-50:  #EDF0FF;
+  --color-blue-600: #283d9a;
+  --color-blue-500: #3551cf;
+  --color-blue-400: #5972e2;
+  --color-blue-300: #788ef1;
+  --color-blue-200: #a2b1f4;
+  --color-blue-100: #c6d0ff;
+  --color-blue-50: #edf0ff;
   /* main */
-  --color-blue: #3551CF;
+  --color-blue: #3551cf;
 
   /* Aqua Sky (300) */
-  --color-teal-900: #050E0D;
+  --color-teal-900: #050e0d;
   --color-teal-800: #132120;
-  --color-teal-700: #1A2F2E;
+  --color-teal-700: #1a2f2e;
   --color-teal-600: #264543;
   --color-teal-500: #356460;
-  --color-teal-400: #4B837E;
-  --color-teal-300: #68A39D;
-  --color-teal-200: #9AC8C6;
-  --color-teal-100: #C8E9E6;
-  --color-teal-50:  #E4F7F5;
+  --color-teal-400: #4b837e;
+  --color-teal-300: #68a39d;
+  --color-teal-200: #9ac8c6;
+  --color-teal-100: #c8e9e6;
+  --color-teal-50: #e4f7f5;
   /* main */
-  --color-teal: #68A39D;
+  --color-teal: #68a39d;
 }
 
-
-  @layer base {
-    h1 {
-      @apply font-bold leading-[1] tracking-[-0.025em] font-serif text-4xl md:text-5xl lg:text-6xl;
-    }
-  
-    h2 {
-      @apply font-bold leading-[1.2] tracking-[-0.01em] font-serif text-2xl md:text-3xl lg:text-4xl;
-    }
-  
-    h3 {
-      @apply font-medium leading-[1.2] tracking-[-0.002em] font-sans text-xl md:text-2xl;
-    }
-  
-    p {
-      @apply font-normal leading-[1.2] tracking-[0em] font-sans text-sm md:text-base;
-    }
-  }
-  
-  @layer components {
-
-      .theme-classic {
-        --bg: var(--color-white);
-        --text-primary: var(--color-black);
-        --highlight: var(--color-orange);
-        --soft: var(--color-bley-500);
-        background-color: var(--bg);
-        color: var(--text-primary);
-      }
-
-      .theme-teal {
-        --bg: var(--color-teal);
-        --text-primary: var(--color-white);
-        --highlight: var(--color-orange);
-        --soft: var(--color-teal-50);
-        background-color: var(--bg);
-        color: var(--text-primary);
-      }
-
-      .theme-orange {
-        --bg: var(--color-orange);
-        --primary: var(--color-white);
-        --highlight: var(--color-teal);
-        --soft: var(--color-orange-50);
-        background-color: var(--bg);
-        color: var(--primary);
-      }
-
-      .theme-soft-light {
-        --bg: var(--color-bley);
-        --primary: var(--color-air);
-        --highlight: var(--color-orange);
-        --soft: var(--color-bley-300);
-        background-color: var(--bg);
-        color: var(--primary);
-      }
-
-      .theme-soft-dark {
-        --bg: var(--color-air);
-        --primary: var(--color-bley);
-        --highlight: var(--color-white);
-        --soft: var(--color-air-300);
-        background-color: var(--bg);
-        color: var(--primary);
-      }
-
-      .theme-dark {
-        --bg: var(--color-black);
-        --primary: var(--color-white);
-        --highlight: var(--color-orange);
-        --soft: var(--color-bley-500);
-        background-color: var(--bg);
-        color: var(--primary);
-      }
-
-      .soft {
-        color: var(--color-bley-500)
-      }
-
-      .highlight {
-        color: var(--color-orange-500)
-      }
-
-      .info {
-        @apply font-normal leading-[1.4] tracking-[0em] font-sans text-xs md:text-sm;
-        color: var(--soft);
-      }
-    
-      .pull-quote {
-        @apply font-normal leading-[1.2] tracking-[0em] font-sans border-l-4 pl-4 text-base md:text-lg;
-        color: var(--highlight);
-      }
-  
-      .link {
-        @apply text-orange hover:underline;
-        color: var(--highlight);
-
-      }
+@layer base {
+  h1 {
+    @apply font-bold leading-[1] tracking-[-0.025em] font-serif text-4xl md:text-5xl lg:text-6xl;
   }
 
+  h2 {
+    @apply font-bold leading-[1.2] tracking-[-0.01em] font-serif text-2xl md:text-3xl lg:text-4xl;
+  }
+
+  h3 {
+    @apply font-medium leading-[1.2] tracking-[-0.002em] font-sans text-xl md:text-2xl;
+  }
+
+  p {
+    @apply font-normal leading-[1.2] tracking-[0em] font-sans text-sm md:text-base;
+  }
+}
+
+@layer components {
+  .theme-classic {
+    --bg: var(--color-white);
+    --text-primary: var(--color-black);
+    --highlight: var(--color-orange);
+    --soft: var(--color-bley-500);
+    background-color: var(--bg);
+    color: var(--text-primary);
+  }
+
+  .theme-teal {
+    --bg: var(--color-teal);
+    --text-primary: var(--color-white);
+    --highlight: var(--color-orange);
+    --soft: var(--color-teal-50);
+    background-color: var(--bg);
+    color: var(--text-primary);
+  }
+
+  .theme-orange {
+    --bg: var(--color-orange);
+    --primary: var(--color-white);
+    --highlight: var(--color-teal);
+    --soft: var(--color-orange-50);
+    background-color: var(--bg);
+    color: var(--primary);
+  }
+
+  .theme-soft-light {
+    --bg: var(--color-bley);
+    --primary: var(--color-air);
+    --highlight: var(--color-orange);
+    --soft: var(--color-bley-300);
+    background-color: var(--bg);
+    color: var(--primary);
+  }
+
+  .theme-soft-dark {
+    --bg: var(--color-air);
+    --primary: var(--color-bley);
+    --highlight: var(--color-white);
+    --soft: var(--color-air-300);
+    background-color: var(--bg);
+    color: var(--primary);
+  }
+
+  .theme-dark {
+    --bg: var(--color-black);
+    --primary: var(--color-white);
+    --highlight: var(--color-orange);
+    --soft: var(--color-bley-500);
+    background-color: var(--bg);
+    color: var(--primary);
+  }
+
+  .soft {
+    color: var(--color-bley-500);
+  }
+
+  .highlight {
+    color: var(--color-orange-500);
+  }
+
+  .info {
+    @apply font-normal leading-[1.4] tracking-[0em] font-sans text-xs md:text-sm;
+    color: var(--soft);
+  }
+
+  .pull-quote {
+    @apply font-normal leading-[1.2] tracking-[0em] font-sans border-l-4 pl-4 text-base md:text-lg;
+    color: var(--highlight);
+  }
+
+  .link {
+    @apply text-orange hover:underline;
+    color: var(--highlight);
+  }
+}
