@@ -8,8 +8,17 @@ interface PostContentProps {
 
 export const PostContent: React.FC<PostContentProps> = ({ content }) => {
   return (
-    <div className="prose prose-lg max-w-none">
-      <ReactMarkdown remarkPlugins={[remarkGfm]}>{content}</ReactMarkdown>
+    <div className="prose prose-lg">
+      <ReactMarkdown
+        remarkPlugins={[remarkGfm]}
+        components={{
+          h1: ({ node, ...props }) => <h3 {...props} />,
+          h2: ({ node, ...props }) => <h4 {...props} />,
+          h3: ({ node, ...props }) => <p {...props} className="font-bold" />,
+        }}
+      >
+        {content}
+      </ReactMarkdown>
     </div>
   );
 };

@@ -1,8 +1,6 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
-@custom-variant dark (&:is(.dark *));
-
 @theme inline {
   --breakpoint-xs: 30rem;
 
@@ -145,19 +143,23 @@
 
 @layer base {
   h1 {
-    @apply font-bold leading-[1.1] tracking-[-0.025em] font-serif text-4xl md:text-5xl lg:text-6xl xl:text-7xl;
+    @apply font-bold leading-[1.1] tracking-[-0.025em] font-serif text-4xl md:text-5xl lg:text-6xl mt-12;
   }
 
   h2 {
-    @apply font-bold leading-[1.2] tracking-[-0.01em] font-serif text-2xl md:text-3xl lg:text-4xl;
+    @apply font-bold leading-[1.2] tracking-[-0.01em] font-serif text-2xl md:text-3xl lg:text-4xl mt-12;
   }
 
   h3 {
-    @apply font-medium leading-[1.2] tracking-[-0.002em] font-sans text-xl md:text-2xl;
+    @apply font-medium leading-[1.2] tracking-[-0.002em] font-sans text-xl md:text-2xl mt-12;
+  }
+
+  h4 {
+    @apply font-medium leading-[1.2] tracking-[-0.002em] font-sans text-lg md:text-xl mt-12;
   }
 
   p {
-    @apply font-normal leading-[1.2] tracking-[0em] font-sans text-sm md:text-base;
+    @apply font-normal leading-[1.5] tracking-[0em] font-sans text-sm md:text-base mt-4;
   }
 }
 
@@ -250,7 +252,7 @@
 
   /* Section padding (for full page sections) */
   .section-padding {
-    @apply px-6 md:px-12 lg:px-24 py-16 md:py-24;
+    @apply px-6 md:px-12 lg:px-24 py-8 md:py-16;
   }
 
   /* Wide section padding (for special/display sections, matches nav) */
@@ -260,7 +262,7 @@
 
   /* Top section padding (for elements at the top to give space for the nav bar) */
   .top-section-padding {
-    @apply pt-16;
+    @apply px-6 md:px-12 lg:px-24 pb-8 md:pb-16 pt-20 md:pt-28;
   }
 
   /* Default spacing between vertical elements */

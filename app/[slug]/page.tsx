@@ -49,9 +49,9 @@ export default async function PostPage(props: { params: { slug: string } }) {
   }
 
   return (
-    <div className="top-section-padding">
-      <article className="section-padding">
-        <h1 className="text-3xl font-bold mb-2">{post.title}</h1>
+    <div className="top-section-padding theme-sand">
+      <article className="mx-auto max-w-3xl">
+        <h2>{post.title}</h2>
         <p className="text-gray-500 mb-8">{post.date}</p>
         <PostContent content={post.content} />
       </article>

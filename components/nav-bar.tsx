@@ -52,9 +52,13 @@ export function NavBar() {
                 </Row>
                 <Row className="hidden sm:flex space-x-12 justify-end">
                   {pages.map((page) => (
-                    <h3 className="text-base" key={page.name}>
-                      <a href={page.href}>{page.name}</a>
-                    </h3>
+                    <a
+                      className="text-base font-medium hover:underline"
+                      key={page.name}
+                      href={page.href}
+                    >
+                      {page.name}
+                    </a>
                   ))}
                 </Row>
                 <Row className="-mr-2 flex items-center sm:hidden">
