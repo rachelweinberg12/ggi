@@ -258,6 +258,11 @@
     @apply mx-auto max-w-7xl px-6 sm:px-8 lg:px-12;
   }
 
+  /* Top section padding (for elements at the top to give space for the nav bar) */
+  .top-section-padding {
+    @apply pt-16;
+  }
+
   /* Default spacing between vertical elements */
   .y-gap {
     @apply space-y-6 md:space-y-8;

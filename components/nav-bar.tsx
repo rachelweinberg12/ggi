@@ -4,11 +4,11 @@ import {
   DisclosureButton,
   DisclosurePanel,
 } from "@headlessui/react";
-
 import { Logo } from "./logo";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
 import { Col, Row } from "./blocks";
 import { useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
 import clsx from "clsx";
 
 const pages = [
@@ -18,6 +18,8 @@ const pages = [
 ];
 
 export function NavBar() {
+  const pathname = usePathname();
+  const isHome = pathname == "/";
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -36,7 +38,10 @@ export function NavBar() {
               "border-b z-10",
               scrolled || open
                 ? "border-black theme-classic"
-                : "border-orange text-white bg-transparent backdrop-blur-sm hover:border-black hover:bg-white hover:text-black",
+                : clsx(
+                    "border-white text-white hover:border-black hover:bg-white hover:text-black",
+                    isHome ? "bg-transparent backdrop-blur-sm" : "theme-teal",
+                  ),
             )}
             id="navbar"
           >
