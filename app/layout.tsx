@@ -53,10 +53,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${satoshi.variable} ${theSeasons.variable} font-sans antialiased theme-classic`}
+        className={`${satoshi.variable} ${theSeasons.variable} font-sans antialiased theme-classic min-h-screen overscroll-none`}
       >
         <NavBar />
-        {children}
+        <div className="">{children}</div>
       </body>
     </html>
   );

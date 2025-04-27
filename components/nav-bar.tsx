@@ -1,3 +1,4 @@
+"use client";
 import {
   Disclosure,
   DisclosureButton,
@@ -7,6 +8,8 @@ import {
 import { Logo } from "./logo";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
 import { Col, Row } from "./blocks";
+import { useEffect, useState } from "react";
+import clsx from "clsx";
 
 const pages = [
   { name: "Writing", href: "writing" },
@@ -15,49 +18,68 @@ const pages = [
 ];
 
 export function NavBar() {
-  return (
-    <Disclosure as="nav" className="fixed w-full">
-      {/* Desktop */}
-      <div className="border-b border-black z-10 theme-sand group-data-open:bg-white">
-        <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12">
-          <Row className="h-16 justify-between items-center">
-            <Row className="flex shrink-0 items-center">
-              <Logo />
-            </Row>
-            <Row className="hidden sm:flex space-x-12 justify-end">
-              {pages.map((page) => (
-                <h3 className="text-base" key={page.name}>
-                  <a href={page.href}>{page.name}</a>
-                </h3>
-              ))}
-            </Row>
-            <Row className="-mr-2 flex items-center sm:hidden">
-              {/* Mobile menu button */}
-              <DisclosureButton className="group relative inline-flex items-center justify-center hover:cursor-pointer">
-                <span className="absolute -inset-0.5" />
-                <Bars3Icon className="block size-6 group-data-[open]:hidden stroke-[1px]" />
-                <XMarkIcon className="size-6 hidden group-data-[open]:block stroke-[1px]" />
-              </DisclosureButton>
-            </Row>
-          </Row>
-        </div>
-      </div>
+  const [scrolled, setScrolled] = useState(false);
 
-      {/* Mobile Panel */}
-      <DisclosurePanel
-        transition
-        className="origin-left transition duration-500 ease-out data-closed:translate-x-full -z-10 theme-sand outline outline-black"
-      >
-        <Col className="items-center justify-center space-y-12 h-dvh overflow-hidden">
-          {pages.map((page) => (
-            <DisclosureButton as="a" href={page.href} key={page.name}>
-              <p className="text-2xl hover:underline relative bottom-20">
-                {page.name}
-              </p>
-            </DisclosureButton>
-          ))}
-        </Col>
-      </DisclosurePanel>
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 10);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+  return (
+    <Disclosure as="nav" className="fixed w-full z-100">
+      {({ open }) => (
+        <>
+          <div
+            className={clsx(
+              "border-b z-10",
+              scrolled || open
+                ? "border-black theme-classic"
+                : "border-orange text-white bg-transparent backdrop-blur-sm hover:border-black hover:bg-white hover:text-black",
+            )}
+            id="navbar"
+          >
+            <div className="wide-section-padding">
+              <Row className="h-16 justify-between items-center">
+                <Row className="flex shrink-0 items-center">
+                  <Logo />
+                </Row>
+                <Row className="hidden sm:flex space-x-12 justify-end">
+                  {pages.map((page) => (
+                    <h3 className="text-base" key={page.name}>
+                      <a href={page.href}>{page.name}</a>
+                    </h3>
+                  ))}
+                </Row>
+                <Row className="-mr-2 flex items-center sm:hidden">
+                  {/* Mobile menu button */}
+                  <DisclosureButton className="group relative inline-flex items-center justify-center hover:cursor-pointer">
+                    <span className="absolute -inset-0.5" />
+                    <Bars3Icon className="block size-6 group-data-[open]:hidden stroke-[1px]" />
+                    <XMarkIcon className="size-6 hidden group-data-[open]:block stroke-[1px]" />
+                  </DisclosureButton>
+                </Row>
+              </Row>
+            </div>
+          </div>
+
+          <DisclosurePanel
+            transition
+            className="origin-left transition duration-500 ease-out data-closed:translate-x-full -z-10 theme-sand outline outline-black"
+          >
+            <Col className="items-center justify-center space-y-12 h-dvh overflow-hidden">
+              {pages.map((page) => (
+                <DisclosureButton as="a" href={page.href} key={page.name}>
+                  <p className="text-2xl hover:underline relative bottom-20">
+                    {page.name}
+                  </p>
+                </DisclosureButton>
+              ))}
+            </Col>
+          </DisclosurePanel>
+        </>
+      )}
     </Disclosure>
   );
 }
