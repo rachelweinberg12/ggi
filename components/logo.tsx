@@ -4,7 +4,7 @@ export function Logo() {
   return (
     <Link
       href="/"
-      className="sm:text-xl tracking font-bold font-serif tracking-[-0.01em] text-lg hover:cursor-pointer"
+      className="sm:text-xl tracking display tracking-[-0.01em] text-lg hover:cursor-pointer"
     >
       Golden Gate Institute for AI
     </Link>

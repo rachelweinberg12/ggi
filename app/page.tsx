@@ -74,9 +74,9 @@ function Hero() {
         priority
       />
       <Row className="wide-section-padding absolute top-42 right-0">
-        <h1 className="w-xs xs:w-md sm:w-lg md:w-xl lg:w-2xl xl:w-3xl xl:text-7xl text-right">
+        <span className="w-xs xs:w-md sm:w-lg md:w-xl lg:w-2xl xl:w-3xl xl:text-7xl display text-right">
           Bringing AI's toughest questions into focus
-        </h1>
+        </span>
       </Row>
     </div>
   );
