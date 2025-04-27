@@ -4,19 +4,11 @@ import matter from "gray-matter";
 import { PostContent } from "@/components/post-content";
 import { notFound } from "next/navigation";
 
-interface PostPageProps {
-  params: {
-    slug: string;
-  };
-}
-
 // 1. Helper to load a single post
 async function getPost(slug: string) {
-  const filePath = path.join(process.cwd(), "posts", slug + ".mdx");
-  console.log(filePath);
+  const filePath = path.join(process.cwd(), "posts/", slug, "/post.mdx");
   try {
     const fileContent = fs.readFileSync(filePath, "utf-8");
-    console.log("file content", fileContent);
     const { data: frontmatter, content } = matter(fileContent);
     return {
       title: frontmatter.title,
@@ -27,15 +19,6 @@ async function getPost(slug: string) {
     console.error(error);
     return null; // file not found
   }
-}
-
-// 2. Generate static params (like getStaticPaths)
-export async function generateStaticParams() {
-  const files = fs.readdirSync(path.join(process.cwd(), "posts"));
-
-  return files.map((filename) => ({
-    slug: filename.replace(".mdx", ""),
-  }));
 }
 
 // 3. Page component
