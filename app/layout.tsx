@@ -63,7 +63,7 @@ export default function RootLayout({
         className={`${satoshi.variable} ${theSeasons.variable} ${sourceSerif.variable} font-sans antialiased theme-classic min-h-screen overscroll-none`}
       >
         <NavBar />
-        <div className="">{children}</div>
+        <div>{children}</div>
       </body>
     </html>
   );

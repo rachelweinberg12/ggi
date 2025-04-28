@@ -12,9 +12,12 @@ export const PostContent: React.FC<PostContentProps> = ({ content }) => {
       <ReactMarkdown
         remarkPlugins={[remarkGfm]}
         components={{
-          h1: ({ node, ...props }) => <h3 {...props} />,
-          h2: ({ node, ...props }) => <h4 {...props} />,
-          h3: ({ node, ...props }) => <p {...props} className="font-bold" />,
+          h1: ({ node, ...props }) => <h3 {...props} className="mt-12" />,
+          h2: ({ node, ...props }) => <h4 {...props} className="mt-12" />,
+          h3: ({ node, ...props }) => (
+            <p {...props} className="font-bold mt-12" />
+          ),
+          p: ({ node, ...props }) => <p {...props} className="mt-4" />,
         }}
       >
         {content}
