@@ -6,20 +6,20 @@ import { formatDate } from "@/utils/formatting";
 import { Col, Row } from "@/components/blocks";
 
 const postSlugs = [
+  "founding-essay",
   "finally-a-way-to-measure-ai-progress",
-  "finally-a-way-to-measure-ai-progress",
-  //   "finally-a-way-to-measure-ai-progress",
+  "first-they-came-for-the-software-engineers",
 ];
 
 export function WritingSpotlight() {
   return (
     <Col className="section-padding">
       <h2>Recent writing</h2>
-      <Row>
+      <div className="grid grid-cols-2 x-gap">
         {postSlugs.map((slug, i) => (
           <PostPreview slug={slug} key={i} />
         ))}
-      </Row>
+      </div>
     </Col>
   );
 }

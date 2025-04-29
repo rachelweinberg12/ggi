@@ -283,12 +283,12 @@
 
   /* Default spacing between vertical elements */
   .y-gap {
-    @apply space-y-6 md:space-y-8;
+    @apply gap-y-6 md:gap-y-8;
   }
 
   /* Default spacing between horizontal elements */
   .x-gap {
-    @apply space-x-6 md:space-x-8;
+    @apply gap-x-6 md:gap-x-8;
   }
 
   /* Default padding for content blocks or cards */
