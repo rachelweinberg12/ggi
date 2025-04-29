@@ -4,14 +4,14 @@ const nextConfig = {
   async redirects() {
     return [
       {
-        source: "/",
+        source: "/:path*",
         has: [
           {
             type: "host",
             value: "goldengateinstitute.org",
           },
         ],
-        destination: "https://www.goldengateinstitute.org",
+        destination: "https://www.goldengateinstitute.org/:path*",
         permanent: true,
       },
     ];
