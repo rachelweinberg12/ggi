@@ -8,7 +8,7 @@ import { Col, Row } from "@/components/blocks";
 const postSlugs = [
   "finally-a-way-to-measure-ai-progress",
   "finally-a-way-to-measure-ai-progress",
-  "finally-a-way-to-measure-ai-progress",
+  //   "finally-a-way-to-measure-ai-progress",
 ];
 
 export function WritingSpotlight() {
@@ -34,6 +34,7 @@ function PostPreview(props: { slug: string }) {
     const { data: frontmatter } = matter(fileContent);
     post = {
       title: frontmatter.title,
+      subtitle: frontmatter.subtitle,
       date: frontmatter.date,
       substackLink: frontmatter["substack-link"],
     };
@@ -43,20 +44,25 @@ function PostPreview(props: { slug: string }) {
   }
 
   return (
-    <div className=" overflow-hidden theme-sand border border-black">
+    <a
+      className="block overflow-hidden p-1 rounded-xl hover:bg-sand"
+      href={post.substackLink}
+      target="_blank"
+    >
       <div className="aspect-[7/5]">
         <Image
           src={`/post-images/${slug}/header.png`}
           alt={post.title}
-          className="w-full h-full object-contain"
+          className="w-full h-full object-contain rounded"
           width={500}
           height={700}
         />
       </div>
       <div className="p-3">
-        <h4 className="mb-2">{post.title}</h4>
-        <p className="text-gray-500 text-sm mb-4">{formatDate(post.date)}</p>
+        <h3 className="mb-1">{post.title}</h3>
+        <h5 className="mb-3">{post.subtitle}</h5>
+        <p className="info">{formatDate(post.date)}</p>
       </div>
-    </div>
+    </a>
   );
 }
