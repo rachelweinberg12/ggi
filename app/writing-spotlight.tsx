@@ -42,7 +42,7 @@ export function WritingSpotlight() {
 function PostPreview(props: { slug: string; vertical?: boolean }) {
   const { slug, vertical } = props;
   // Get post data
-  const filePath = path.join(process.cwd(), "posts/", slug, "/post.mdx");
+  const filePath = path.join(process.cwd(), "posts/", slug + ".mdx");
   let post;
   try {
     const fileContent = fs.readFileSync(filePath, "utf-8");
@@ -63,27 +63,27 @@ function PostPreview(props: { slug: string; vertical?: boolean }) {
     <a
       className={clsx(
         "flex overflow-hidden p-1 rounded-xl border border-black h-full hover:bg-sand",
-        vertical ? "flex-col" : "gap-x-3",
+        vertical ? "flex-col" : "gap-x-1 sm:gap-x-3",
       )}
       href={post.substackLink}
       target="_blank"
     >
-      <div className="aspect-[7/5]">
+      <div className="aspect-square sm:aspect-[7/5]">
         <Image
           src={`/post-images/${slug}/header.png`}
           alt={post.title}
           className={clsx(
-            "w-full h-full object-contain rounded",
-            !vertical && "max-h-52 md:max-h-64 xl:max-h-full",
+            "w-full h-full object-cover sm:object-contain rounded",
+            !vertical && "max-h-36 sm:max-h-52 md:max-h-64 xl:max-h-full",
           )}
           width={500}
           height={700}
         />
       </div>
-      <Col className="p-3 gap-y-0 h-full justify-between">
+      <Col className="p-1 sm:p-3 gap-y-0 h-full justify-between">
         <div>
           <h3 className="mb-1">{post.title}</h3>
-          <h5 className="mb-3">{post.subtitle}</h5>
+          <h5 className="mb-1 sm:mb-3">{post.subtitle}</h5>
         </div>
         <p className="info">
           {formatDate(post.date)} | {post.authors}

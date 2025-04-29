@@ -6,7 +6,7 @@ import { notFound } from "next/navigation";
 
 // 1. Helper to load a single post
 async function getPost(slug: string) {
-  const filePath = path.join(process.cwd(), "posts/", slug, "/post.mdx");
+  const filePath = path.join(process.cwd(), "posts/", slug + ".mdx");
   try {
     const fileContent = fs.readFileSync(filePath, "utf-8");
     const { data: frontmatter, content } = matter(fileContent);
