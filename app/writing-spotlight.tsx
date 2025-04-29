@@ -4,9 +4,10 @@ import path from "path";
 import matter from "gray-matter";
 import { formatDate } from "@/utils/formatting";
 import { Col, Row } from "@/components/blocks";
+import clsx from "clsx";
 
-const postSlugs = [
-  "founding-essay",
+const primaryPostSlug = "founding-essay";
+const secondaryPostSlugs = [
   "finally-a-way-to-measure-ai-progress",
   "first-they-came-for-the-software-engineers",
 ];
@@ -15,17 +16,31 @@ export function WritingSpotlight() {
   return (
     <Col className="section-padding">
       <h2>Recent writing</h2>
-      <div className="grid grid-cols-2 x-gap">
-        {postSlugs.map((slug, i) => (
-          <PostPreview slug={slug} key={i} />
-        ))}
+      <div className="xl:grid grid-cols-12 x-gap hidden">
+        <div className="col-span-5">
+          <PostPreview slug={primaryPostSlug} vertical />
+        </div>
+        <Col className="h-full justify-between col-span-7">
+          {secondaryPostSlugs.map((slug, i) => (
+            <PostPreview slug={slug} key={i} />
+          ))}
+        </Col>
+      </div>
+      <div className="grid grid-rows-3 y-gap xl:hidden">
+        <Col className="h-full justify-between col-span-7">
+          <PostPreview slug={primaryPostSlug} />
+
+          {secondaryPostSlugs.map((slug, i) => (
+            <PostPreview slug={slug} key={i} />
+          ))}
+        </Col>
       </div>
     </Col>
   );
 }
 
-function PostPreview(props: { slug: string }) {
-  const { slug } = props;
+function PostPreview(props: { slug: string; vertical?: boolean }) {
+  const { slug, vertical } = props;
   // Get post data
   const filePath = path.join(process.cwd(), "posts/", slug, "/post.mdx");
   let post;
@@ -37,6 +52,7 @@ function PostPreview(props: { slug: string }) {
       subtitle: frontmatter.subtitle,
       date: frontmatter.date,
       substackLink: frontmatter["substack-link"],
+      authors: frontmatter.authors,
     };
   } catch (error) {
     console.error(error);
@@ -45,7 +61,10 @@ function PostPreview(props: { slug: string }) {
 
   return (
     <a
-      className="block overflow-hidden p-1 rounded-xl hover:bg-sand"
+      className={clsx(
+        "flex overflow-hidden p-1 rounded-xl border border-black h-full hover:bg-sand",
+        vertical ? "flex-col" : "gap-x-3",
+      )}
       href={post.substackLink}
       target="_blank"
     >
@@ -53,16 +72,23 @@ function PostPreview(props: { slug: string }) {
         <Image
           src={`/post-images/${slug}/header.png`}
           alt={post.title}
-          className="w-full h-full object-contain rounded"
+          className={clsx(
+            "w-full h-full object-contain rounded",
+            !vertical && "max-h-52 md:max-h-64 xl:max-h-full",
+          )}
           width={500}
           height={700}
         />
       </div>
-      <div className="p-3">
-        <h3 className="mb-1">{post.title}</h3>
-        <h5 className="mb-3">{post.subtitle}</h5>
-        <p className="info">{formatDate(post.date)}</p>
-      </div>
+      <Col className="p-3 gap-y-0 h-full justify-between">
+        <div>
+          <h3 className="mb-1">{post.title}</h3>
+          <h5 className="mb-3">{post.subtitle}</h5>
+        </div>
+        <p className="info">
+          {formatDate(post.date)} | {post.authors}
+        </p>
+      </Col>
     </a>
   );
 }
