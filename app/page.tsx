@@ -1,12 +1,15 @@
-import { Row } from "@/components/blocks";
+import { Col, Row } from "@/components/blocks";
 import Image from "next/image";
 import { WritingSpotlight } from "./writing-spotlight";
 
 export default function Home() {
   return (
     <main>
-      <Hero />
-      <WritingSpotlight />
+      <Col className="section-padding justify-center items-center h-dvh">
+        <h1 className="text-center relative bottom-1/5">
+          Website coming soon!
+        </h1>
+      </Col>
     </main>
   );
 }
