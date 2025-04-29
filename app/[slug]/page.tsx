@@ -3,6 +3,7 @@ import path from "path";
 import matter from "gray-matter";
 import { PostContent } from "@/components/post-content";
 import { notFound } from "next/navigation";
+import { use } from "react";
 
 // 1. Helper to load a single post
 async function getPost(slug: string) {
@@ -22,9 +23,10 @@ async function getPost(slug: string) {
 }
 
 // 3. Page component
-export default async function PostPage(props: { params: { slug: string } }) {
-  const { slug } = await props.params;
-  console.log(slug);
+export default async function PostPage(props: {
+  params: Promise<{ slug: string }>;
+}) {
+  const { slug } = use(props.params);
   const post = await getPost(slug);
 
   if (!post) {
