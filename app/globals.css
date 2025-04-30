@@ -173,6 +173,10 @@
   a {
     @apply cursor-pointer;
   }
+
+  ul {
+    @apply list-disc ml-5;
+  }
 }
 
 @layer components {
