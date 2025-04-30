@@ -48,7 +48,10 @@ export function NavBar() {
             <div className="narrow-section-padding">
               <Row className="h-16 justify-between items-center">
                 <Row className="flex shrink-0 items-center relative group">
-                  <Logo className="transition-opacity group-hover:opacity-0" />
+                  <Logo
+                    dark={scrolled || open || !isHome}
+                    className="transition-opacity group-hover:opacity-0"
+                  />
                   <Logo
                     dark
                     className="absolute inset-0 transition-opacity opacity-0 group-hover:opacity-100"
