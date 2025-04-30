@@ -45,8 +45,8 @@ export function BriefAbout() {
           </li>
         </ul>
         <p>
-          Our founding team includes Taren Stinebrickner-Kauffman, Steve Newman,
-          and Rachel Weinberg.
+          Our founding team consists of Taren Stinebrickner-Kauffman, Steve
+          Newman, and Rachel Weinberg.
         </p>
       </Col>
     </div>
