@@ -3,6 +3,7 @@ import Image from "next/image";
 import { WritingSpotlight } from "./writing-spotlight";
 import { EventsSpotlight } from "./events-spotlight";
 import { TheCurveSpotlight } from "./the-curve-spotlight";
+import { BriefAbout } from "./brief-about";
 
 export default function Home() {
   return (
@@ -11,6 +12,7 @@ export default function Home() {
       <WritingSpotlight />
       <TheCurveSpotlight />
       <EventsSpotlight />
+      <BriefAbout />
     </main>
   );
 }

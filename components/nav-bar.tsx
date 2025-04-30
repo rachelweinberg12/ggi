@@ -48,7 +48,7 @@ export function NavBar() {
             <div className="narrow-section-padding">
               <Row className="h-16 justify-between items-center">
                 <Row className="flex shrink-0 items-center">
-                  <Logo />
+                  <Logo dark={scrolled || open || !isHome} />
                 </Row>
                 <Row className="hidden sm:flex space-x-12 justify-end">
                   {pages.map((page) => (

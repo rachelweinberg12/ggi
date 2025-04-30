@@ -1,10 +1,4 @@
-import Image from "next/image";
-import fs from "fs";
-import path from "path";
-import matter from "gray-matter";
-import { formatDate } from "@/utils/formatting";
-import { Col, Row } from "@/components/blocks";
-import clsx from "clsx";
+import { Col } from "@/components/blocks";
 
 const testimonials = [
   {
@@ -27,12 +21,12 @@ export function TheCurveSpotlight() {
   return (
     <div className="section-padding border-y border-black theme-teal">
       <h1>The Curve</h1>
-      <h5 className="mt-2">October 3-5, 2025 | SF & Berkeley</h5>
-      <h2 className="mt-2">
+      <h5 className="mt-1">October 3-5, 2025 | SF & Berkeley</h5>
+      <h2 className="mt-3">
         A gathering for leading thinkers, builders, advocates, and
         decision-makers to make sense of the AI big picture.
       </h2>
-      <Col className="mt-3 gap-2">
+      <Col className="mt-8 gap-2">
         <p>
           <b>Purpose:</b> No single group has all the answers or execution power
           to make the best of transformative AI. The Curve creates a space for
@@ -56,7 +50,7 @@ export function TheCurveSpotlight() {
           power?
         </p>
       </Col>
-      <Col className="y-gap x-gap sm:flex-row mt-5">
+      <Col className="y-gap x-gap sm:flex-row mt-8">
         {testimonials.map((t) => (
           <Testimonial quote={t.quote} name={t.name} key={t.name} />
         ))}

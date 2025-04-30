@@ -1,12 +1,17 @@
 import Link from "next/link";
+import Image from "next/image";
 
-export function Logo() {
+export function Logo(props: { dark?: boolean }) {
+  const { dark } = props;
   return (
-    <Link
-      href="/"
-      className="sm:text-xl tracking display tracking-[-0.01em] text-lg hover:cursor-pointer"
-    >
-      Golden Gate Institute for AI
+    <Link href="/" className="hover:cursor-pointer">
+      <Image
+        src={dark ? "/BlackLogo.png" : "/WhiteLogo.png"}
+        alt="Golden Gate Institute for AI"
+        className="h-5 object-contain object-left"
+        height={50}
+        width={300}
+      />
     </Link>
   );
 }
