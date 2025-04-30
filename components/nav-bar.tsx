@@ -45,7 +45,7 @@ export function NavBar() {
             )}
             id="navbar"
           >
-            <div className="wide-section-padding">
+            <div className="narrow-section-padding">
               <Row className="h-16 justify-between items-center">
                 <Row className="flex shrink-0 items-center">
                   <Logo />

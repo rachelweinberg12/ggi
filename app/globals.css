@@ -254,7 +254,6 @@
 
   .pull-quote {
     @apply font-normal leading-[1.2] tracking-[0em] font-sans border-l-4 pl-4 text-base md:text-lg;
-    color: var(--highlight);
   }
 
   .text-link {
@@ -272,7 +271,7 @@
   }
 
   /* Wide section padding (for special/display sections, matches nav) */
-  .wide-section-padding {
+  .narrow-section-padding {
     @apply mx-auto max-w-7xl px-6 sm:px-8 lg:px-12;
   }
 

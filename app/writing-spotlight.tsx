@@ -73,7 +73,7 @@ function PostPreview(props: { slug: string; vertical?: boolean }) {
     >
       <div
         className={clsx(
-          "sm:aspect-[7/5]",
+          "sm:aspect-[4/3]",
           vertical ? "aspect-[5/3]" : "aspect-square",
         )}
       >
@@ -81,7 +81,7 @@ function PostPreview(props: { slug: string; vertical?: boolean }) {
           src={`/post-images/${slug}/header.png`}
           alt={post.title}
           className={clsx(
-            "w-full h-full object-cover sm:object-contain rounded sm:aspect-[7/5]",
+            "w-full h-full object-cover rounded sm:aspect-[4/3]",
             vertical
               ? "aspect-[5/3]"
               : "max-h-36 sm:max-h-52 md:max-h-64 xl:max-h-full aspect-square",
