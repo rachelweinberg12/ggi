@@ -19,7 +19,10 @@ const testimonials = [
 
 export function TheCurveSpotlight() {
   return (
-    <div className="section-padding border-y border-black theme-teal">
+    <div
+      className="section-padding border-y border-black theme-teal"
+      id="the-curve"
+    >
       <h1>The Curve</h1>
       <h5 className="mt-1">October 3-5, 2025 | SF & Berkeley</h5>
       <h2 className="mt-3">

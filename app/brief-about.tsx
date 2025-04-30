@@ -2,7 +2,10 @@ import { Col } from "@/components/blocks";
 
 export function BriefAbout() {
   return (
-    <div className="section-padding border-y border-black theme-sand">
+    <div
+      className="section-padding border-y border-black theme-sand"
+      id="about"
+    >
       <h2>About us</h2>
       <Col className="mt-3 gap-2">
         <p>

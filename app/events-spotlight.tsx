@@ -14,7 +14,7 @@ const secondaryPostSlugs = [
 
 export function EventsSpotlight() {
   return (
-    <Col className="section-padding">
+    <Col className="section-padding" id="events">
       <h2>Upcoming events</h2>
       <div className="xl:grid grid-cols-12 x-gap hidden">
         <div className="col-span-5">
