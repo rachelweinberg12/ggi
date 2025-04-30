@@ -26,14 +26,17 @@ export function WritingSpotlight() {
           ))}
         </Col>
       </div>
-      <div className="grid grid-rows-3 y-gap xl:hidden">
-        <Col className="h-full justify-between col-span-7">
-          <PostPreview slug={primaryPostSlug} />
-
-          {secondaryPostSlugs.map((slug, i) => (
-            <PostPreview slug={slug} key={i} />
-          ))}
-        </Col>
+      <div className="hidden xs:grid grid-rows-3 y-gap xl:hidden">
+        <PostPreview slug={primaryPostSlug} />
+        {secondaryPostSlugs.map((slug, i) => (
+          <PostPreview slug={slug} key={i} />
+        ))}
+      </div>
+      <div className="grid grid-rows-3 y-gap xs:hidden">
+        <PostPreview slug={primaryPostSlug} vertical />
+        {secondaryPostSlugs.map((slug, i) => (
+          <PostPreview slug={slug} key={i} vertical />
+        ))}
       </div>
     </Col>
   );
@@ -63,18 +66,25 @@ function PostPreview(props: { slug: string; vertical?: boolean }) {
     <a
       className={clsx(
         "flex overflow-hidden p-1 rounded-xl border border-black h-full hover:bg-sand",
-        vertical ? "flex-col" : "gap-x-1 sm:gap-x-3",
+        vertical ? "flex-col gap-y-1" : "gap-x-1 sm:gap-x-3",
       )}
       href={post.substackLink}
       target="_blank"
     >
-      <div className="aspect-square sm:aspect-[7/5]">
+      <div
+        className={clsx(
+          "sm:aspect-[7/5]",
+          vertical ? "aspect-[5/3]" : "aspect-square",
+        )}
+      >
         <Image
           src={`/post-images/${slug}/header.png`}
           alt={post.title}
           className={clsx(
-            "w-full h-full object-cover sm:object-contain rounded",
-            !vertical && "max-h-36 sm:max-h-52 md:max-h-64 xl:max-h-full",
+            "w-full h-full object-cover sm:object-contain rounded sm:aspect-[7/5]",
+            vertical
+              ? "aspect-[5/3]"
+              : "max-h-36 sm:max-h-52 md:max-h-64 xl:max-h-full aspect-square",
           )}
           width={500}
           height={700}
