@@ -1,19 +1,17 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import { Source_Serif_4 } from "next/font/google";
-import "./globals.css";
-import { NavBar } from "@/components/nav-bar";
-import { Footer } from "./footer";
+import "../../../globals.css";
 
 const satoshi = localFont({
   src: [
     {
-      path: "../public/fonts/Satoshi/Satoshi-Variable.woff2",
+      path: "../../fonts/Satoshi/Satoshi-Variable.woff2",
       weight: "300 900",
       style: "normal",
     },
     {
-      path: "../public/fonts/Satoshi/Satoshi-VariableItalic.woff2",
+      path: "../../fonts/Satoshi/Satoshi-VariableItalic.woff2",
       weight: "300 900",
       style: "italic",
     },
@@ -24,17 +22,17 @@ const satoshi = localFont({
 const theSeasons = localFont({
   src: [
     {
-      path: "../public/fonts/TheSeasons/TheSeasons-Light.woff2",
+      path: "../../fonts/TheSeasons/TheSeasons-Light.woff2",
       weight: "300",
       style: "normal",
     },
     {
-      path: "../public/fonts/TheSeasons/TheSeasons-Regular.woff2",
+      path: "../../fonts/TheSeasons/TheSeasons-Regular.woff2",
       weight: "400",
       style: "normal",
     },
     {
-      path: "../public/fonts/TheSeasons/TheSeasons-Bold.woff2",
+      path: "../../fonts/TheSeasons/TheSeasons-Bold.woff2",
       weight: "700",
       style: "normal",
     },
@@ -63,9 +61,7 @@ export default function RootLayout({
       <body
         className={`${satoshi.variable} ${theSeasons.variable} ${sourceSerif.variable} font-sans antialiased theme-classic min-h-screen overscroll-none`}
       >
-        <NavBar />
         <div>{children}</div>
-        <Footer />
       </body>
     </html>
   );
