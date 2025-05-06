@@ -1,10 +1,12 @@
 import Image from "next/image";
+import { About2024 } from "./about-2024";
 
 export default function Home() {
   return (
     <main>
       <Hero />
       <About />
+      <About2024 />
     </main>
   );
 }
