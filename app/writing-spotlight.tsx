@@ -14,7 +14,7 @@ const secondaryPostSlugs = [
 
 export function WritingSpotlight() {
   return (
-    <Col className="section-padding">
+    <Col className="nav-section-padding y-section-padding">
       <h2>Recent writing</h2>
       <div className="xl:grid grid-cols-12 x-gap hidden">
         <div className="col-span-5">

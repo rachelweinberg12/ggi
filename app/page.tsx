@@ -28,7 +28,7 @@ function Hero() {
         height={100}
         priority
       />
-      <div className="h-full narrow-section-padding">
+      <div className="h-full nav-section-padding">
         <Row className="relative h-full">
           <span className="absolute top-1/3 right-0 w-xs xs:w-md sm:w-lg md:w-xl lg:w-2xl xl:w-3xl xl:text-7xl display text-right">
             Bringing AI's toughest questions into focus
