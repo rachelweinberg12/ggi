@@ -60,13 +60,12 @@ export function TheCurveSpotlight() {
           </p>
           <p>
             <b>Topics:</b> Our content will get at questions like — How can we
-            unlock the benefits of AI for scientific discovery, institutional
-            function, and global prosperity? How might AI concentrate or
-            distribute power? What are the risks posed by current and future AI
-            systems? How quickly will AI systems become more powerful? What
-            impact will they have on the job market and economic growth? What
+            unlock the benefits of AI for scientific discovery? How might AI
+            concentrate or distribute power? Does AI pose catastrophic or
+            existential risks? How quickly will AI development progress? What
+            impact will AI have on the job market and economic growth? What
             implications does AI have for national security and global balance
-            of power?
+            of power? And of course: What should we do about it?
           </p>
           <Col className="y-gap x-gap mt-8">
             {testimonials.map((t) => (
