@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { About2024 } from "./about-2024";
+import { FAQ } from "./faq";
 
 export default function Home() {
   return (
@@ -7,6 +8,7 @@ export default function Home() {
       <Hero />
       <About />
       <About2024 />
+      <FAQ />
     </main>
   );
 }
@@ -40,7 +42,7 @@ function Hero() {
 
 function About() {
   return (
-    <div className="section-padding theme-classic">
+    <div className="section-padding theme-classic border-t border-black">
       <div className="max-w-7xl mx-auto mb-8">
         <h2 className="mb-4">Our purpose</h2>
         <p className="mb-2">

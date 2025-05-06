@@ -75,7 +75,7 @@ const testimonials = [
 
 export function About2024() {
   return (
-    <div className="theme-sand">
+    <div className="theme-sand border-t border-black">
       <div className="nav-section-padding y-section-padding">
         <h1 className="mb-8">About The Curve 2024</h1>
         <Row className="justify-between items-end mb-8">
@@ -173,7 +173,7 @@ export function About2024() {
 
 function Testimonial(props: { name: string; quote: string }) {
   return (
-    <Col className="gap-1 justify-between max-w-sm">
+    <Col className="gap-1 justify-between lg:max-w-sm">
       <p className="italic">"{props.quote}"</p>
       <p className="text-right">— {props.name}</p>
     </Col>
