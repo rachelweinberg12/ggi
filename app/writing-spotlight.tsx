@@ -5,6 +5,7 @@ import matter from "gray-matter";
 import { formatDate } from "@/utils/formatting";
 import { Col, Row } from "@/components/blocks";
 import clsx from "clsx";
+import { LinkButton } from "@/components/link-button";
 
 const primaryPostSlug = "founding-essay";
 const secondaryPostSlugs = [
@@ -15,7 +16,14 @@ const secondaryPostSlugs = [
 export function WritingSpotlight() {
   return (
     <Col className="nav-section-padding y-section-padding">
-      <h2>Recent writing</h2>
+      <Row className="justify-between items-end flex-row">
+        <h2>Recent writing</h2>
+        <LinkButton
+          href="https://amistrongeryet.substack.com/"
+          title="See all writing"
+          className="hidden xs:flex"
+        />
+      </Row>
       <div className="xl:grid grid-cols-12 x-gap hidden">
         <div className="col-span-5">
           <PostPreview slug={primaryPostSlug} vertical />
@@ -38,6 +46,12 @@ export function WritingSpotlight() {
           <PostPreview slug={slug} key={i} vertical />
         ))}
       </div>
+      <Row className="justify-end xs:hidden">
+        <LinkButton
+          href="https://amistrongeryet.substack.com/"
+          title="See all writing"
+        />
+      </Row>
     </Col>
   );
 }

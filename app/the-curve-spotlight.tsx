@@ -1,4 +1,5 @@
-import { Col } from "@/components/blocks";
+import { Col, Row } from "@/components/blocks";
+import { LinkButton } from "@/components/link-button";
 
 const testimonials = [
   {
@@ -27,10 +28,21 @@ export function TheCurveSpotlight() {
         <div className="text-width-pos">
           <h1>The Curve</h1>
           <h5 className="mt-1">October 3-5, 2025 | SF & Berkeley</h5>
-          <h2 className="mt-5">
+          <h2 className="mt-6">
             A conference for thinkers, builders, and leaders to tackle the AI
             big picture.
           </h2>
+          <Row className="mt-6 hidden xs:flex">
+            <LinkButton
+              href="https://thecurve.goldengateinstitute.org"
+              title="Learn more"
+              className="px-6 py-2 bg-white text-teal hover:bg-teal hover:text-white rounded border"
+            />
+            <LinkButton
+              href="https://thecurve.goldengateinstitute.org"
+              title="Hear when applications open"
+            />
+          </Row>
         </div>
         <Col className="mt-8 lg:mt-0 gap-2 text-width-pos">
           <p>
@@ -60,6 +72,17 @@ export function TheCurveSpotlight() {
             {testimonials.map((t) => (
               <Testimonial quote={t.quote} name={t.name} key={t.name} />
             ))}
+          </Col>
+          <Col className="mt-6 xs:hidden items-center">
+            <LinkButton
+              href="https://thecurve.goldengateinstitute.org"
+              title="Hear when applications open"
+            />
+            <LinkButton
+              href="https://thecurve.goldengateinstitute.org"
+              title="Learn more"
+              className="px-6 py-2 bg-white text-teal rounded border"
+            />
           </Col>
         </Col>
       </div>

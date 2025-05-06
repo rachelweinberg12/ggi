@@ -1,4 +1,5 @@
-import { Col } from "@/components/blocks";
+import { Col, Row } from "@/components/blocks";
+import { LinkButton } from "@/components/link-button";
 
 export function BriefAbout() {
   return (
@@ -7,7 +8,7 @@ export function BriefAbout() {
       id="about"
     >
       <div className="text-width-pos">
-        <h2>About us</h2>
+        <h1>About us</h1>
         <Col className="mt-3 gap-2">
           <p>
             We believe that AI will be a transformative technology, with the
@@ -50,6 +51,13 @@ export function BriefAbout() {
             Our founding team consists of Taren Stinebrickner-Kauffman, Steve
             Newman, and Rachel Weinberg.
           </p>
+          <Row className="justify-center mt-5">
+            <LinkButton
+              href="/about"
+              title="Learn more"
+              className="px-6 py-2 bg-black text-sand hover:bg-sand hover:text-black border rounded"
+            />
+          </Row>
         </Col>
       </div>
     </div>
