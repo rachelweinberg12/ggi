@@ -57,7 +57,7 @@ export function NavBar() {
                     className="absolute inset-0 transition-opacity opacity-0 group-hover:opacity-100"
                   />
                 </Row>
-                <Row className="hidden sm:flex space-x-12 justify-end">
+                <Row className="hidden sm:flex space-x-8 md:space-x-12 justify-end">
                   {pages.map((page) => (
                     <a
                       className="text-base font-medium hover:underline"
