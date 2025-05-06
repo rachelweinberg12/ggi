@@ -1,9 +1,10 @@
-import { Row } from "@/components/blocks";
+import { Col, Row } from "@/components/blocks";
 import Image from "next/image";
 import { WritingSpotlight } from "./writing-spotlight";
 import { EventsSpotlight } from "./events-spotlight";
 import { TheCurveSpotlight } from "./the-curve-spotlight";
 import { BriefAbout } from "./brief-about";
+import { LinkButton } from "@/components/link-button";
 
 export default function Home() {
   return (
@@ -30,9 +31,18 @@ function Hero() {
       />
       <div className="h-full nav-section-padding">
         <Row className="relative h-full">
-          <span className="absolute top-1/3 right-0 w-xs xs:w-md sm:w-lg md:w-xl lg:w-2xl xl:w-3xl xl:text-7xl display text-right">
-            Bringing AI's toughest questions into focus
-          </span>
+          <div className="absolute top-1/3 right-0 w-xs xs:w-md sm:w-lg md:w-xl lg:w-2xl xl:w-3xl flex flex-col items-end gap-y-3">
+            <h1 className="xl:text-7xl display text-right w-full">
+              Bringing AI's toughest questions into focus
+            </h1>
+            <Col className="mt-3 sm:flex-row items-end gap-y-1 gap-x-6">
+              <LinkButton
+                href="https://amistrongeryet.substack.com/"
+                title="Subscribe to our newsletter"
+              />
+              <LinkButton href="/about" title="About us" />
+            </Col>
+          </div>
         </Row>
       </div>
     </div>
