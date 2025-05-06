@@ -34,7 +34,7 @@ const theSeasons = localFont({
       style: "normal",
     },
     {
-      path: "../../fonts/TheSeasons/TheSeasons-Bold.woff2",
+      path: "../fonts/TheSeasons/TheSeasons-Bold.woff2",
       weight: "700",
       style: "normal",
     },
