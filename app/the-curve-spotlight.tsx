@@ -23,14 +23,16 @@ export function TheCurveSpotlight() {
       className="section-padding border-y border-black theme-teal"
       id="the-curve"
     >
-      <div className="text-width-pos">
-        <h1>The Curve</h1>
-        <h5 className="mt-1">October 3-5, 2025 | SF & Berkeley</h5>
-        <h2 className="mt-3">
-          A conference for thinkers, builders, and leaders to tackle the AI big
-          picture.
-        </h2>
-        <Col className="mt-8 gap-2">
+      <div className="grid lg:grid-cols-2 x-gap items-start">
+        <div className="text-width-pos">
+          <h1>The Curve</h1>
+          <h5 className="mt-1">October 3-5, 2025 | SF & Berkeley</h5>
+          <h2 className="mt-5">
+            A conference for thinkers, builders, and leaders to tackle the AI
+            big picture.
+          </h2>
+        </div>
+        <Col className="mt-8 lg:mt-0 gap-2 text-width-pos">
           <p>
             <b>Purpose:</b> The Curve creates a space for the people creating
             and steering AI to share knowledge, explore disagreements, and
@@ -54,11 +56,11 @@ export function TheCurveSpotlight() {
             implications does AI have for national security and global balance
             of power?
           </p>
-        </Col>
-        <Col className="y-gap x-gap sm:flex-row mt-8">
-          {testimonials.map((t) => (
-            <Testimonial quote={t.quote} name={t.name} key={t.name} />
-          ))}
+          <Col className="y-gap x-gap mt-8">
+            {testimonials.map((t) => (
+              <Testimonial quote={t.quote} name={t.name} key={t.name} />
+            ))}
+          </Col>
         </Col>
       </div>
     </div>
