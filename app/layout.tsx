@@ -3,6 +3,7 @@ import localFont from "next/font/local";
 import { Source_Serif_4 } from "next/font/google";
 import "./globals.css";
 import { NavBar } from "@/components/nav-bar";
+import { Footer } from "./footer";
 
 const satoshi = localFont({
   src: [
@@ -64,6 +65,7 @@ export default function RootLayout({
       >
         <NavBar />
         <div>{children}</div>
+        <Footer />
       </body>
     </html>
   );
