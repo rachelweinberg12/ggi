@@ -6,7 +6,7 @@ import { SubstackSubscribe } from "@/components/substack-subscribe";
 export function Footer() {
   return (
     <div className="theme-classic section-padding">
-      <Col className="md:flex-row md:justify-between text-width-pos x-gap items-center md:items-stretch">
+      <Col className="md:flex-row md:justify-between narrow-section-padding x-gap items-center md:items-stretch">
         <div className="w-full xs:w-108">
           <h3 className="mb-3">Get announcements and event invites</h3>
           <CrmSubscribe />

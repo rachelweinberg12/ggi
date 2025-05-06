@@ -280,7 +280,7 @@
 
   /* Text width & position */
   .text-width-pos {
-    @apply mx-auto max-w-7xl;
+    @apply mx-auto max-w-3xl;
   }
 
   /* Top section padding (for elements at the top to give space for the nav bar) */

@@ -28,11 +28,13 @@ function Hero() {
         height={100}
         priority
       />
-      <Row className="narrow-section-padding absolute top-1/3 right-0">
-        <span className="w-xs xs:w-md sm:w-lg md:w-xl lg:w-2xl xl:w-3xl xl:text-7xl display text-right">
-          Bringing AI's toughest questions into focus
-        </span>
-      </Row>
+      <div className="h-full narrow-section-padding">
+        <Row className="relative h-full">
+          <span className="absolute top-1/3 right-0 w-xs xs:w-md sm:w-lg md:w-xl lg:w-2xl xl:w-3xl xl:text-7xl display text-right">
+            Bringing AI's toughest questions into focus
+          </span>
+        </Row>
+      </div>
     </div>
   );
 }
