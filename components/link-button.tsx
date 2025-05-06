@@ -1,4 +1,4 @@
-import { ArrowLongRightIcon } from "@heroicons/react/24/solid";
+import { ArrowUpRightIcon } from "@heroicons/react/24/solid";
 import Link from "next/link";
 
 export function LinkButton(props: { href: string; title: string }) {
@@ -7,8 +7,8 @@ export function LinkButton(props: { href: string; title: string }) {
     <Link href={href} className="flex items-center gap-1 group">
       <span className="text-nowrap group-hover:underline md:text-lg">
         {title}
-      </span>{" "}
-      <ArrowLongRightIcon className="w-4 h-4 relative top-0.5" />
+      </span>
+      <ArrowUpRightIcon className="w-4 h-4 relative top-0.5" />
     </Link>
   );
 }
