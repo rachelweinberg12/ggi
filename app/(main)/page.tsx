@@ -24,7 +24,7 @@ function Hero() {
       <Image
         className="object-cover h-dvh absolute top-0 left-0 sm:aspect-16/9 aspect-2/3"
         src="/GGB.png"
-        alt="Next.js logo"
+        alt="Hero image"
         width={2000}
         height={100}
         priority
