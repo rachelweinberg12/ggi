@@ -16,7 +16,7 @@ const events: Event[] = [
   {
     title: "AI & Democracy Coworking Day",
     subtitle:
-      "Come cowork and meet other people working on how AI can bolster democracy, and how to democratically govern AI.",
+      "Come cowork and meet other people who think about how AI can bolster democracy and how to democratically govern AI.",
     url: "https://lu.ma/rm2nli40",
     date: "All day, May 12, 2025",
     location: "San Francisco",
@@ -24,9 +24,9 @@ const events: Event[] = [
     openness: "Open invite",
   },
   {
-    title: 'Natalie Foster on "The Guarantee"',
+    title: "Reimagining the Economy in the Age of AI (with Natalie Foster)",
     subtitle:
-      "Join us for snacks, drinks, and a fireside chat with Natalie Foster about reimagining the economy in the age of AI.",
+      "Join us for snacks, drinks, and a fireside chat with Natalie Foster about building a resilient and inclusive economy in the age of AI.",
     url: "https://lu.ma/q4fxo69f",
     date: "6-8pm, June 18, 2025",
     location: "San Francisco",
