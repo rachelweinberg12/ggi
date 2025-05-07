@@ -50,18 +50,21 @@ const advisors = [
 
 export function Team() {
   return (
-    <div className="nav-section-padding y-section-padding theme-classic border-t border-black">
-      <h2 className="mb-8">Our team</h2>
-      <div className="grid grid-cols-2 sm:grid-cols-3 sm:gap-8 gap-4">
-        {coreTeam.map((member) => (
-          <TeamMember key={member.name} {...member} />
-        ))}
-      </div>
-      <h2 className="mb-8 mt-16">Our advisors</h2>
-      <div className="grid grid-cols-2 sm:grid-cols-3 gap-8">
-        {advisors.map((member) => (
-          <TeamMember key={member.name} {...member} />
-        ))}
+    <div className="theme-sand border-t border-black" id="team">
+      <div className="nav-section-padding y-section-padding">
+        {" "}
+        <h2 className="mb-8">Our team</h2>
+        <div className="grid grid-cols-2 sm:grid-cols-3 sm:gap-8 gap-4">
+          {coreTeam.map((member) => (
+            <TeamMember key={member.name} {...member} />
+          ))}
+        </div>
+        <h2 className="mb-8 mt-16">Our advisors</h2>
+        <div className="grid grid-cols-2 sm:grid-cols-3 gap-8">
+          {advisors.map((member) => (
+            <TeamMember key={member.name} {...member} />
+          ))}
+        </div>
       </div>
     </div>
   );

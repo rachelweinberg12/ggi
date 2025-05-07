@@ -4,10 +4,12 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 import { Team } from "./team";
+import { OurWork } from "./our-work";
 export default function About() {
   return (
     <div>
       <AboutHero />
+      <OurWork />
       <Team />
     </div>
   );

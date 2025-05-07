@@ -38,7 +38,7 @@ export function BriefAbout() {
               broad-based economic benefits?
             </li>
             <li>
-              <b>Institutional Adaptation:</b> How must democratic and other key
+              <b>Democracy & Governance:</b> How must democratic and other key
               institutions adapt to the challenges and opportunities that AI
               brings?
             </li>
