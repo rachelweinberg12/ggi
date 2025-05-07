@@ -3,11 +3,12 @@ import Link from "next/link";
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
-
+import { Team } from "./team";
 export default function About() {
   return (
     <div>
       <AboutHero />
+      <Team />
     </div>
   );
 }
