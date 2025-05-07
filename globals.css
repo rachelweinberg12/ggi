@@ -181,7 +181,7 @@
 @layer components {
   .theme-classic {
     --bg: var(--color-white);
-    --text-primary: var(--color-black);
+    --primary: var(--color-black);
     --highlight: var(--color-orange);
     --soft: var(--color-bley-500);
     background-color: var(--bg);
@@ -190,7 +190,7 @@
 
   .theme-teal {
     --bg: var(--color-teal);
-    --text-primary: var(--color-white);
+    --primary: var(--color-white);
     --highlight: var(--color-orange);
     --soft: var(--color-teal-50);
     background-color: var(--bg);
@@ -310,5 +310,13 @@
   /* Standard margin bottom after a block */
   .block-margin {
     @apply mb-8 md:mb-12;
+  }
+
+  .btn {
+    @apply border border-primary px-6 py-2 rounded;
+  }
+
+  .btn-primary {
+    @apply bg-primary text-background hover:bg-transparent hover:text-primary;
   }
 }
