@@ -185,7 +185,7 @@
     --highlight: var(--color-orange);
     --soft: var(--color-bley-500);
     background-color: var(--bg);
-    color: var(--text-primary);
+    color: var(--primary);
   }
 
   .theme-teal {
@@ -194,7 +194,7 @@
     --highlight: var(--color-orange);
     --soft: var(--color-teal-50);
     background-color: var(--bg);
-    color: var(--text-primary);
+    color: var(--primary);
   }
 
   .theme-orange {
