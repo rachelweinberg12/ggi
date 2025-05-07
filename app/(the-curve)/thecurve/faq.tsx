@@ -1,4 +1,5 @@
 import { Toggle } from "@/components/toggle";
+import TypeformPopupButton from "@/components/typeform-popup";
 
 export function FAQ() {
   return (
@@ -29,11 +30,17 @@ export function FAQ() {
         <Toggle title="When will I be able to apply?">
           <p className="mb-2">
             We plan to publish the application and an initial speaker list in
-            June. Sign up to our announcements list here to be notified when
-            that happens!
+            June.{" "}
+            <TypeformPopupButton
+              formId="CGFfW1bw"
+              buttonText="Sign up here"
+              buttonClassName="inline text-link"
+            />{" "}
+            to be notified when that happens!
           </p>
         </Toggle>
-        <Toggle title="What if I'd like to host an event or workshop?">
+        {/* TODO: Add these blocks back in with the new forms */}
+        {/* <Toggle title="What if I'd like to host an event or workshop?">
           <p className="mb-2">
             You can fill out this form. Note that the vast majority, and
             possibly all, of our main content will be initiated by us, but we
@@ -44,11 +51,16 @@ export function FAQ() {
             case attendees will be welcome to host whatever side sessions they
             like.
           </p>
-        </Toggle>
+        </Toggle> */}
         <Toggle title="What can I do if I have a friend or colleague who I think should attend?">
           <p className="mb-2">
-            Fill out this recommendation form! You can also nudge them to apply
-            themselves.
+            Fill out{" "}
+            <TypeformPopupButton
+              formId="lqoOqKDB"
+              buttonText="this recommendation form"
+              buttonClassName="inline text-link lg:text-base"
+            />
+            ! You can also nudge them to apply themselves.
           </p>
         </Toggle>
         <Toggle title="What's your press policy?">
@@ -64,11 +76,16 @@ export function FAQ() {
           <p className="mb-2">
             Thank you for asking! Here are a couple ways you can help:
           </p>
-          <ul>
+          <ul className="text-base">
             <li>
-              Point us towards great people through our recommendation form.
-              Events are nothing without their people, as they say, so any help
-              bringing in fantastic attendees is extremely appreciated.
+              Point us towards great people through our{" "}
+              <TypeformPopupButton
+                formId="lqoOqKDB"
+                buttonText="recommendation form"
+                buttonClassName="inline text-link"
+              />
+              . Events are nothing without their people, as they say, so any
+              help bringing in fantastic attendees is extremely appreciated.
             </li>
             <li>
               You can sponsor or donate to the event, as an individual or as an

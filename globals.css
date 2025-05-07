@@ -166,7 +166,7 @@
   }
 
   p {
-    @apply font-normal leading-[1.5] tracking-[0em] font-sans text-sm md:text-base;
+    @apply font-normal leading-[1.5] tracking-[0em] font-sans text-sm sm:text-base;
   }
 
   a {
