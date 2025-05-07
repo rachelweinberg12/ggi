@@ -65,14 +65,6 @@ export function NavBar() {
                         : "text-white group-hover:text-black",
                     )}
                   />
-                  {/* <Logo
-                    dark={scrolled || open}
-                    className="transition-opacity group-hover:opacity-0"
-                  />
-                  <Logo
-                    dark
-                    className="absolute inset-0 transition-opacity opacity-0 group-hover:opacity-100"
-                  /> */}
                 </Row>
                 <Row className="hidden sm:flex space-x-8 md:space-x-12 justify-end">
                   {pages.map((page) => (
