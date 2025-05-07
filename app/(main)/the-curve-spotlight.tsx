@@ -1,5 +1,6 @@
 import { Col, Row } from "@/components/blocks";
 import { LinkButton } from "@/components/link-button";
+import TypeformPopupButton from "@/components/typeform-popup";
 
 const testimonials = [
   {
@@ -38,9 +39,10 @@ export function TheCurveSpotlight() {
               title="Learn more"
               className="px-6 py-2 bg-white text-teal hover:bg-teal hover:text-white rounded border"
             />
-            <LinkButton
-              href="https://thecurve.goldengateinstitute.org"
-              title="Hear when applications open"
+            <TypeformPopupButton
+              formId="CGFfW1bw"
+              buttonText="Hear when applications open"
+              withArrow
             />
           </Row>
         </div>
