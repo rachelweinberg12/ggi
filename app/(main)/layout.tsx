@@ -8,12 +8,12 @@ import { Footer } from "./footer";
 const satoshi = localFont({
   src: [
     {
-      path: "../fonts/Satoshi/Satoshi-Variable.woff2",
+      path: "../../fonts/Satoshi/Satoshi-Variable.woff2",
       weight: "300 900",
       style: "normal",
     },
     {
-      path: "../fonts/Satoshi/Satoshi-VariableItalic.woff2",
+      path: "../../fonts/Satoshi/Satoshi-VariableItalic.woff2",
       weight: "300 900",
       style: "italic",
     },
@@ -24,17 +24,17 @@ const satoshi = localFont({
 const theSeasons = localFont({
   src: [
     {
-      path: "../fonts/TheSeasons/TheSeasons-Light.woff2",
+      path: "../../fonts/TheSeasons/TheSeasons-Light.woff2",
       weight: "300",
       style: "normal",
     },
     {
-      path: "../fonts/TheSeasons/TheSeasons-Regular.woff2",
+      path: "../../fonts/TheSeasons/TheSeasons-Regular.woff2",
       weight: "400",
       style: "normal",
     },
     {
-      path: "../fonts/TheSeasons/TheSeasons-Bold.woff2",
+      path: "../../fonts/TheSeasons/TheSeasons-Bold.woff2",
       weight: "700",
       style: "normal",
     },
