@@ -29,7 +29,7 @@ function AboutHero() {
   return (
     <div className="top-section-padding pt-36 pb-24 theme-sand">
       <h1 className="text-center mb-16 max-w-3xl mx-auto">
-        This is a thirteen word quirky tagline that sort of explains our deal.
+        This is a thirteen-word quirky tagline that sort of explains our deal.
       </h1>
       <Row className="justify-center">
         <Link className="btn" href="#team">
