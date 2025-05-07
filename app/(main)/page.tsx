@@ -11,8 +11,8 @@ export default function Home() {
     <main>
       <Hero />
       <WritingSpotlight />
-      <TheCurveSpotlight />
       <EventsSpotlight />
+      <TheCurveSpotlight />
       <BriefAbout />
     </main>
   );

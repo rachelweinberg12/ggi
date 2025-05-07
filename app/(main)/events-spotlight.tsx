@@ -1,62 +1,68 @@
 import Image from "next/image";
-import fs from "fs";
-import path from "path";
-import matter from "gray-matter";
-import { formatDate } from "@/utils/formatting";
 import { Col, Row } from "@/components/blocks";
 import clsx from "clsx";
 
-const eventSlugs = [
-  "founding-essay",
-  //   "finally-a-way-to-measure-ai-progress",
-  //   "first-they-came-for-the-software-engineers",
+type Event = {
+  title: string;
+  subtitle: string;
+  url: string;
+  date: string;
+  location: string;
+  imageUrl: string;
+  openness: string;
+};
+
+const events: Event[] = [
+  {
+    title: "AI & Democracy Coworking Day",
+    subtitle:
+      "Come cowork and meet other people working on how AI can bolster democracy, and how to democratically govern AI.",
+    url: "https://lu.ma/rm2nli40",
+    date: "All day, May 12, 2025",
+    location: "San Francisco",
+    imageUrl: "/event-images/AIDemocracyCoworking.png",
+    openness: "Open invite",
+  },
+  {
+    title: 'Natalie Foster on "The Guarantee"',
+    subtitle:
+      "Join us for snacks, drinks, and a fireside chat with Natalie Foster about reimagining the economy in the age of AI.",
+    url: "https://lu.ma/q4fxo69f",
+    date: "6-8pm, June 18, 2025",
+    location: "San Francisco",
+    imageUrl: "/event-images/TheGuarantee.png",
+    openness: "Open invite",
+  },
 ];
 
 export function EventsSpotlight() {
-  const numEvents = eventSlugs.length;
+  const numEvents = events.length;
   return (
     <div>
-      <Col className="nav-section-padding y-section-padding" id="events">
+      <Col className="nav-section-padding y-section-padding pt-0" id="events">
         <h2>Upcoming events</h2>
         {numEvents === 1 ? (
-          <OneCardLayout eventSlug={eventSlugs[0]} />
+          <OneCardLayout event={events[0]} />
         ) : numEvents === 2 ? (
-          <TwoCardLayout eventSlugs={eventSlugs} />
+          <TwoCardLayout events={events} />
         ) : (
-          <ThreeCardLayout eventSlugs={eventSlugs} />
+          <ThreeCardLayout events={events} />
         )}
       </Col>
     </div>
   );
 }
 
-function PostPreview(props: { slug: string; vertical?: boolean }) {
-  const { slug, vertical } = props;
-  // Get post data
-  const filePath = path.join(process.cwd(), "posts/", slug + ".mdx");
-  let post;
-  try {
-    const fileContent = fs.readFileSync(filePath, "utf-8");
-    const { data: frontmatter } = matter(fileContent);
-    post = {
-      title: frontmatter.title,
-      subtitle: frontmatter.subtitle,
-      date: frontmatter.date,
-      substackLink: frontmatter["substack-link"],
-      authors: frontmatter.authors,
-    };
-  } catch (error) {
-    console.error(error);
-    return null;
-  }
+function EventPreview(props: { event: Event; vertical?: boolean }) {
+  const { event, vertical } = props;
 
   return (
     <a
       className={clsx(
-        "flex overflow-hidden p-1 rounded-xl border border-black h-full hover:bg-sand",
+        "flex overflow-hidden p-1 rounded border border-black h-full hover:bg-sand",
         vertical ? "flex-col gap-y-1" : "gap-x-1 sm:gap-x-3",
       )}
-      href={post.substackLink}
+      href={event.url}
       target="_blank"
     >
       <div
@@ -66,10 +72,10 @@ function PostPreview(props: { slug: string; vertical?: boolean }) {
         )}
       >
         <Image
-          src={`/post-images/${slug}/header.png`}
-          alt={post.title}
+          src={event.imageUrl}
+          alt={event.title}
           className={clsx(
-            "w-full h-full object-cover rounded sm:aspect-[4/3]",
+            "w-full h-full object-cover rounded-sm sm:aspect-[4/3]",
             vertical
               ? "aspect-[5/3]"
               : "max-h-36 sm:max-h-52 md:max-h-64 xl:max-h-full aspect-square",
@@ -80,57 +86,57 @@ function PostPreview(props: { slug: string; vertical?: boolean }) {
       </div>
       <Col className="p-1 sm:p-3 gap-y-0 justify-between">
         <div>
-          <h3 className="mb-1">{post.title}</h3>
-          <h5 className="mb-1 sm:mb-3">{post.subtitle}</h5>
+          <h3 className="mb-1">{event.title}</h3>
+          <h5 className="mb-1 sm:mb-3">{event.subtitle}</h5>
         </div>
         <p className="info">
-          {formatDate(post.date)} | {post.authors}
+          {event.date} | {event.location} | {event.openness}
         </p>
       </Col>
     </a>
   );
 }
 
-function ThreeCardLayout(props: { eventSlugs: string[] }) {
-  const { eventSlugs } = props;
+function ThreeCardLayout(props: { events: Event[] }) {
+  const { events } = props;
   return (
     <>
       <div className="xl:grid grid-cols-12 x-gap hidden">
         <div className="col-span-5">
-          <PostPreview slug={eventSlugs[0]} vertical />
+          <EventPreview event={events[0]} vertical />
         </div>
         <Col className="h-full justify-between col-span-7">
-          {eventSlugs.map((slug, i) => {
+          {events.map((event, i) => {
             if (i === 0) return null;
-            return <PostPreview slug={slug} key={i} />;
+            return <EventPreview event={event} key={i} />;
           })}
         </Col>
       </div>
       <div className="hidden xs:grid grid-rows-3 y-gap xl:hidden">
-        {eventSlugs.map((slug, i) => (
-          <PostPreview slug={slug} key={i} />
+        {events.map((event, i) => (
+          <EventPreview event={event} key={i} />
         ))}
       </div>
       <div className="grid grid-rows-3 y-gap xs:hidden">
-        {eventSlugs.map((slug, i) => (
-          <PostPreview slug={slug} key={i} vertical />
+        {events.map((event, i) => (
+          <EventPreview event={event} key={i} vertical />
         ))}
       </div>
     </>
   );
 }
 
-function TwoCardLayout(props: { eventSlugs: string[] }) {
-  const { eventSlugs } = props;
+function TwoCardLayout(props: { events: Event[] }) {
+  const { events } = props;
   return (
     <div className="grid grid-cols-1 grid-rows-2 xl:grid-cols-2 xl:grid-rows-1 y-gap x-gap">
-      {eventSlugs.map((slug, i) => (
+      {events.map((event, i) => (
         <div key={i} className="col-span-1 row-span-1">
           <div className="hidden xs:block xl:hidden h-full w-full">
-            <PostPreview slug={slug} />
+            <EventPreview event={event} />
           </div>
           <div className="xs:hidden xl:block h-full w-full">
-            <PostPreview slug={slug} vertical />
+            <EventPreview event={event} vertical />
           </div>
         </div>
       ))}
@@ -138,15 +144,15 @@ function TwoCardLayout(props: { eventSlugs: string[] }) {
   );
 }
 
-function OneCardLayout(props: { eventSlug: string }) {
-  const { eventSlug } = props;
+function OneCardLayout(props: { event: Event }) {
+  const { event } = props;
   return (
     <>
       <div className="hidden xs:block">
-        <PostPreview slug={eventSlug} />
+        <EventPreview event={event} />
       </div>
       <div className="xs:hidden">
-        <PostPreview slug={eventSlug} vertical />
+        <EventPreview event={event} vertical />
       </div>
     </>
   );
