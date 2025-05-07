@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { About2024 } from "./about-2024";
 import { FAQ } from "./faq";
+import TypeformPopupButton from "@/components/typeform-popup";
 
 export default function Home() {
   return (
@@ -16,22 +17,32 @@ export default function Home() {
 function Hero() {
   return (
     <div className="w-full theme-orange section-padding">
-      <div className="relative h-[400px] sm:h-[40dvw] sm:max-h-[400px] mx-auto max-w-7xl">
-        <div className="sm:px-12">
-          <h1 className="mt-5">The Curve</h1>
-          <h5 className="mt-1">October 3-5, 2025 | SF & Berkeley</h5>
-          <h2 className="lg:my-12 my-6 w-2/3">
+      <div className="relative sm:h-[50dvw] sm:max-h-[400px] mx-auto max-w-7xl">
+        <div className="relative h-full z-10">
+          <h1 className="mt-5 text-5xl text-center sm:text-left">The Curve</h1>
+          <h5 className="mt-1 text-center sm:text-left">
+            October 3-5, 2025 | SF & Berkeley
+          </h5>
+          <h2 className="my-12 xl:my-12 sm:my-8 sm:w-2/3 w-full text-center sm:text-left">
             A conference where thinkers, builders, and leaders grapple with AI's
             biggest questions.
           </h2>
+          <div className="flex justify-center w-full sm:block">
+            <TypeformPopupButton
+              formId="CGFfW1bw"
+              buttonText="Get notified when applications open"
+              buttonClassName="border border-white bg-white text-orange rounded px-6 py-2 hover:bg-orange hover:text-white"
+              withArrow
+            />
+          </div>
         </div>
-        <div className="hidden sm:flex absolute xl:bottom-12 bottom-0 left-0 w-full h-full justify-center items-center">
+        <div className="hidden sm:flex absolute bottom-0 left-0 w-full  justify-center items-center">
           <Image
-            className="object-contain text-white"
+            className="object-contain text-white max-w-7xl w-full"
             src="/WideCurve.svg"
             alt="Curve"
             width={2000}
-            height={100}
+            height={1000}
             priority
           />
         </div>
@@ -88,7 +99,7 @@ function About() {
         <h2 className="mb-4">The experience</h2>
         <p className="mb-2">
           We prioritize small group and one-on-one conversations, and design our
-          event accordingly. You’re encouraged to skip sessions during the day
+          event accordingly. You're encouraged to skip sessions during the day
           in favor of talking with your fellow attendees, and the venue will
           stay open late into the night to accommodate those long, winding,
           fruitful discussions. The venue is set up around conversation nooks,

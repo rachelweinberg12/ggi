@@ -16,7 +16,7 @@ export function LinkButton(props: {
       <span className="text-nowrap group-hover:underline md:text-lg">
         {title}
       </span>
-      <ArrowUpRightIcon className="w-4 h-4 relative top-0.5" />
+      <ArrowUpRightIcon className="w-4 h-4" />
     </Link>
   );
 }

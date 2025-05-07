@@ -20,7 +20,7 @@ export function Toggle({ title, children, className = "" }: ToggleProps) {
       >
         <span className="md:text-lg">{title}</span>
         <ChevronDownIcon
-          className={`w-5 h-5 rotate-90 transition-transform ${
+          className={`w-5 h-5 rotate-90 transition-transform shrink-0 ${
             isOpen ? "rotate-none" : "rotate-90"
           }`}
         />
