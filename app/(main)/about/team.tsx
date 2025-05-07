@@ -22,19 +22,19 @@ const coreTeam = [
 
 const advisors = [
   {
-    name: "Jennifer Pahlka",
-    title: "Niskanen Center",
-    imageUrl: "/advisors/JenniferPahlka.jpg",
-  },
-  {
     name: "Roy Bahat",
     title: "Bloomberg Beta",
     imageUrl: "/advisors/RoyBahat.png",
   },
   {
-    name: "Geoff Ralston",
-    title: "Safe AI Fund",
-    imageUrl: "/advisors/GeoffRalston.webp",
+    name: "Catherine Bracy",
+    title: "TechEquity",
+    imageUrl: "/advisors/CatherineBracy.png",
+  },
+  {
+    name: "Jason Crawford",
+    title: "Roots of Progress Institute",
+    imageUrl: "/advisors/JasonCrawford.jpg",
   },
   {
     name: "Cate Hall",
@@ -42,9 +42,14 @@ const advisors = [
     imageUrl: "/advisors/CateHall.jpg",
   },
   {
-    name: "Jason Crawford",
-    title: "Roots of Progress Institute",
-    imageUrl: "/advisors/JasonCrawford.jpg",
+    name: "Jennifer Pahlka",
+    title: "Niskanen Center",
+    imageUrl: "/advisors/JenniferPahlka.jpg",
+  },
+  {
+    name: "Geoff Ralston",
+    title: "Safe AI Fund",
+    imageUrl: "/advisors/GeoffRalston.webp",
   },
 ];
 
@@ -82,9 +87,11 @@ function TeamMember(props: { name: string; title?: string; imageUrl: string }) {
         />
       </div>
       <Col className="h-full justify-between">
-        <div className="flex flex-col gap-2 w-30 xs:w-40 lg:w-50 xl:w-full">
-          <h4>{name}</h4>
-          <p className="font-light">{title}</p>
+        <div className="flex flex-col gap-1 w-30 xs:w-40 lg:w-50 xl:w-full">
+          <h4 className="text-center xl:text-left">{name}</h4>
+          <p className="font-light leading-tight text-center xl:text-left">
+            {title}
+          </p>
         </div>
       </Col>
     </div>
