@@ -49,7 +49,7 @@ export function NavBar() {
               <Row className="h-16 justify-between items-center">
                 <Row className="flex shrink-0 items-center relative group">
                   <Logo
-                    dark={scrolled || open || !isHome}
+                    dark={scrolled || open}
                     className="transition-opacity group-hover:opacity-0"
                   />
                   <Logo
