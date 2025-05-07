@@ -41,7 +41,8 @@ function Hero() {
             <Col className="mt-3 sm:flex-row items-end gap-y-1 gap-x-6">
               <LinkButton
                 href="https://amistrongeryet.substack.com/"
-                title="Subscribe to our newsletter"
+                title="Subscribe to our Substack"
+                newTab
               />
               <LinkButton href="/about" title="About us" />
             </Col>

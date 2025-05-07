@@ -8,12 +8,12 @@ export function Footer() {
     <div className="theme-classic border-t border-black">
       <Col className="md:flex-row md:justify-between nav-section-padding y-section-padding x-gap items-center md:items-stretch">
         <div className="w-full xs:w-108">
-          <h3 className="mb-3">Get announcements and event invites</h3>
+          <h3 className="mb-3">Get event invites and announcements</h3>
           <CrmSubscribe />
         </div>
         <Col className="justify-between">
           <div className="mb-3">
-            <h3>Subscribe to our newsletter</h3>
+            <h3>Subscribe to our Substack</h3>
             <SubstackSubscribe />
           </div>
           <Row className="justify-end">
