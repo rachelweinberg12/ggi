@@ -34,7 +34,7 @@ function AboutHero() {
       <h1 className="text-center mb-16 max-w-3xl mx-auto">
         This is a thirteen-word quirky tagline that sort of explains our deal.
       </h1>
-      <Row className="justify-center">
+      <Row className="flex-col sm:flex-row items-center justify-center gap-4">
         <Link className="btn" href="#team">
           Meet the team
         </Link>

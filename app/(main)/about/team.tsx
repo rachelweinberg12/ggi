@@ -1,6 +1,5 @@
-import { Col, Row } from "@/components/blocks";
+import { Col } from "@/components/blocks";
 import { ProfilePicture } from "@/components/profile-picture";
-import { SocialIcon } from "react-social-icons";
 
 const coreTeam = [
   {
