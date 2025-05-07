@@ -46,16 +46,33 @@ export function NavBar() {
             id="navbar"
           >
             <div className="nav-section-padding">
-              <Row className="h-16 justify-between items-center">
+              <Row className="h-18 justify-between items-center">
                 <Row className="flex shrink-0 items-center relative group">
                   <Logo
+                    iconStrokeClass={clsx(
+                      scrolled || open
+                        ? "stroke-black"
+                        : "stroke-white group-hover:stroke-black",
+                    )}
+                    iconFillClass={clsx(
+                      scrolled || open
+                        ? "fill-black"
+                        : "fill-white group-hover:fill-black",
+                    )}
+                    textClass={clsx(
+                      scrolled || open
+                        ? "text-black"
+                        : "text-white group-hover:text-black",
+                    )}
+                  />
+                  {/* <Logo
                     dark={scrolled || open}
                     className="transition-opacity group-hover:opacity-0"
                   />
                   <Logo
                     dark
                     className="absolute inset-0 transition-opacity opacity-0 group-hover:opacity-100"
-                  />
+                  /> */}
                 </Row>
                 <Row className="hidden sm:flex space-x-8 md:space-x-12 justify-end">
                   {pages.map((page) => (
