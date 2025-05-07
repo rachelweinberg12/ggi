@@ -10,8 +10,11 @@ export default function Home() {
   return (
     <main>
       <Hero />
+      <div id="writing" className="relative bottom-10" />
       <WritingSpotlight />
+      <div id="events" className="relative bottom-24" />
       <EventsSpotlight />
+      <div id="the-curve" className="relative bottom-10" />
       <TheCurveSpotlight />
       <BriefAbout />
     </main>

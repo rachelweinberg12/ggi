@@ -83,7 +83,6 @@ function PostPreview(props: { slug: string; vertical?: boolean }) {
         vertical ? "flex-col gap-y-1" : "gap-x-1 sm:gap-x-3",
       )}
       href={post.substackLink}
-      id="writing"
       target="_blank"
     >
       <div

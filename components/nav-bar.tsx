@@ -12,9 +12,9 @@ import { usePathname } from "next/navigation";
 import clsx from "clsx";
 
 const pages = [
-  { name: "Writing", href: "writing" },
-  { name: "Events", href: "events" },
-  { name: "About", href: "about" },
+  { name: "Writing", href: "/#writing" },
+  { name: "Events", href: "/#events" },
+  { name: "About", href: "/about" },
 ];
 
 export function NavBar() {

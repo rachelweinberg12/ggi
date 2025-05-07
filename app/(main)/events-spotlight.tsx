@@ -39,7 +39,7 @@ export function EventsSpotlight() {
   const numEvents = events.length;
   return (
     <div>
-      <Col className="nav-section-padding y-section-padding pt-0" id="events">
+      <Col className="nav-section-padding y-section-padding pt-0">
         <h2>Upcoming events</h2>
         {numEvents === 1 ? (
           <OneCardLayout event={events[0]} />
