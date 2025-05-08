@@ -54,7 +54,7 @@ function Hero() {
 function About() {
   return (
     <div className="section-padding theme-classic border-t border-black">
-      <div className="max-w-7xl mx-auto mb-8">
+      <div className="text-width-pos mb-8">
         <h2 className="mb-4">Our purpose</h2>
         <p className="mb-2">
           We aim to foster productive dialogue among a diverse set of experts
@@ -76,7 +76,7 @@ function About() {
           disagreements, and coordinate on strategy.
         </p>
       </div>
-      <div className="max-w-7xl mx-auto mb-8">
+      <div className="text-width-pos mb-8">
         <h2 className="mb-4">Who will be there</h2>
         <p className="mb-2">The Curve is invite-only.</p>
         <p className="mb-2">
@@ -95,7 +95,7 @@ function About() {
           academics, public intellectuals, and journalists.
         </p>
       </div>
-      <div className="max-w-7xl mx-auto">
+      <div className="text-width-pos">
         <h2 className="mb-4">The experience</h2>
         <p className="mb-2">
           We prioritize small group and one-on-one conversations, and design our

@@ -110,7 +110,7 @@ export function About2024() {
         </Row>
         <div className="y-section-padding">
           <h2 className="mb-8">What people said about it</h2>
-          <div className="grid grid-cols-1 gap-6 sm:gap-12 sm:grid-cols-2 md:grid-cols-3 mb-12">
+          <div className="grid grid-cols-1 gap-6 sm:gap-12 sm:grid-cols-2 md:grid-cols-3 mb-16 md:mb-24">
             {testimonials.map((testimonial) => (
               <Testimonial key={testimonial.name} {...testimonial} />
             ))}
