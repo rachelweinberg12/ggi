@@ -1,6 +1,6 @@
 import { Toggle } from "@/components/toggle";
 import TypeformPopupButton from "@/components/typeform-popup";
-
+import { TYPEFORM_IDS } from "@/utils/constants";
 export function FAQ() {
   return (
     <div className="section-padding theme-classic border-t border-black">
@@ -32,7 +32,7 @@ export function FAQ() {
             We plan to publish the application and an initial speaker list in
             June.{" "}
             <TypeformPopupButton
-              formId="CGFfW1bw"
+              formId={TYPEFORM_IDS.TC_NOTIF}
               buttonText="Sign up here"
               buttonClassName="inline text-link"
             />{" "}
@@ -56,7 +56,7 @@ export function FAQ() {
           <p className="mb-2">
             Fill out{" "}
             <TypeformPopupButton
-              formId="lqoOqKDB"
+              formId={TYPEFORM_IDS.TC_PPL_RECS}
               buttonText="this recommendation form"
               buttonClassName="inline text-link lg:text-base"
             />
@@ -80,7 +80,7 @@ export function FAQ() {
             <li>
               Point us towards great people through our{" "}
               <TypeformPopupButton
-                formId="lqoOqKDB"
+                formId={TYPEFORM_IDS.TC_PPL_RECS}
                 buttonText="recommendation form"
                 buttonClassName="inline text-link"
               />

@@ -2,7 +2,7 @@ import Image from "next/image";
 import { About2024 } from "./about-2024";
 import { FAQ } from "./faq";
 import TypeformPopupButton from "@/components/typeform-popup";
-
+import { TYPEFORM_IDS } from "@/utils/constants";
 export default function Home() {
   return (
     <main>
@@ -27,9 +27,9 @@ function Hero() {
             A conference where thinkers, builders, and leaders grapple with AI's
             biggest questions.
           </h2>
-          <div className="flex justify-center w-full sm:block">
+          <div className="flex justify-center absolute bottom-0 left-0 w-full sm:block">
             <TypeformPopupButton
-              formId="CGFfW1bw"
+              formId={TYPEFORM_IDS.TC_NOTIF}
               buttonText="Get notified when applications open"
               buttonClassName="border border-white bg-white text-orange rounded px-6 py-2 hover:bg-orange hover:text-white"
               withArrow
@@ -46,6 +46,15 @@ function Hero() {
             priority
           />
         </div>
+        {/* <div className="flex sm:hidden absolute bottom-12 left-0">
+          <Image
+            className="object-contain text-white"
+            src="/NarrowCurve.svg"
+            alt="Curve"
+            width={2000}
+            height={100}
+          />
+        </div> */}
       </div>
     </div>
   );

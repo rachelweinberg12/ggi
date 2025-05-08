@@ -6,6 +6,7 @@ import { formatDate } from "@/utils/formatting";
 import { Col, Row } from "@/components/blocks";
 import clsx from "clsx";
 import { LinkButton } from "@/components/link-button";
+import { SUBSTACK_URL } from "@/utils/constants";
 
 const primaryPostSlug = "founding-essay";
 const secondaryPostSlugs = [
@@ -47,10 +48,7 @@ export function WritingSpotlight() {
         ))}
       </div>
       <Row className="justify-end xs:hidden">
-        <LinkButton
-          href="https://amistrongeryet.substack.com/"
-          title="See all writing"
-        />
+        <LinkButton href={SUBSTACK_URL} title="See all writing" />
       </Row>
     </Col>
   );
@@ -68,7 +66,7 @@ function PostPreview(props: { slug: string; vertical?: boolean }) {
       title: frontmatter.title,
       subtitle: frontmatter.subtitle,
       date: frontmatter.date,
-      substackLink: frontmatter["substack-link"],
+      substackSlug: frontmatter["substack-slug"],
       authors: frontmatter.authors,
     };
   } catch (error) {
@@ -82,7 +80,7 @@ function PostPreview(props: { slug: string; vertical?: boolean }) {
         "flex overflow-hidden p-1 rounded border border-black h-full hover:bg-sand",
         vertical ? "flex-col gap-y-1" : "gap-x-1 sm:gap-x-3",
       )}
-      href={post.substackLink}
+      href={`${SUBSTACK_URL}${post.substackSlug}`}
       target="_blank"
     >
       <div

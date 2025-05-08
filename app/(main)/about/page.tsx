@@ -5,6 +5,7 @@ import path from "path";
 import matter from "gray-matter";
 import { Team } from "./team";
 import { OurWork } from "./our-work";
+import { SUBSTACK_URL } from "@/utils/constants";
 export default function About() {
   return (
     <div>
@@ -15,20 +16,7 @@ export default function About() {
   );
 }
 
-function getSubstackLink(slug: string) {
-  const filePath = path.join(process.cwd(), "posts/", slug + ".mdx");
-  try {
-    const fileContent = fs.readFileSync(filePath, "utf-8");
-    const { data: frontmatter } = matter(fileContent);
-    return frontmatter["substack-link"];
-  } catch (error) {
-    console.error(error);
-    return null; // file not found
-  }
-}
-
 function AboutHero() {
-  const foundingEssayUrl = getSubstackLink("founding-essay");
   return (
     <div className="top-section-padding pt-36 pb-24 theme-sand">
       <h1 className="text-center mb-16 max-w-3xl mx-auto">
@@ -41,7 +29,11 @@ function AboutHero() {
         <Link className="btn" href="#our-work">
           Learn about our work
         </Link>
-        <Link className="btn" href={foundingEssayUrl}>
+        <Link
+          className="btn"
+          href={`${SUBSTACK_URL}/p/founding-essay`}
+          target="_blank"
+        >
           Read our founding essay
         </Link>
       </Row>
