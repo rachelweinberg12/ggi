@@ -32,8 +32,8 @@ export function FAQ() {
             We plan to publish the application and an initial speaker list in
             June.{" "}
             <TypeformPopupButton
-              formId={TYPEFORM_IDS.TC_NOTIF}
-              buttonText="Sign up here"
+              formId={TYPEFORM_IDS.ANNOUNCEMENTS}
+              buttonText="Sign up to our announcements listhere"
               buttonClassName="inline text-link"
             />{" "}
             to be notified when that happens!

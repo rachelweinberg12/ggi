@@ -29,7 +29,7 @@ function Hero() {
           </h2>
           <div className="flex justify-center bottom-0 left-0 w-full sm:block">
             <TypeformPopupButton
-              formId={TYPEFORM_IDS.TC_NOTIF}
+              formId={TYPEFORM_IDS.ANNOUNCEMENTS}
               buttonText="Get notified when applications open"
               buttonClassName="border border-white bg-white text-orange rounded px-6 py-2 hover:bg-orange hover:text-white"
               withArrow

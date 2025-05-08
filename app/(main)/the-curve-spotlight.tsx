@@ -40,7 +40,7 @@ export function TheCurveSpotlight() {
               className="px-6 py-2 bg-white text-teal hover:bg-teal hover:text-white rounded border"
             />
             <TypeformPopupButton
-              formId={TYPEFORM_IDS.TC_NOTIF}
+              formId={TYPEFORM_IDS.ANNOUNCEMENTS}
               buttonText="Hear when applications open"
               withArrow
             />
