@@ -1,8 +1,5 @@
 import { Row } from "@/components/blocks";
 import Link from "next/link";
-import fs from "fs";
-import path from "path";
-import matter from "gray-matter";
 import { Team } from "./team";
 import { OurWork } from "./our-work";
 import { SUBSTACK_URL } from "@/utils/constants";
