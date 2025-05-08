@@ -15,9 +15,9 @@ export default function About() {
 
 function AboutHero() {
   return (
-    <div className="top-section-padding pt-36 pb-24 theme-sand">
+    <div className="top-section-padding pt-48 pb-36 theme-sand">
       <h1 className="text-center mb-16 max-w-3xl mx-auto">
-        This is a thirteen-word quirky tagline that sort of explains our deal.
+        Helping you make sense of conflicting stories about AI
       </h1>
       <Row className="flex-col sm:flex-row items-center justify-center gap-4">
         <Link className="btn" href="#team">
