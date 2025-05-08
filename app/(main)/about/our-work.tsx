@@ -7,13 +7,13 @@ export function OurWork() {
       <div className="text-width-pos">
         <h2 className="mb-4">Our mission</h2>
         <p className="mb-2">
-          AI will transform the world at an unprecedented pace. Developments are
-          happening so fast that it's hard to keep up: there's a constant
-          cascade of contradictory predictions and competing policy proposals.
-          Meanwhile, the communities shaping AI's future — industry leaders,
-          safety researchers, security experts, civil society groups,
-          policymakers, and academics — work in parallel, with too few avenues
-          for candid discussion and collaboration.
+          AI will transform the world at an unprecedented pace. Already
+          developments are happening so fast that it's impossible to keep up:
+          there's a constant stream of contradictory predictions and competing
+          policy proposals. Meanwhile, the communities shaping AI's future —
+          industry leaders, safety researchers, security experts, civil society
+          groups, policymakers, and academics — work in parallel, with too few
+          avenues for candid discussion and collaboration.
         </p>
         <p className="mb-2">
           The Golden Gate Institute for AI is a think tank dedicated to
