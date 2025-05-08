@@ -52,9 +52,9 @@ const testimonials = [
     quote: "It felt like an event where history was happening.",
   },
   {
-    name: "Dave Kasten",
+    name: "Nathan Labenz",
     quote:
-      "The Curve led to some of the best conversations on AI policy I've ever had. Just overall one heck of a useful and fun conference.",
+      "Super high quality attendees. It did not feel like an awkward Thanksgiving, but a good faith meeting of the minds.",
   },
   {
     name: "Misha Glouberman",
@@ -62,14 +62,19 @@ const testimonials = [
       "So many conferences are thoughtlessly run or designed. This was such a remarkable exception.",
   },
   {
+    name: "Sam Hammond",
+    quote:
+      "A great conference. I finally have some feel for what makes Berkeley special. It's through the looking glass. Subcultures within subcultures. The internet concretized.",
+  },
+  {
     name: "Ivan Bercovich",
     quote:
       "I got to engage with extraordinary people who had interesting ideas across a variety of topics and a common interest in AI. Lovely.",
   },
   {
-    name: "Nathan Labenz",
+    name: "Dave Kasten",
     quote:
-      "Super high quality attendees. It did not feel like an awkward Thanksgiving, but a good faith meeting of the minds.",
+      "The Curve led to some of the best conversations on AI policy I've ever had. Just overall one heck of a useful and fun conference.",
   },
 ];
 
