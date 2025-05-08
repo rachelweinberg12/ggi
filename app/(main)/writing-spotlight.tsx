@@ -20,7 +20,7 @@ export function WritingSpotlight() {
       <Row className="justify-between items-end flex-row">
         <h2>Recent writing</h2>
         <LinkButton
-          href="https://amistrongeryet.substack.com/"
+          href={SUBSTACK_URL}
           title="See all writing"
           className="hidden xs:flex"
         />

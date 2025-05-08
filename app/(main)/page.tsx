@@ -5,6 +5,7 @@ import { EventsSpotlight } from "./events-spotlight";
 import { TheCurveSpotlight } from "./the-curve-spotlight";
 import { BriefAbout } from "./brief-about";
 import { LinkButton } from "@/components/link-button";
+import { SUBSTACK_URL } from "@/utils/constants";
 
 export default function Home() {
   return (
@@ -40,7 +41,7 @@ function Hero() {
             </h1>
             <Col className="mt-3 sm:flex-row items-end gap-y-1 gap-x-6">
               <LinkButton
-                href="https://amistrongeryet.substack.com/"
+                href={SUBSTACK_URL}
                 title="Subscribe to our Substack"
                 newTab
               />

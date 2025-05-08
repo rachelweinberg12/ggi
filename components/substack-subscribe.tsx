@@ -1,9 +1,5 @@
+import { SUBSTACK_URL } from "@/utils/constants";
+
 export function SubstackSubscribe() {
-  return (
-    <iframe
-      src="https://amistrongeryet.substack.com/embed"
-      width="350"
-      height="150"
-    />
-  );
+  return <iframe src={`${SUBSTACK_URL}/embed`} width="350" height="150" />;
 }
