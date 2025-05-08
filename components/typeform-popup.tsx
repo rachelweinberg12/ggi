@@ -12,15 +12,23 @@ export default function TypeformPopupButton(props: {
   buttonText: string;
   buttonClassName?: string;
   withArrow?: boolean;
+  overrideClass?: boolean;
 }) {
-  const { formId, buttonText, buttonClassName, withArrow = false } = props;
+  const {
+    formId,
+    buttonText,
+    buttonClassName,
+    withArrow = false,
+    overrideClass = false,
+  } = props;
 
   return (
     <PopupButton
       id={formId}
       size={66}
       className={clsx(
-        "hover:cursor-pointer hover:underline flex items-center gap-x-1 text-nowrap md:text-lg",
+        !overrideClass &&
+          "hover:cursor-pointer hover:underline flex items-center gap-x-1 text-nowrap md:text-lg",
         buttonClassName,
       )}
     >

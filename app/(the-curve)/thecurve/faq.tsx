@@ -33,8 +33,9 @@ export function FAQ() {
             June.{" "}
             <TypeformPopupButton
               formId={TYPEFORM_IDS.ANNOUNCEMENTS}
-              buttonText="Sign up to our announcements listhere"
+              buttonText="Sign up to our announcements list here"
               buttonClassName="inline text-link"
+              overrideClass
             />{" "}
             to be notified when that happens!
           </p>
@@ -58,7 +59,8 @@ export function FAQ() {
             <TypeformPopupButton
               formId={TYPEFORM_IDS.TC_PPL_RECS}
               buttonText="this recommendation form"
-              buttonClassName="inline text-link lg:text-base"
+              buttonClassName="inline text-link"
+              overrideClass
             />
             ! You can also nudge them to apply themselves.
           </p>
@@ -83,6 +85,7 @@ export function FAQ() {
                 formId={TYPEFORM_IDS.TC_PPL_RECS}
                 buttonText="recommendation form"
                 buttonClassName="inline text-link"
+                overrideClass
               />
               . Events are nothing without their people, as they say, so any
               help bringing in fantastic attendees is extremely appreciated.
