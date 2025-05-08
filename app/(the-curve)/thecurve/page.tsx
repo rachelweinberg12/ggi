@@ -27,7 +27,7 @@ function Hero() {
             A conference where thinkers, builders, and leaders grapple with AI's
             biggest questions.
           </h2>
-          <div className="flex justify-center absolute bottom-0 left-0 w-full sm:block">
+          <div className="flex justify-center bottom-0 left-0 w-full sm:block">
             <TypeformPopupButton
               formId={TYPEFORM_IDS.TC_NOTIF}
               buttonText="Get notified when applications open"
@@ -46,15 +46,6 @@ function Hero() {
             priority
           />
         </div>
-        {/* <div className="flex sm:hidden absolute bottom-12 left-0">
-          <Image
-            className="object-contain text-white"
-            src="/NarrowCurve.svg"
-            alt="Curve"
-            width={2000}
-            height={100}
-          />
-        </div> */}
       </div>
     </div>
   );
