@@ -11,20 +11,17 @@ export function BriefAbout() {
         <h1>About us</h1>
         <Col className="mt-3 gap-2">
           <p>
-            We believe that AI will be a transformative technology, with the
-            potential for enormous upside and downside.
+            We expect AI to be transformative, with the potential for enormous
+            upside and downside, but don't think society is on track to make the
+            most of it.
           </p>
           <p>
-            Developments in AI have been moving so quickly that expert consensus
-            has not had time to emerge. When the experts are talking past one
-            another, decision-makers can’t make sense of what’s going on.
-            Without understanding, they’ll miss opportunities and stumble into
-            disasters.
-          </p>
-          <p>
-            We aim to support leaders to meet the challenges of the AI
-            transition by bridging disciplines, convening experts, and
-            publishing accessible analysis of AI’s toughest questions.
+            Our mission is to support leaders as they navigate this high-stakes
+            period of rapid AI advancement by bridging disciplines, convening
+            experts, and publishing accessible analysis of AI’s toughest
+            questions. When conflicting perspectives emerge on crucial
+            questions, we serve as the organization you can turn to for clarity
+            and insight.
           </p>
           <p>We focus on four broad topics:</p>
           <ul>
@@ -48,8 +45,31 @@ export function BriefAbout() {
             </li>
           </ul>
           <p>
-            Our founding team consists of Taren Stinebrickner-Kauffman, Steve
-            Newman, and Rachel Weinberg.
+            Our founding team consists of{" "}
+            <a
+              className="text-link"
+              href="https://www.linkedin.com/in/taren-stinebrickner-kauffman-953b9831/"
+              target="_blank"
+            >
+              Taren Stinebrickner-Kauffman
+            </a>
+            ,{" "}
+            <a
+              className="text-link"
+              href="https://www.linkedin.com/in/stevescalyr/"
+              target="_blank"
+            >
+              Steve Newman
+            </a>
+            , and{" "}
+            <a
+              className="text-link"
+              href="https://www.linkedin.com/in/rachel-weinberg-789b23228/"
+              target="_blank"
+            >
+              Rachel Weinberg
+            </a>
+            .
           </p>
           <Row className="justify-center mt-5">
             <LinkButton
