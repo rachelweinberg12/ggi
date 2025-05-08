@@ -49,11 +49,6 @@ export function NavBar() {
               <Row className="h-18 justify-between items-center">
                 <Row className="flex shrink-0 items-center relative group">
                   <Logo
-                    iconStrokeClass={clsx(
-                      scrolled || open
-                        ? "stroke-black"
-                        : "stroke-white group-hover:stroke-black",
-                    )}
                     iconFillClass={clsx(
                       scrolled || open
                         ? "fill-black"
