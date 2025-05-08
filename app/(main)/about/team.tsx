@@ -4,17 +4,17 @@ import { ProfilePicture } from "@/components/profile-picture";
 const coreTeam = [
   {
     name: "Taren Stinebrickner-Kauffman",
-    title: "CEO & Co-Founder",
+    title: "Co-Founder & CEO",
     imageUrl: "/team/Taren.jpg",
   },
   {
     name: "Steve Newman",
-    title: "President & Co-Founder",
+    title: "Co-Founder & President",
     imageUrl: "/team/Steve.jpg",
   },
   {
     name: "Rachel Weinberg",
-    title: "Director of Events & Co-Founder",
+    title: "Co-Founder & Director of Events",
     imageUrl: "/team/Rachel.jpg",
   },
 ];
