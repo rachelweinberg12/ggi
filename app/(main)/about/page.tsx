@@ -20,14 +20,14 @@ function AboutHero() {
         Helping you make sense of conflicting stories about AI
       </h1>
       <Row className="flex-col sm:flex-row items-center justify-center gap-4">
-        <Link className="btn" href="#team">
+        <Link className="btn hover:underline" href="#team">
           Meet the team
         </Link>
-        <Link className="btn" href="#our-work">
+        <Link className="btn hover:underline" href="#our-work">
           Learn about our work
         </Link>
         <Link
-          className="btn"
+          className="btn hover:underline"
           href={`${SUBSTACK_URL}/p/founding-essay`}
           target="_blank"
         >

@@ -16,7 +16,7 @@ const secondaryPostSlugs = [
 
 export function WritingSpotlight() {
   return (
-    <Col className="nav-section-padding y-section-padding">
+    <Col className="nav-section-padding y-section-padding border-t border-black">
       <Row className="justify-between items-end flex-row">
         <h2>Recent writing</h2>
         <LinkButton
