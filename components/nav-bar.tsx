@@ -12,9 +12,9 @@ import { usePathname } from "next/navigation";
 import clsx from "clsx";
 
 const pages = [
-  { name: "Writing", href: "writing" },
-  { name: "Events", href: "events" },
-  { name: "About", href: "about" },
+  { name: "Writing", href: "/#writing" },
+  { name: "Events", href: "/#events" },
+  { name: "About", href: "/about" },
 ];
 
 export function NavBar() {
@@ -35,7 +35,7 @@ export function NavBar() {
         <>
           <div
             className={clsx(
-              "border-b z-10",
+              "border-b z-10 group",
               scrolled || open
                 ? "border-black theme-classic"
                 : clsx(
@@ -45,12 +45,23 @@ export function NavBar() {
             )}
             id="navbar"
           >
-            <div className="wide-section-padding">
-              <Row className="h-16 justify-between items-center">
-                <Row className="flex shrink-0 items-center">
-                  <Logo />
+            <div className="nav-section-padding">
+              <Row className="h-18 justify-between items-center">
+                <Row className="flex shrink-0 items-center relative group">
+                  <Logo
+                    iconFillClass={clsx(
+                      scrolled || open
+                        ? "fill-black"
+                        : "fill-white group-hover:fill-black",
+                    )}
+                    textClass={clsx(
+                      scrolled || open
+                        ? "text-black"
+                        : "text-white group-hover:text-black",
+                    )}
+                  />
                 </Row>
-                <Row className="hidden sm:flex space-x-12 justify-end">
+                <Row className="hidden sm:flex space-x-8 md:space-x-12 justify-end">
                   {pages.map((page) => (
                     <a
                       className="text-base font-medium hover:underline"
