@@ -52,6 +52,24 @@ export const metadata: Metadata = {
   title: "Golden Gate Institute for AI",
   description:
     "A non-profit that supports leaders to meet the challenges of the AI transition by bridging disciplines, convening experts, and publishing accessible analysis of AI’s toughest questions.",
+  openGraph: {
+    title: "Golden Gate Institute for AI",
+    description:
+      "A non-profit that supports leaders to meet the challenges of the AI transition by bridging disciplines, convening experts, and publishing accessible analysis of AI’s toughest questions.",
+
+    url: "https://goldengateinstitute.org",
+    siteName: "Golden Gate Institute for AI",
+    images: [
+      {
+        url: "/GGB.png",
+        width: 960,
+        height: 540,
+        alt: "Preview Image",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
 };
 
 export default function RootLayout({
