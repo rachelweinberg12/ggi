@@ -1,4 +1,4 @@
-export const SUBSTACK_URL = "https://amistrongeryet.substack.com";
+export const SUBSTACK_URL = "https://secondthoughts.ai";
 export const LINKEDIN_URL =
   "https://www.linkedin.com/company/golden-gate-institute-for-ai";
 export const X_URL = "https://x.com/GoldenGateInst";
