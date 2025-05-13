@@ -13,16 +13,16 @@ type Event = {
 };
 
 const events: Event[] = [
-  {
-    title: "AI & Democracy Coworking Day",
-    subtitle:
-      "Come cowork and meet other people who think about how AI can bolster democracy and how to democratically govern AI.",
-    url: "https://lu.ma/rm2nli40",
-    date: "All day, May 12, 2025",
-    location: "San Francisco",
-    imageUrl: "/event-images/AIDemocracyCoworking.png",
-    openness: "Open invite",
-  },
+  // {
+  //   title: "AI & Democracy Coworking Day",
+  //   subtitle:
+  //     "Come cowork and meet other people who think about how AI can bolster democracy and how to democratically govern AI.",
+  //   url: "https://lu.ma/rm2nli40",
+  //   date: "All day, May 12, 2025",
+  //   location: "San Francisco",
+  //   imageUrl: "/event-images/AIDemocracyCoworking.png",
+  //   openness: "Open invite",
+  // },
   {
     title: "Reimagining the Economy in the Age of AI (with Natalie Foster)",
     subtitle:
