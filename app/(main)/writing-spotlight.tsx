@@ -69,7 +69,6 @@ function PostPreview(props: { slug: string; vertical?: boolean }) {
       title: frontmatter.title,
       subtitle: frontmatter.subtitle,
       date: frontmatter.date,
-      substackSlug: frontmatter["substack-slug"],
       authors: frontmatter.authors,
     };
   } catch (error) {
@@ -83,7 +82,7 @@ function PostPreview(props: { slug: string; vertical?: boolean }) {
         "flex overflow-hidden p-1 rounded border border-black h-full hover:bg-sand",
         vertical ? "flex-col gap-y-1" : "gap-x-1 sm:gap-x-3",
       )}
-      href={`${SUBSTACK_URL}${post.substackSlug}`}
+      href={`${SUBSTACK_URL}/p/${slug}`}
       target="_blank"
     >
       <div
