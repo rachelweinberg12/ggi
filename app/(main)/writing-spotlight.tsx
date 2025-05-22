@@ -10,7 +10,7 @@ import { SUBSTACK_URL } from "@/utils/constants";
 
 const postSlugs = [
   "founding-essay",
-  "measuring-ai-progress",
+  "ai-2027",
   "first-they-came-for-the-software",
 ];
 
