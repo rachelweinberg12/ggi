@@ -8,10 +8,10 @@ import clsx from "clsx";
 import { LinkButton } from "@/components/link-button";
 import { SUBSTACK_URL } from "@/utils/constants";
 
-const primaryPostSlug = "founding-essay";
-const secondaryPostSlugs = [
-  "finally-a-way-to-measure-ai-progress",
-  "first-they-came-for-the-software-engineers",
+const postSlugs = [
+  "founding-essay",
+  "measuring-ai-progress",
+  "first-they-came-for-the-software",
 ];
 
 export function WritingSpotlight() {
@@ -27,25 +27,28 @@ export function WritingSpotlight() {
       </Row>
       <div className="xl:grid grid-cols-12 x-gap hidden">
         <div className="col-span-5">
-          <PostPreview slug={primaryPostSlug} vertical />
+          <PostPreview slug={postSlugs[0]} vertical />
         </div>
         <Col className="h-full justify-between col-span-7">
-          {secondaryPostSlugs.map((slug, i) => (
-            <PostPreview slug={slug} key={i} />
-          ))}
+          {postSlugs.map((slug, i) => {
+            if (i === 0) return null;
+            return <PostPreview slug={slug} key={i} />;
+          })}
         </Col>
       </div>
       <div className="hidden xs:grid grid-rows-3 y-gap xl:hidden">
-        <PostPreview slug={primaryPostSlug} />
-        {secondaryPostSlugs.map((slug, i) => (
-          <PostPreview slug={slug} key={i} />
-        ))}
+        <PostPreview slug={postSlugs[0]} />
+        {postSlugs.map((slug, i) => {
+          if (i === 0) return null;
+          return <PostPreview slug={slug} key={i} />;
+        })}
       </div>
       <div className="grid grid-rows-3 y-gap xs:hidden">
-        <PostPreview slug={primaryPostSlug} vertical />
-        {secondaryPostSlugs.map((slug, i) => (
-          <PostPreview slug={slug} key={i} vertical />
-        ))}
+        <PostPreview slug={postSlugs[0]} vertical />
+        {postSlugs.map((slug, i) => {
+          if (i === 0) return null;
+          return <PostPreview slug={slug} key={i} vertical />;
+        })}
       </div>
       <Row className="justify-end xs:hidden">
         <LinkButton href={SUBSTACK_URL} title="See all writing" />
