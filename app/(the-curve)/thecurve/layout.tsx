@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import { Source_Serif_4 } from "next/font/google";
 import "../../../globals.css";
+import { NavBar } from "./nav-bar";
 
 const satoshi = localFont({
   src: [
@@ -64,6 +65,7 @@ export default function RootLayout({
       <body
         className={`${satoshi.variable} ${theSeasons.variable} ${sourceSerif.variable} font-sans antialiased theme-classic min-h-screen overscroll-none`}
       >
+        <NavBar />
         <div>{children}</div>
       </body>
     </html>

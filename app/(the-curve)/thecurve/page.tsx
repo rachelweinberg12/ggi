@@ -7,8 +7,11 @@ export default function Home() {
   return (
     <main>
       <Hero />
+      <div id="about" className="relative bottom-10" />
       <About />
+      <div id="2024" className="relative bottom-10" />
       <About2024 />
+      <div id="faq" className="relative bottom-10" />
       <FAQ />
     </main>
   );
@@ -16,7 +19,7 @@ export default function Home() {
 
 function Hero() {
   return (
-    <div className="w-full theme-orange section-padding">
+    <div className="w-full theme-orange top-section-padding">
       <div className="relative sm:h-[50dvw] sm:max-h-[400px] mx-auto max-w-7xl">
         <div className="relative h-full z-10">
           <h1 className="mt-5 text-5xl text-center sm:text-left">The Curve</h1>
