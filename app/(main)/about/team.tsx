@@ -1,24 +1,6 @@
 import { Col } from "@/components/blocks";
 import { ProfilePicture } from "@/components/profile-picture";
-
-const coreTeam = [
-  {
-    name: "Taren Stinebrickner-Kauffman",
-    title: "Co-Founder & CEO",
-    imageUrl: "/team/Taren.jpg",
-  },
-  {
-    name: "Steve Newman",
-    title: "Co-Founder & President",
-    imageUrl: "/team/Steve.jpg",
-  },
-  {
-    name: "Rachel Weinberg",
-    title: "Co-Founder & Director of Events",
-    imageUrl: "/team/Rachel.jpg",
-  },
-];
-
+import { TEAM_MEMBERS } from "@/utils/constants";
 const advisors = [
   {
     name: "Roy Bahat",
@@ -59,7 +41,7 @@ export function Team() {
         {" "}
         <h2 className="mb-8">Our team</h2>
         <div className="grid grid-cols-2 sm:grid-cols-3 sm:gap-8 gap-4">
-          {coreTeam.map((member) => (
+          {TEAM_MEMBERS.map((member) => (
             <TeamMember key={member.name} {...member} />
           ))}
         </div>
@@ -74,7 +56,13 @@ export function Team() {
   );
 }
 
-function TeamMember(props: { name: string; title?: string; imageUrl: string }) {
+function TeamMember(props: {
+  name: string;
+  title?: string;
+  email?: string;
+  socials?: { network: string; url: string }[];
+  imageUrl: string;
+}) {
   const { name, title, imageUrl } = props;
   return (
     <div className="flex flex-col gap-2 items-center xl:flex-row lg:gap-4 w-full">
