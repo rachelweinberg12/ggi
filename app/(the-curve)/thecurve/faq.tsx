@@ -1,6 +1,7 @@
 import { Toggle } from "@/components/toggle";
 import TypeformPopupButton from "@/components/typeform-popup";
 import { TYPEFORM_IDS } from "@/utils/constants";
+import Link from "next/link";
 export function FAQ() {
   return (
     <div className="section-padding theme-classic border-t border-black">
@@ -92,7 +93,11 @@ export function FAQ() {
             </li>
             <li>
               You can sponsor or donate to the event, as an individual or as an
-              organization. If you're interested, reach out to Rachel at{" "}
+              organization. Check out our{" "}
+              <Link href="/sponsorship" className="text-link">
+                sponsorship page
+              </Link>{" "}
+              to learn more, and reach out to Rachel at{" "}
               <a
                 href="mailto:rachel@goldengateinstitute.org"
                 className="text-link"
@@ -105,7 +110,8 @@ export function FAQ() {
                 href="https://calendly.com/rachel-weinberg/30min"
               >
                 here
-              </a>
+              </a>{" "}
+              if you'd like to pursue sponsorship or donate.
             </li>
           </ul>
         </Toggle>
