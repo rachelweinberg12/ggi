@@ -1,6 +1,5 @@
-import { Col, Row } from "@/components/blocks";
+import { Col } from "@/components/blocks";
 import { CrmSubscribe } from "@/components/crm-subscribe";
-import { Logo } from "@/components/logo";
 import Image from "next/image";
 export function Footer() {
   return (
