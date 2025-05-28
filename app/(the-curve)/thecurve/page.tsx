@@ -19,8 +19,8 @@ export default function Home() {
 
 function Hero() {
   return (
-    <div className="w-full theme-orange top-section-padding">
-      <div className="relative sm:h-[50dvw] sm:max-h-[400px] mx-auto max-w-7xl">
+    <div className="w-full theme-orange y-section-padding pt-24 md:pt-28">
+      <div className="relative sm:h-[50dvw] sm:max-h-[400px] nav-section-padding">
         <div className="relative h-full z-10">
           <h1 className="mt-5 text-5xl text-center sm:text-left">The Curve</h1>
           <h5 className="mt-1 text-center sm:text-left">
@@ -39,7 +39,7 @@ function Hero() {
             />
           </div>
         </div>
-        <div className="hidden sm:flex absolute bottom-0 left-0 w-full  justify-center items-center">
+        <div className="hidden sm:flex absolute bottom-0 left-0 w-full  justify-center items-center nav-section-padding">
           <Image
             className="object-contain text-white max-w-7xl w-full"
             src="/WideCurve.svg"
