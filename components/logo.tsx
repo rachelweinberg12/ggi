@@ -5,16 +5,18 @@ export function Logo(props: {
   textClass?: string;
   iconSizeClass?: string;
   iconFillClass?: string;
+  url?: string;
 }) {
   const {
     textClass = "text-black",
     iconSizeClass = "sm:h-5 sm:w-5 h-6 w-6",
     iconFillClass = "fill-black",
+    url = "/",
   } = props;
 
   return (
     <Link
-      href="/"
+      href={url}
       className={clsx(
         "hover:cursor-pointer flex items-center gap-3",
         textClass,

@@ -1,0 +1,105 @@
+"use client";
+import {
+  Disclosure,
+  DisclosureButton,
+  DisclosurePanel,
+} from "@headlessui/react";
+import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
+import { Col, Row } from "@/components/blocks";
+import { useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
+import { Logo } from "./logo";
+import clsx from "clsx";
+
+const pages = [
+  { name: "About", href: "/#about" },
+  { name: "FAQ", href: "/#faq" },
+  { name: "Sponsorship", href: "/sponsorship" },
+];
+
+export function NavBar() {
+  const pathname = usePathname();
+  const isHome = pathname == "/";
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 10);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+  return (
+    <Disclosure as="nav" className="fixed w-full z-100">
+      {({ open }) => (
+        <>
+          <div
+            className={clsx(
+              "border-b z-10 group",
+              scrolled || open
+                ? "border-black theme-classic"
+                : clsx(
+                    "border-white text-white hover:border-black hover:bg-white hover:text-black",
+                    isHome ? "bg-transparent backdrop-blur-sm" : "theme-orange",
+                  ),
+            )}
+            id="navbar"
+          >
+            <div className="nav-section-padding">
+              <Row className="h-18 justify-between items-center">
+                <Row className="flex shrink-0 items-center relative group">
+                  <Logo
+                    iconFillClass={clsx(
+                      scrolled || open
+                        ? "fill-black"
+                        : "fill-white group-hover:fill-black",
+                    )}
+                    textClass={clsx(
+                      scrolled || open
+                        ? "text-black"
+                        : "text-white group-hover:text-black",
+                    )}
+                  />
+                </Row>
+                <Row className="hidden sm:flex space-x-8 md:space-x-12 justify-end">
+                  {pages.map((page) => (
+                    <a
+                      className="text-base font-medium hover:underline"
+                      key={page.name}
+                      href={page.href}
+                    >
+                      {page.name}
+                    </a>
+                  ))}
+                </Row>
+                <Row className="-mr-2 flex items-center sm:hidden">
+                  {/* Mobile menu button */}
+                  <DisclosureButton className="group relative inline-flex items-center justify-center hover:cursor-pointer">
+                    <span className="absolute -inset-0.5" />
+                    <Bars3Icon className="block size-6 group-data-[open]:hidden stroke-[1px]" />
+                    <XMarkIcon className="size-6 hidden group-data-[open]:block stroke-[1px]" />
+                  </DisclosureButton>
+                </Row>
+              </Row>
+            </div>
+          </div>
+
+          <DisclosurePanel
+            transition
+            className="origin-left transition duration-500 ease-out data-closed:translate-x-full -z-10 theme-sand outline outline-black"
+          >
+            <Col className="items-center justify-center space-y-12 h-dvh overflow-hidden">
+              {pages.map((page) => (
+                <DisclosureButton as="a" href={page.href} key={page.name}>
+                  <p className="text-2xl hover:underline relative bottom-20">
+                    {page.name}
+                  </p>
+                </DisclosureButton>
+              ))}
+            </Col>
+          </DisclosurePanel>
+        </>
+      )}
+    </Disclosure>
+  );
+}
