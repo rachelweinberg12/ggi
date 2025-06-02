@@ -24,9 +24,9 @@ const events: Event[] = [
   //   openness: "Open invite",
   // },
   {
-    title: "Reimagining the Economy in the Age of AI (with Natalie Foster)",
+    title: "Reimagining the Economy in the Age of AI",
     subtitle:
-      "Join us for snacks, drinks, and a fireside chat with Natalie Foster about building a resilient and inclusive economy in the age of AI.",
+      "Join us for snacks, drinks, and a fireside chat about building a resilient and inclusive economy in the age of AI — with Natalie Foster, Anna Makanju, and Geoff Ralston.",
     url: "https://lu.ma/q4fxo69f",
     date: "6-8pm, June 18, 2025",
     location: "San Francisco",
