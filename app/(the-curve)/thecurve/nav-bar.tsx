@@ -14,7 +14,7 @@ import clsx from "clsx";
 const pages = [
   { name: "About", href: "/#about" },
   { name: "FAQ", href: "/#faq" },
-  //   { name: "Sponsorship", href: "/sponsorship" },
+  { name: "Sponsorship", href: "/sponsorship" },
 ];
 
 export function NavBar() {
