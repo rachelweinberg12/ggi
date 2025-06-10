@@ -72,7 +72,7 @@ const SPONSORSHIP_TIERS: SponsorshipTier[] = [
 export default function SponsorshipPage() {
   return (
     <main>
-      <div className="top-section-padding">
+      <div className="section-padding">
         <div className="text-width-pos">
           <h1>About sponsorship</h1>
           <p className="mt-6">
