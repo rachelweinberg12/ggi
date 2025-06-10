@@ -3,11 +3,9 @@ import path from "path";
 import matter from "gray-matter";
 import { PostContent } from "@/components/post-content";
 import { notFound } from "next/navigation";
-import { use } from "react";
 
-// 1. Helper to load a single post
 async function getPost(slug: string) {
-  const filePath = path.join(process.cwd(), "posts/", slug + ".mdx");
+  const filePath = path.join(process.cwd(), "posts", slug + ".mdx");
   try {
     const fileContent = fs.readFileSync(filePath, "utf-8");
     const { data: frontmatter, content } = matter(fileContent);
@@ -22,12 +20,12 @@ async function getPost(slug: string) {
   }
 }
 
-// 3. Page component
-export default async function PostPage(props: {
-  params: Promise<{ slug: string }>;
+export default async function PostPage({
+  params,
+}: {
+  params: { slug: string };
 }) {
-  const { slug } = use(props.params);
-  const post = await getPost(slug);
+  const post = await getPost(params.slug);
 
   if (!post) {
     notFound();
