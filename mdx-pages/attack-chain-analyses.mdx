@@ -1,0 +1,237 @@
+---
+title: "Attack Chain Analyses"
+---
+
+# Executive Summary
+
+This is an analysis of how current and future AIs will impact the volume of cybersecurity attacks.
+
+There are many different sorts of cyberattacks, involving different goals and techniques. To analyze the impact of AI, we must consider each attack scenario in turn.
+
+An attack scenario can be thought of as comprising a series of steps. For instance, a “spear phishing” attack aimed at stealing money from a company might involve:
+
+1. Identifying a list of target individuals at that company.
+2. Researching each individual and crafting targeted emails.
+3. Stealing passwords from one or more individuals.
+4. Using those passwords to gain initial access to some internal system.
+5. Additional steps, such as accessing a bank account, or inserting forged routing instructions into a legitimate payment request.
+6. Money laundering of the proceeds.
+
+In this section of our report, we consider some important attack scenarios, and list the steps in each scenario. We then use the methodology described in [The Cybersecurity Equilibrium](https://www.notion.so/The-Cybersecurity-Equilibrium-1274c916374a80e0a1cbee90308d4cd1?pvs=21) to forecast how AI is likely to impact that form of attack.
+
+# Methodology
+
+For this analysis, we selected a set of relevant major attack categories (e.g., DDoS, targeted phishing) and broke them down into a canonical set of core "kill-chain" steps (e.g., social engineering, exploitation, privilege escalation, lateral movement). We then assessed the potential for each step to be automated. Finally, we evaluated the potential for such automation to increase the volume of attacks. See the Model Approach section for details.
+
+There are many different categories of attacks. For this analysis, we selected attacks which are either highly prevalent (e.g. phishing attacks) or of strategic importance (e.g., critical infrastructure attacks).
+
+- Distributed Denial of Service Attacks
+- Targeted Phishing Attacks
+- Website or Web API Breaches (not yet published)
+- State Sponsored Attacks on Critical Infrastructure (not yet published)
+- Supply Chain Attacks (not yet published)
+
+For each category, we identified the "kill-chain" steps that are involved in a typical attack. Different attack scenarios often share some steps. The steps which show up in at least one of our attack scenarios are as follows:
+
+- **Infrastructure Setup:** One-time setup of systems to support many attacks, such as command-and-control or drop-box servers.
+- **Target Identification:** Identifying human or computer targets to be attacked.
+- **Social Engineering:** Communicating with a victim to convince them to take some action, such as sharing their password or downloading a malicious executable. This might consist of a single outbound message (phishing), or a multi-turn interaction to establish trust.
+- **Initial Compromise/exploitation:** Gaining initial unauthorized access to a computer system.
+- **Privilege Escalation:** Elevating system privileges to access sensitive information or settings.
+- **Lateral Movement:** Navigating from one system to another within the target environment.
+- **Code Insertion:** Implanting a backdoor in software to facilitate future access.
+- **Asset identification and extraction/system damage:** The value-generation step that all of the other steps have been leading up to: exfiltrating information, compromising data integrity, or damaging / destroying data / systems.
+- **Monetization/Value Exploitation:** Profiting from the attack, such as selling stolen credit card data on the dark web.
+
+To indicate what level of AI sophistication would be needed to automate a given attack step, we use the following rough groupings:
+
+- **GPT-4:** LLMs at roughly GPT-4 capability
+- **GPT-4-tuned:** adds additional training for a particular task.
+- **Agentic-AI:** not necessarily more “intelligent” or “knowledgeable” than GPT-4-class, but able to carry out an extended series of goal-oriented actions, with reasonable reliability, in a messy open-ended environment.
+- **Agentic-AI-tuned:** adds additional training for a particular task.
+- **AGI**: at least as capable as a typical expert human at most commonplace tasks, including the ability to learn new skills as efficiently as a human.
+- **AGI-tuned**: adds additional training for a particular task.
+
+These are explained further in [AI Capability Levels](https://www.notion.so/AI-Capability-Levels-1454c916374a80fcac7ad0022cd0352d?pvs=21).
+
+## Model Approach
+
+For a given attack category, what determines the number of attempted and successful attacks, and how might that change with developments in AI? We use a model based on the concepts we present in [The Cybersecurity Equilibrium](https://www.notion.so/The-Cybersecurity-Equilibrium-1274c916374a80e0a1cbee90308d4cd1?pvs=21).
+
+We assume that attacks in a particular category follow a standard sequence of steps. For instance, a DDoS attack might require some initial setup, infecting “zombie” machines that will be used to carry out the attack, identifying a target, and so forth.
+
+Suppose that, in practice, 1000 attacks are carried out per week. Why not 2000? We presume that one or more **dampeners** determine the rate of attacks. There are two types of dampeners: **decreasing marginal returns** and **thermostatic effects**. Decreasing marginal returns is a term for the tendency for some tasks to become more difficult as you do more of them; for instance, it may become harder to find additional companies vulnerable to a ransomware attack. When a step has steeply decreasing returns, we say it is a **rate-limiting step**. A thermostatic effect, by contrast, is something that happens as a response to an increase in the overall volume of attacks (especially successful attacks), such as the potential to trigger retaliation.
+
+Presumably, for any attack category, there is at least one rate-limiting step and/or one important thermostatic effect. Otherwise, the rate of attacks would increase until a rate-limiting step or thermostatic effect was reached.
+
+We conclude that an advance in AI capabilities will significantly increase the rate of attacks if:
+
+- It assists with all rate-limiting steps, and
+- There are no important thermostatic effects in play (e.g. we are far from the point at which increased attacks might spur retaliation), and
+- That same advance will not assist defenders to the same degree.
+
+An April 2025 publication from Google DeepMind, [Evaluating potential cybersecurity threats of advanced AI](https://deepmind.google/discover/blog/evaluating-potential-cybersecurity-threats-of-advanced-ai/), uses a related approach to evaluating the impact of AI on cyberattacks. Similar to our work, they identify “critical bottleneck stages along the cyberattack chain where AI could significantly disrupt the traditional costs of an attack”. Their analysis is far more comprehensive and detailed than ours, and is based on extensive real-world data – “over 12,000 real-world attempts to use AI in cyberattacks in 20 countries, drawing on data from [Google’s Threat Intelligence Group](https://cloud.google.com/blog/topics/threat-intelligence/adversarial-misuse-generative-ai)”. However, the authors do not consider how changes will play into the equilibrium between attack and defense, do not discuss “softer” skills (such as money laundering) involved in the full lifecycle of an attack, and do not attempt to make specific predictions as to which categories of attack will increase at various stages of AI development. We see our role as placing work like this in a broader context. We would like to see similar levels of rigor in exploring the rest of the attack lifecycle and ecosystem.
+
+# Overview of Findings
+
+In this section, we will evaluate each attack scenario to determine the likelihood of partial/full automation with current/future LLMs.
+
+## Distributed Denial of Service (DDoS) Attacks
+
+### TL;DR
+
+A DDoS attack does not involve “hacking” target systems. Instead, it simply attempts to knock the system offline (denying service) by flooding it with traffic. To generate a large volume of traffic, the attacker uses a network of compromised systems, sometimes called “zombies” or “bots”.
+
+For this analysis, we distinguish two categories of attack:
+
+- Attacks against a small number of large entities
+- Attacks against a large number of smaller entities
+
+We also distinguish between two types of attacks:
+
+- Network-level attacks: An attack that floods a network with massive amounts of generic data to overwhelm its network connection or devices.
+- Application-level attacks: An attack that interacts with a victim website/service (e.g., filling out forms) in a realistic manner, to tie up database servers or other resources. This type of attack must be customized to each target, but can be more difficult to detect and block.
+
+### Conclusions:
+
+### What We Expect to Increase
+
+- Application-level attacks are likely to increase with agentic and AGI LLMs, as these tools can automate the analysis of web applications and generate tailored attack scripts at scale.
+
+### What We Expect Not to Increase
+
+- Network-level attacks may see only marginal growth, because some limiting factors (availability of easily compromised zombie nodes; profitable targets who do not have anti-DDoS protection) will not be strongly influenced by AI.
+
+### Analysis
+
+Below is a table showing the kill-chain steps involved in DDoS attacks:
+
+| **Step** | **Bottleneck?** | **Accelerators and Dampeners** |
+| --- | --- | --- |
+| Infrastructure Setup | No | N/A |
+| Infection of zombie machines | Depends | Accelerators:
+• GPT-4-class models may help automate discovery of vulnerabilities, generation of exploits, and analysis of targets to determine what they are vulnerable to 
+Dampeners:
+• Attackers may run out of easily-compromised nodes |
+| Command and Control | No | N/A |
+| Target Identification | For attacks against large entities: No
+
+For attacks against large numbers of smaller entities: Yes | Accelerators:
+• Agentic AI can accelerate gathering of targeting details on large numbers of victims (e.g., contact details for ransom requests, server IPs, etc.)
+Dampeners:
+• N/A |
+| Initial Compromise/Exploitation | Yes for application-level DDoS attacks | Accelerators:
+• GPT-4-class models could be used to analyze web applications and generate customized scripts to generate application-level attack traffic on a large number of victim websites (which would have been prohibitive in the past)
+Dampeners:
+• N/A |
+| Monetization/Value Exploitation | Depends - some forms of Monetization/Value Exploitation  are not a bottleneck
+(e.g., blockchain payments) | Acceleration:
+• GPT-4-class/Agentic AI could be used as a scalable "customer service agent" to help ensure victims know how and where to transfer payments to the attacker
+Dampeners:
+• N/A |
+
+Below is a table showing other **overall** dampeners that currently rate-limit the frequency of large DDoS attacks:
+
+| **Factor** | **When does this kick in** |
+| --- | --- |
+| Detection and prosecution by authorities | Only if things get much worse (major victims, or large increase in smaller victims) |
+| Defense improvements for various cyber-security technologies | Incrementally for vendors based on perceived impact of attack |
+
+### Details
+
+LLMs may enable attackers to target a larger number of victims. One limiting factor is identifying victim organizations that fit their attack profile (e.g., likely to pay a ransom to stop the attack), and identify contact information at these organizations to send a ransom request. Agentic AIs may be able to automate this work.
+
+Application-level attacks are harder to block than network-level attacks. They are also more work to carry out, because the attack must be customized to each target. Current LLMs may be sufficiently capable to help in analyzing a web application and writing code to generate realistic traffic for that application.
+
+# Targeted Phishing Attacks
+
+### TL;DR
+
+For this analysis, we attacks along two axes:
+
+- Attack objective:
+    - Personal Exploitation: Attacks that seek to obtain personal information, credentials, initiate a money transfer, etc. which can be accomplished without compromising the victim's network
+    - Single-system Exploitation: Attacks that target a single victim’s computer, with the aim of stealing or corrupting data on that computer.
+    - Multi-system Exploitation: Attacks that use a toehold on the initial victim’s computer to compromise other systems or people in the organization (“lateral movement”).
+- Targeting scope:
+    - Narrow Targeting: Attacks that target a small number of high-value victims
+    - Broad Targeting: Attacks that target a large number of victims
+
+Note that in all cases, we are discussing targeted “spear phishing” attacks which are customized to each recipient. We do not address untargeted attacks that are broadcast widely without any customization.
+
+|  | Single-system Exploitation | Multi-system Exploitation | Personal Exploitation |
+| --- | --- | --- | --- |
+| Narrow Targeting | Bottlenecks may be removed with LLM agents but some could require AGI | Bottlenecks may be removed with fine-tuned LLM agents but some could require AGI | Bottlenecks can be removed with LLM agents |
+| Broad Targeting | Bottlenecks may be removed with LLM agents but some could require AGI | Bottlenecks may be removed with fine-tuned LLM agents but some could require AGI | Bottlenecks can be removed with LLM agents |
+
+### Conclusions:
+
+### What We Expect to Increase
+
+- **Broad-targeted, personal exploitation**: Agentic AI will likely increase attack volumes, especially for scams that require back-and-forth communications with the victim, since repetitive tasks like target identification and communication can be automated efficiently.
+- **Single-system exploitation attacks**: Single-system breaches may increase once agentic AIs are developed that are fine-tuned for monetization/value exploitation.
+- **Multi-system exploitation attacks**: Multi-system breaches may increase once agentic AIs can be fine-tuned for advanced skills such as lateral movement, privilege escalation and monetization/value exploitation. A substantial increase may require AI skills rising to the level of AGI.
+- **High-Value Narrow Targeting**: Advanced phishing campaigns targeting high-value individuals or entities may not see substantial growth, as they require human-level intelligence and nuanced social engineering.
+
+### What We Expect Not to Increase
+
+- **Narrowly-targeted, personal exploitation attacks may not increase, as these attacks may be limited by factors that will not be affected by AI (such as the supply of targets).**
+
+As attacks increase, victims may become harder to fool and investments in detection mechanisms may rise, which may limit the increase in all attack categories.
+
+### Analysis
+
+The following kill-chain steps are present across the four different quadrants of targeted phishing attacks. Some of these steps may be omitted depending on the attack, e.g.: personal exploitation does not involve lateral movement or privilege escalation.
+
+Today's bottlenecks primarily occur in Target Identification, Email Crafting, Lateral Movement, Privilege Escalation, and Asset Identification and Extraction.
+
+| **Step** | **Bottleneck?** | **Accelerators and Dampeners** |
+| --- | --- | --- |
+| Infrastructure Setup | No | N/A |
+| Target Identification | Yes | Accelerators:
+• Agentic AI could automate the collection of background information on potential targets within/across organizations
+Dampeners:
+• A finite pool of viable victims |
+| Social Engineering (1-turn/multi-turn) | Yes | Accelerators:
+• GPT-4-class could craft convincing 1-turn communications to a target
+• GPT-4-class/Agentic AI could engage in ongoing multi-turn conversations to socially engineer a target
+Dampeners:
+• N/A |
+| Initial Compromise
+** | No | N/A |
+| Command & Control 
+** | No | N/A |
+| Lateral Movement
+** | Yes | Accelerators:
+• Agentic AI with fine tuning in lateral movement skills could partially automate this step; may require human assistance
+• AGI could fully automate this step
+Dampeners:
+• N/A |
+| Privilege Escalation
+** | Yes | Accelerators:
+• Agentic AI with fine tuning in privilege escalation could partially automate this step; may require human assistance
+• AGI could fully automate this step
+Dampeners:
+• N/A |
+| Asset Identification and Extraction | Yes | Accelerators:
+• Agentic AI could partially partially automate this step; may require human assistance to identify valuable target data
+• AGI could fully automate this step 
+Dampeners:
+• Increased back-and-forth C&C traffic due to the LLM not being an expert hacker may reveal the infection, relative to a human hacker who may be more bandwidth efficient |
+| Monetization/Value Exploitation | Depends | Accelerators:
+• Agentic AI could automate tasks like fund transfers, delivery of IP to designated recipients, etc.
+• AGI could automate tasks like negotiation/sale of data/IP on the darkweb
+Dampeners:
+• N/A |
+
+Below is a table showing **overall** dampeners that may limit increase in successful attacks:
+
+| **Factor** | **When does this kick in** |
+| --- | --- |
+| Targets become harder to fool | Increase in attacks (and publicity around AI-powered attacks) could raise awareness and motivate increased training |
+| Detection and prosecution by authorities | Only if things get much worse (major victims, or large increase in smaller victims) |
+
+Open questions:
+
+- Will agentic AIs be able to conduct the human intel required for convincing phishing campaigns for higher-value attacks, or will this require full AGI (or human workers)?
+- Once AGI arrives, will “off the shelf” AGIs be able to perform tasks such as privilege escalation, lateral movement, and monetization/value extraction, or will they need additional specialized training – and if so, what level of sophistication would an attacker need to provide such training?

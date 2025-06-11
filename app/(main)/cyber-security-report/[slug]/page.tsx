@@ -23,8 +23,16 @@ async function getPost(slug: string) {
   }
 }
 
-export default async function Page() {
-  const post = await getPost("cyber-security-report");
+export default async function Page({
+  params,
+}: {
+  params: { slug: string };
+}) {
+  const post = await getPost(params.slug);
+
+  if (!post) {
+    notFound();
+  }
 
   return (
     <div className="section-padding theme-sand">
