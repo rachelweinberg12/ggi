@@ -32,7 +32,7 @@ export default async function PostPage({
   }
 
   return (
-    <div className="section-padding theme-sand">
+    <div className="top-section-padding theme-sand">
       <article className="mx-auto max-w-3xl">
         <h2>{post.title}</h2>
         <p className="text-gray-500 mb-8">{post.date}</p>
