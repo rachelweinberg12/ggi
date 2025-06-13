@@ -17,7 +17,7 @@ An attack scenario can be thought of as comprising a series of steps. For instan
 5. Additional steps, such as accessing a bank account, or inserting forged routing instructions into a legitimate payment request.
 6. Money laundering of the proceeds.
 
-In this section of our report, we consider some important attack scenarios, and list the steps in each scenario. We then use the methodology described in [The Cybersecurity Equilibrium](https://www.notion.so/The-Cybersecurity-Equilibrium-1274c916374a80e0a1cbee90308d4cd1?pvs=21) to forecast how AI is likely to impact that form of attack.
+In this section of our report, we consider some important attack scenarios, and list the steps in each scenario. We then use the methodology described in [The Cybersecurity Equilibrium](/cyber-security-report/the-cybersecurity-equilibrium) to forecast how AI is likely to impact that form of attack.
 
 # Methodology
 
@@ -52,11 +52,11 @@ To indicate what level of AI sophistication would be needed to automate a given 
 - **AGI**: at least as capable as a typical expert human at most commonplace tasks, including the ability to learn new skills as efficiently as a human.
 - **AGI-tuned**: adds additional training for a particular task.
 
-These are explained further in [AI Capability Levels](https://www.notion.so/AI-Capability-Levels-1454c916374a80fcac7ad0022cd0352d?pvs=21).
+These are explained further in [AI Capability Levels](/cyber-security-report/ai-capability-levels).
 
 ## Model Approach
 
-For a given attack category, what determines the number of attempted and successful attacks, and how might that change with developments in AI? We use a model based on the concepts we present in [The Cybersecurity Equilibrium](https://www.notion.so/The-Cybersecurity-Equilibrium-1274c916374a80e0a1cbee90308d4cd1?pvs=21).
+For a given attack category, what determines the number of attempted and successful attacks, and how might that change with developments in AI? We use a model based on the concepts we present in [The Cybersecurity Equilibrium](/cyber-security-report/the-cybersecurity-equilibrium).
 
 We assume that attacks in a particular category follow a standard sequence of steps. For instance, a DDoS attack might require some initial setup, infecting “zombie” machines that will be used to carry out the attack, identifying a target, and so forth.
 
@@ -91,8 +91,6 @@ We also distinguish between two types of attacks:
 
 - Network-level attacks: An attack that floods a network with massive amounts of generic data to overwhelm its network connection or devices.
 - Application-level attacks: An attack that interacts with a victim website/service (e.g., filling out forms) in a realistic manner, to tie up database servers or other resources. This type of attack must be customized to each target, but can be more difficult to detect and block.
-
-### Conclusions:
 
 ### What We Expect to Increase
 
@@ -164,8 +162,6 @@ Note that in all cases, we are discussing targeted “spear phishing” attacks 
 | Narrow Targeting | Bottlenecks may be removed with LLM agents but some could require AGI | Bottlenecks may be removed with fine-tuned LLM agents but some could require AGI | Bottlenecks can be removed with LLM agents |
 | Broad Targeting | Bottlenecks may be removed with LLM agents but some could require AGI | Bottlenecks may be removed with fine-tuned LLM agents but some could require AGI | Bottlenecks can be removed with LLM agents |
 
-### Conclusions:
-
 ### What We Expect to Increase
 
 - **Broad-targeted, personal exploitation**: Agentic AI will likely increase attack volumes, especially for scams that require back-and-forth communications with the victim, since repetitive tasks like target identification and communication can be automated efficiently.
@@ -197,18 +193,14 @@ Dampeners:
 • GPT-4-class/Agentic AI could engage in ongoing multi-turn conversations to socially engineer a target
 Dampeners:
 • N/A |
-| Initial Compromise
-** | No | N/A |
-| Command & Control 
-** | No | N/A |
-| Lateral Movement
-** | Yes | Accelerators:
+| Initial Compromise | No | N/A |
+| Command & Control  | No | N/A |
+| Lateral Movement | Yes | Accelerators:
 • Agentic AI with fine tuning in lateral movement skills could partially automate this step; may require human assistance
 • AGI could fully automate this step
 Dampeners:
 • N/A |
-| Privilege Escalation
-** | Yes | Accelerators:
+| Privilege Escalation | Yes | Accelerators:
 • Agentic AI with fine tuning in privilege escalation could partially automate this step; may require human assistance
 • AGI could fully automate this step
 Dampeners:
