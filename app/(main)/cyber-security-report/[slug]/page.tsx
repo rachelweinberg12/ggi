@@ -31,7 +31,7 @@ export default async function Page({ params }: { params: { slug: string } }) {
   }
 
   return (
-    <div className="section-padding">
+    <div className="top-section-padding">
       <article className="text-width-pos">
         <h2>{post.title}</h2>
         <PostContent content={post.content} />

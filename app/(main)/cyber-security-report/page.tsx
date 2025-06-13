@@ -26,7 +26,7 @@ export default async function Page() {
     notFound();
   }
   return (
-    <div className="section-padding theme-classic">
+    <div className="top-section-padding theme-classic">
       <article className="mx-auto max-w-3xl">
         <h2>{post.title}</h2>
         <PostContent content={post.content} />
