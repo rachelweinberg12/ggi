@@ -9,12 +9,12 @@ interface PostContentProps {
 
 export const PostContent: React.FC<PostContentProps> = ({ content }) => {
   // Find line breaks inside table cells, and replace them with BRs so that the Markdown renderer will
-  // display them properly. Warning, this regex was written by Claude and I (Steve) haven't attempted to
-  // understand it. It's meant to replace line breaks that appear inside a multi-line table cell, meaning
-  // after a line that starts (but does not end) with a pipe character, and before a line that ends (but does not
-  // start) with a pipe character.
+  // display them properly. The initial regex matches lines that contain at least two pipes (which, in
+  // our case, only occurs for tables), and continues until a pipe at the end of a line (which indicates
+  // the end of a table row). Any line breaks in between are intra-cell content and should be replaced
+  // with <br/>.
   const processedContent = content.replace(
-    /(\|.*\|[\s\S]*?)(?=\n\n|\n\|[^|]*\||$)/g,
+    /\|.*\|[\s\S]*?\|$/gm,
     (tableSection) => tableSection.replace(/\n(?!\|)/g, '<br/>')
   );
 
