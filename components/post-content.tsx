@@ -19,6 +19,7 @@ export const PostContent: React.FC<PostContentProps> = ({ content }) => {
           ),
           p: ({ node, ...props }) => <p {...props} className="mt-4" />,
           a: ({ node, ...props }) => <a {...props} className="text-link" />,
+          blockquote: ({ node, ...props }) => <blockquote {...props} className="pull-quote" />,
         }}
       >
         {content}
