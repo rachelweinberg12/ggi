@@ -1,0 +1,52 @@
+---
+title: "AI Capability Levels"
+---
+
+To discuss the impact that AI will have on cybersecurity, we need to identify the specific AI capabilities that are most likely to have an impact. We break these down into two categories: **narrow technical skills** and **broad agentic skills**.
+
+Examples of narrow technical skills are finding vulnerabilities in a piece of software, constructing an exploit to take advantage of a vulnerability, or using an exploit to gain access to a system. Each such skill applies to a specific subject area, has a well-defined goal, clear success / failure criteria, involves specific types of information, and (except at the most advanced skill levels) does not require strategic decision-making or extended chains of reasoning.
+
+Broad agentic tasks, by contrast, tend to be open-ended, with fuzzier success criteria, and are carried out in unstructured environments involving multiple types of information.
+
+Examples of tasks where broad agentic skills might be required:
+
+- Crafting a targeted phishing email. This might involve seeking out information on the target through searches on Google, LinkedIn, and social media sites; pursuing leads to further information; and finally selecting the most helpful tidbits to incorporate into the message.
+- Identifying suitable targets for a ransomware attack
+- Carrying on a discussion in a social engineering attack
+- Money laundering (for the proceeds of a successful attack).
+
+# Levels of Agentic Skill
+
+For broad agentic skills, we loosely define three levels of AI capability:
+
+- **GPT-4** refers to large language models at roughly GPT-4 levels of capability. As of late 2024, this describes the best models currently available, including GPT-4o, Claude 3.5, Gemini 1.5, Llama 3.2, and perhaps one or two others. (Update: as of May 2025, models such as o3, DeepSeek-r1, Gemini 2.5, and Claude 4 are entering a new level of capability. However, they still don’t advance to “agentic AI” as defined in the next bullet.)
+- **Agentic AI** refers to a system that may not be much more “intelligent” or “knowledgeable” than GPT-4 class LLMs, but is able to carry out an extended series of goal-oriented actions, with reasonable reliability, in a messy open-ended environment. As of May 2025, such systems do not yet exist, at least at a level of capability that would have a major impact on cybersecurity.
+- **AGI** refers to a system that is at least as capable as a typical expert human at most commonplace tasks, including the ability to learn new skills as efficiently as a human.
+
+Typically, a practical system will consist of an AI model (such as an LLM), incorporated into a larger scaffolding system that supplies instructions and data to the model and carries out actions specified by the model (such as sending emails or accessing web pages). We presume that most of the effort required to construct such a system goes into the model itself, and so we will refer to a system according to the level of model capability it requires.
+
+We do not currently consider the potential impact if and when ASI (artificial superintelligence) is developed – i.e. an AI which is far more capable than even expert humans.
+
+Some tasks might require significant effort devoted to fine tuning a model and/or constructing the enclosing system. For instance, imagine that GPT-4 by itself turns out to not be good enough to write a really good targeted phishing email, but with substantial fine tuning it would be. In that case, attackers would need the resources to gather data for fine tuning. However, this can often be fairly modest (e.g. 1000 task samples). We will refer to such models as **GPT-4-tuned** or **agentic-AI-tuned**.
+
+Human-level AGI might also need additional training for a particular task (just as people do!). In some cases, this might not be much of a barrier – if the model is truly an AGI, you could just tell it to come up with its own training plan and carry it out. However, in some cases, this might require access to knowledge / training materials or other resources that are not easily obtained. We refer to AGI models that have had substantial resources invested in training on a specialized task as **AGI-tuned**.
+
+# Levels of Technical Skill
+
+For narrow technical skills, such as finding code vulnerabilities or crafting exploits, there are two broad approaches to creating AI models. One approach is to fine-tune a general GPT-4 or Agentic AI class model, applying special training for the task. The other is to develop a special-purpose model from scratch, without using a general-purpose LLM as a starting point.
+
+In general, we imagine that special-purpose models would be harder to develop, because they would need to be trained from scratch. Such models might or might not be released as open source / open weights, and thus might or might not be available to attackers, with the exception of nation-state attackers who can develop their own tools. But there will be a wide range of levels of sophistication / training effort in each category, and the ranges will overlap – a really sophisticated fine-tune might be more work to develop than a simple special-purpose model.
+
+As with the broad agentic systems, these narrow technical systems might require some work to develop an enclosing scaffold that supplies instructions and data to the model and carries out actions. For instance, once a narrow model has produced a potential exploit for a particular piece of software, the framework might need to run the target program, apply the exploit, and see whether it works.
+
+Ultimately, some attacks might require an agentic AI to orchestrate the overall attack, working in close conjunction with special-purpose systems to carry out specific steps.
+
+# Availability to Attackers
+
+GPT-4 class systems are universally available today. For instance, DeepSeek-r1 is a capable, open-weights model; in practice anyone can use it for any purpose, and any filters that cause it to refuse certain harmful tasks can easily be removed.
+
+We presume that agentic AI and human-level AGI systems will require very large resources to develop, and will not be available to attackers unless / until some highly resourced organization chooses to release such a model. (Development costs come down over time, but the future where agentic AI is easily developed from scratch is beyond the scope of this report.)
+
+Once a system is released as open weights, the level of effort required to fine tune it or scaffold it for particular tasks will vary widely. The level of effort to develop or fine-tune systems for narrow technical tasks will also vary widely. A human-level AGI might require an amount of training data equivalent to what a skilled person would need to learn the task; less-capable systems (e.g. what we’re calling agentic AI) might need substantially more data to learn a complex task that is well beyond the skills of a standard LLM.
+
+Where possible, we will attempt to provide rough estimates of the level of attacker resources required to automate each relevant skill.

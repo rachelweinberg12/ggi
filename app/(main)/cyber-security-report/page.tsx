@@ -5,7 +5,7 @@ import { PostContent } from "@/components/post-content";
 import { notFound } from "next/navigation";
 
 async function getPost(slug: string) {
-  const filePath = path.join(process.cwd(), "posts", slug + ".mdx");
+  const filePath = path.join(process.cwd(), "mdx-pages", slug + ".mdx");
   try {
     const fileContent = fs.readFileSync(filePath, "utf-8");
     const { data: frontmatter, content } = matter(fileContent);
@@ -20,7 +20,7 @@ async function getPost(slug: string) {
   }
 }
 
-export default async function PostPage({
+export default async function Page({
   params,
 }: {
   params: Promise<{ slug: string }>;
@@ -33,10 +33,9 @@ export default async function PostPage({
   }
 
   return (
-    <div className="top-section-padding theme-sand">
+    <div className="top-section-padding theme-classic">
       <article className="mx-auto max-w-3xl">
         <h2>{post.title}</h2>
-        <p className="text-gray-500 mb-8">{post.date}</p>
         <PostContent content={post.content} />
       </article>
     </div>
