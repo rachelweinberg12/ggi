@@ -1,0 +1,150 @@
+---
+title: "The Cybersecurity Equilibrium"
+---
+
+# Introduction
+
+The impact of AI on cyberattacks is often viewed through a simple lens: if AI automates some aspect of cyberattacks, obviously there will be many more successful attacks.
+
+This is unrealistic. Like any system involving multiple participants with competing interests, cybersecurity exists in a complex **equilibrium**. As a result, automation of a particular capability might not lead to a large increase in successful attacks. For instance, some attackers might be limited by the fear of retaliation, rather than an inability to scale up their operations.
+
+To understand how advances in AI capabilities will impact the lived experience of cyberattacks, it’s important to understand this equilibrium. On this page, we review the important mechanisms of the cybersecurity equilibrium, some asymmetries between attack and defense, and implications for how various AI capabilities might tip the balance. We conclude with a simple framework for estimating the impact of AI progress on the volume and impact of cyberattacks.
+
+# Mechanisms of Equilibrium
+
+This section lists mechanisms that tend to reduce the impact of an advance in attacker capabilities. In general, an advance will still have *some* impact, but it could be small or large, depending on how strongly these mechanisms apply.
+
+## Diminishing Marginal Returns
+
+Suppose that someone wants to break into a certain organization. They identify employees of that organization, and send carefully crafted scam emails (spear phishing). If AI allows them to write more emails, they could use this time to seek out additional employees to target. However, they will find it progressively harder to find good candidates (e.g. people whose can be clearly identified as employees and whose social media presence contains information useful in crafting a plausible email).
+
+In economics, this is known as a **diminishing marginal return**: as you do more of something, you may get progressively less return for additional investment. In cybersecurity, another example might be scouting for vulnerable devices to incorporate into a botnet: eventually you’ll run out of easily-compromised targets.
+
+Many steps in a cybersecurity attack may suffer from diminishing marginal returns. If a particular step is subject to significant diminishing marginal returns – if the rate of attacks is sitting at a steep point on the curve for that attack step – then we will say that it is a **rate-limiting step**.
+
+## Costs Shift to Other Steps in the Attack Chain
+
+Any successful cyberattack entails multiple steps. For instance, a partial list of steps for even a simple phishing attack might include identifying targets, crafting emails, stealing credentials, employing those credentials to gain initial access to some system, exploiting that access (likely encompassing multiple steps), and money laundering of the proceeds.
+
+If automation of one step allows an attacker to carry out more attacks, then other, non-automated steps may become a limiting factor. This can be especially true if diminishing returns kick in. For instance, it might become harder to find new targets, or to hire skilled staff to exploit stolen credentials.
+
+## Some Attack Steps are Not Rate Limiting
+
+Some steps are already “easy” for attackers, i.e. cheap to perform and easy to scale. Automating these steps will have little impact.
+
+As one panelist noted, this can be especially true for well-resources nation state attackers:
+
+> It is worth mentioning that these actors are able to execute [attacks on infrastructure] successfully at little cost without any assistance from AI. Espionage and nation state actors are generally only limited by the intelligence they need to successfully execute these operations. They are not limited by technical capabilities in the same way an opportunistic actor such as Ransomware group might be.
+> 
+
+## Increased Chance of Detection / Remediation
+
+Each attempted attack poses a risk of the defender noticing and then acting to prevent that form of attack from being used in the future. This limits the incentive for an attacker to scale up their operations.
+
+For instance, suppose a spam campaign targets multiple individuals at an organization. If one of those individuals reports the attack, their email administrator will be alerted and may be able to thwart future attacks (e.g. by crafting a filter rule or notifying staff to be more aware). Thus, even if AI makes it easier to send spam messages, an attacker might choose not to send more messages to a given organization.
+
+From our panel:
+
+> Failure of an intelligence operation comes with a cost because they are often executed within a limited window of opportunity and failure often burns sensitive sources and capabilities.
+> 
+
+> Using cyber techniques effectively exposes them and stunts any future usage.
+> 
+
+Importantly, in this example, our hypothetical spammer could increase their scope of operations by targeting more organizations. This would work so long as organizations are not sharing information about detected attacks. This in turn highlights the importance of information sharing for defenders. (When a single email or security provider serves multiple customers, that provider of course can share information across those customers.)
+
+A similar phenomenon can result in new attack techniques quickly “burning out”. In the words of one panelist:
+
+> Attractive low cost exploits appear and we see spikes in ransomware attacks when this happens. They all use these immediately, scan the internet, find vulnerable orgs, and then in a couple weeks, the spike is gone. They’ve … ‘used up’ all the victims who are vulnerable. And we see a lull until the next one.
+> 
+
+Sophisticated attacks often rely on “zero-day” bugs – bugs which are unknown to defenders (and thus unable to be patched) at the time of the attack. If such an attack is detected, defenders may identify and fix the issue, thus “burning” the zero-day. Discovering zero-day bugs is difficult and expensive, so the reluctance to burn these valuable assets acts as a restriction on their use.
+
+## Increased Chance of Retaliation
+
+Some attackers are deterred by the possibility of retaliation, such as prosecution. For instance, a ransomware gang actually [apologized after one of their affiliates targeted a children’s hospital](https://www.canhealth.com/2023/01/04/cyber-criminals-apologize-for-attacking-sickkids/). For this reason, they may not choose to scale up attacks even if AI makes it easier to do so. State actors have their own reasons for restraint; in the words of one panelist:
+
+> The other consideration around restraint is the "Glass house" effect. We're all vulnerable and no one wants to throw stones from glass houses. And, of course, sometimes the threat is stronger than the execution.
+> 
+
+At the international level, retaliation might include sanctions or counterattacks.
+
+This factor may not apply under all circumstances. For instance, in the event of a hot war, state-sponsored actors might be less worried about retaliation for cyberattacks. Also, AI may “democratize” attack capabilities, opening the door to less-well-resourced attackers who are also less concerned about the consequences of their actions. As one of our panelists noted, many small nations can’t match the capabilities even of current cybercrime gangs, but AI could change that.
+
+## Thermostatic Effects
+
+An increase in attack volume may trigger responses that make future attacks more difficult. The previous two sections (increased chance of detection / remediation and of retaliation) fall under this heading. Other potential thermostatic effects include:
+
+- Victims might increase general security, training, policies, etc. (E.g. targets of attempted espionage might become more vigilant.)
+- A high overall rate of successful attacks might spur broader changes, e.g. spurring software vendors to prioritize security.
+
+## Dual-Use Technologies
+
+Some advances that assist attackers are also helpful for defenders. For instance, tools that identify vulnerabilities in a codebase can be used by defenders to fix those vulnerabilities. (Of course the overall picture is more complex; vulnerability detection tools are helpful to defenders if they allow bugs to be fixed before software is released, but otherwise can open a window for attackers between the time a bug is identified and a patch is applied.)
+
+# Asymmetries Between Attack and Defense
+
+This section lists differences between attackers and defenders which affect the impact of new AI cyber capabilities.
+
+## Defenders Get a Head Start
+
+Between the time when a piece of software is written and the time it is deployed, defenders have an opportunity to identify and fix bugs. As a result, vulnerability-discovery tools which identify bugs quickly provide an asymmetric advantage to defenders (to the extent that defenders make use of the latest tools – an important question in practice).
+
+## It Is Difficult For Defenders to Move Quickly
+
+Defenders have to worry about many priorities besides cybersecurity. As a result, they cannot always move quickly in response to new developments. For instance, it’s important to test a new software version before deploying it widely. Testing introduces delays during which attackers can exploit an unpatched vulnerability. However, bypassing tests increases the risk of disruption to business operations. (The [July 2024 CrowdStrike-related IT outages](https://en.wikipedia.org/wiki/2024_CrowdStrike-related_IT_outages) provide a notable example.) Even introducing new security rules without thorough testing creates the risk of false positives, which can overwhelm a security team or (if the security tool takes automatic action to block an attack) cause service outages.
+
+Attackers are free to move quickly to adopt new tools or exploit a newly discovered vulnerability. Defenders must be more cautious.
+
+Providers of cybersecurity tools and services must also be cautious. For instance, if a security provider discovers a new form of attack and updates an ML model to block that attack, the rule might accidentally block legitimate usage as well. This could lead to business disruption at the provider’s clients, which is highly damaging to the provider’s reputation. Thus, new rules must be deployed cautiously, which takes time.
+
+This applies even more strongly to the use of AI to detect or block attacks. Attackers can afford to "move fast and break things": they can cobble together an AI-based attack system, try it out in the wild, iteratively improve the approaches that seem promising, and discard the others. Defenders have to be much more cautious about deploying novel AI-based architectures, because acquiring confidence in a squishy, inscrutable AI tool takes time. Imagine if Walmart’s security provider started testing a new AI system in January, observed 10 months of excellent performance, and turned it on in November – only to have it interpret the Cyber Monday traffic surge as an attack and block millions of legitimate customers.
+
+(Even deploying a new AI system in monitor-only mode, where all it can do is flag suspicious activity for manual review, can be chancy: a misbehaving rule could flood the security team with false alarms, which eventually leads to legitimate alerts being missed or ignored.)
+
+It is also the case that some attackers and defenders will move more rapidly than others, and the fastest attackers are free to target the slowest defenders.
+
+For all of these reasons, a rapid pace of change will generally be advantageous to attackers, unless and until things settle down again (which is not guaranteed to happen).
+
+## Funding
+
+The funding landscape is complicated. It can be roughly broken into two categories, software development and system operations. For each category, we can consider the funding available for defenders (software developers, system operators) and attackers.
+
+For software development, defenders try to avoid bugs, or to detect and correct them quickly. Attackers try to find bugs they can exploit. In general, the more widely used a piece of software, the more resources defenders will have available. (Widely used commercial software in general should be backed by a professional security team, though of course this varies in practice. Widely used open-source software benefits from efforts such as Google’s Project Zero.) Thus, bespoke systems and niche products may tend to have more vulnerabilities. This becomes most problematic when such systems are used by a target that has high value to an attacker. However, attackers will also have more motivation to find bugs in widely used programs.
+
+For system operations, defenders try to run a tight ship (maintaining secure configuration, rapidly applying patches, detecting attacks), and attackers try to identify flaws and exploit them without being detected. A Fortune 50 company will have teams responsible for vulnerability scanning, ensuring best practices in system architecture, etc. A smaller company will have fewer resources. Defenders achieve some benefit from cooperation – providers of security tools are able to make large investments and to aggregate data across a wide pool of customers (noticing attack patterns). However, the benefits of these tools can be limited by the capacity for each customer’s security team to triage and address reports.
+
+In aggregate, considerably more resources are spent on cyberdefense than cyberattack. Thus, systematic tools (such as automated vulnerability discovery) tend to favor defenders. However, attackers can focus their efforts unevenly, seeking out weak targets; less-systematic approaches (such as creatively scouting for flaws in a deployed system) favor attackers.
+
+## Availability of Data
+
+Various forms of data are valuable for cybersecurity. Most simply, information about an attack can be used to develop rules for detecting similar attacks in the future. Defenders can use records of normal system operation to detect outliers that might indicate an attack, while attackers can use the same data to learn to disguise their activities. Many forms of data are useful for training AIs, so data will only become more valuable as the role of AI in cybersecurity grows.
+
+Defenders may, in principle, have access to more data. For instance, they are in a position to gather extensive data regarding the operation of their own systems.
+
+An important question is how how well attackers and defenders are able to share data. For instance, providers of security tools may be in a position to aggregate data across all of the customers they serve.
+
+# Implications For the Impact of AI
+
+The considerations outlined on this page can help us predict the impact of any given advance in AI capabilities. The most impactful capabilities will be those which:
+
+- Target the most expensive, rate-limiting steps in a particular attack scenario. **[TODO: link to our attack chain analysis – currently in [this Google Doc](https://docs.google.com/document/d/1bQmq4H2Wnm03dXv5YAn_UWbIzkJ-nOQjIneTo5L1Xx0/edit?tab=t.0#heading=h.81t4wpdzg5j8) but will move.]** In particular, a large impact may occur once multiple capabilities emerge that collectively target all of the rate-limiting steps.
+- Increase the quality of attacks, rather than quantity. For instance, capabilities which allow an attack to be better targeted, or have a higher chance of success or be more likely to avoid detection. This helps attackers without requiring an increased volume of activity that can lead to detection or other thermostatic effects.
+- Extend sophisticated attack capabilities to low-resourced attackers who may not be worried about retaliation or other consequences of an attack.
+- Are much more useful to attackers than defenders.
+
+In addition, there are systemic factors which will influence the overall impact of AI on cybersecurity:
+
+- The faster capabilities evolve, the more difficulty defenders will have in keeping up. Attackers have less friction in deploying new capabilities.
+- Tools that allow software bugs to be discovered prior to deployment should advantage defenders.
+- Any advances that reduce friction for deploying updates to software and security systems will tip the scales toward defenders. However, it may be difficult to make progress in this area.
+
+# Further Reading
+
+[Will AI Make Cyber Swords or Shields?](https://cset.georgetown.edu/publication/will-ai-make-cyber-swords-or-shields/), a 2022 paper by Andrew Lohn and Krystal Jackson, provides an excellent and highly readable deeper dive into the ideas presented here.
+
+# Internal / Working Notes (not part of the final report)
+
+[Notes from Will AI Make Cyber Swords or Shields?](https://www.notion.so/Notes-from-Will-AI-Make-Cyber-Swords-or-Shields-12d4c916374a8088bd6aff544d93263d?pvs=21)
+
+[Offcuts](https://www.notion.so/Offcuts-12d4c916374a80e18b2ce0ee94e7f5fe?pvs=21)
