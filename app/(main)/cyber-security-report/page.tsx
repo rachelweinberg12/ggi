@@ -1,6 +1,3 @@
-import { Row } from "@/components/blocks";
-import Link from "next/link";
-import { SUBSTACK_URL } from "@/utils/constants";
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
@@ -25,7 +22,9 @@ async function getPost(slug: string) {
 
 export default async function Page() {
   const post = await getPost("cyber-security-report");
-
+  if (!post) {
+    notFound();
+  }
   return (
     <div className="section-padding theme-sand">
       <article className="mx-auto max-w-3xl">
