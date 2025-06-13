@@ -23,11 +23,7 @@ async function getPost(slug: string) {
   }
 }
 
-export default async function Page({
-  params,
-}: {
-  params: { slug: string };
-}) {
+export default async function Page({ params }: { params: { slug: string } }) {
   const post = await getPost(params.slug);
 
   if (!post) {
@@ -35,8 +31,8 @@ export default async function Page({
   }
 
   return (
-    <div className="section-padding theme-sand">
-      <article className="mx-auto max-w-3xl">
+    <div className="section-padding">
+      <article className="text-width-pos">
         <h2>{post.title}</h2>
         <PostContent content={post.content} />
       </article>
