@@ -176,6 +176,10 @@
   ul {
     @apply list-disc ml-5 font-normal tracking-[0em] font-sans text-sm sm:text-base;
   }
+
+  ol {
+    @apply list-decimal ml-5 font-normal tracking-[0em] font-sans text-sm sm:text-base;
+  }
 }
 
 @layer components {
