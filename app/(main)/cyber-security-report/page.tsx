@@ -20,11 +20,18 @@ async function getPost(slug: string) {
   }
 }
 
-export default async function Page() {
-  const post = await getPost("cyber-security-report");
+export default async function Page({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}) {
+  const { slug } = await params;
+  const post = await getPost(slug);
+
   if (!post) {
     notFound();
   }
+
   return (
     <div className="top-section-padding theme-classic">
       <article className="mx-auto max-w-3xl">
