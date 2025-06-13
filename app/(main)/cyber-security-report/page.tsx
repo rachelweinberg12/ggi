@@ -20,13 +20,8 @@ async function getPost(slug: string) {
   }
 }
 
-export default async function Page({
-  params,
-}: {
-  params: Promise<{ slug: string }>;
-}) {
-  const { slug } = await params;
-  const post = await getPost(slug);
+export default async function Page() {
+  const post = await getPost("cyber-security-report");
 
   if (!post) {
     notFound();
