@@ -17,11 +17,9 @@ Examples of tasks where broad agentic skills might be required:
 
 # Levels of Agentic Skill
 
-[**TODO**: come up with better terse names for these, for use in the attach chain analyses. I’m reluctant to include the term “LLM”, because the agentic and especially human-level AGI levels might not be LLMs.]
-
 For broad agentic skills, we loosely define three levels of AI capability:
 
-- **GPT-4** refers to large language models at roughly GPT-4 levels of capability. As of late 2024, this describes the best models currently available, including GPT-4o, Claude 3.5, Gemini 1.5, Llama 3.2, and perhaps one or two others. (Update: as of May 2025, models such as o3, DeepSeek-r2, Gemini 2.5, and Claude 4 are entering a new level of capability. However, they still don’t advance to “agentic AI” as defined in the next bullet.)
+- **GPT-4** refers to large language models at roughly GPT-4 levels of capability. As of late 2024, this describes the best models currently available, including GPT-4o, Claude 3.5, Gemini 1.5, Llama 3.2, and perhaps one or two others. (Update: as of May 2025, models such as o3, DeepSeek-r1, Gemini 2.5, and Claude 4 are entering a new level of capability. However, they still don’t advance to “agentic AI” as defined in the next bullet.)
 - **Agentic AI** refers to a system that may not be much more “intelligent” or “knowledgeable” than GPT-4 class LLMs, but is able to carry out an extended series of goal-oriented actions, with reasonable reliability, in a messy open-ended environment. As of May 2025, such systems do not yet exist, at least at a level of capability that would have a major impact on cybersecurity.
 - **AGI** refers to a system that is at least as capable as a typical expert human at most commonplace tasks, including the ability to learn new skills as efficiently as a human.
 
@@ -35,12 +33,9 @@ Human-level AGI might also need additional training for a particular task (just 
 
 # Levels of Technical Skill
 
-**TODO**: what sorts of models might be used for specific technical task (such as finding vulnerabilities or crafting exploits)? What approaches have been used in published work to date? I can imagine two possibilities:
+For narrow technical skills, such as finding code vulnerabilities or crafting exploits, there are two broad approaches to creating AI models. One approach is to fine-tune a general GPT-4 or Agentic AI class model, applying special training for the task. The other is to develop a special-purpose model from scratch, without using a general-purpose LLM as a starting point.
 
-- Special-purpose models (not an LLM, not trained on English text, trained only on data associated with a specific task). These might or might not be released as open source / open weights (and thus might or might not be available to attackers, with the exception of nation-state attackers who can develop their own tools).
-- Fine-tuned versions of LLMs, whether GPT-4-class or agentic. (As noted above, fine-tuning AGI doesn’t seem like a meaningful distinction.)
-
-In general, I would imagine that special-purpose models would be harder to develop, because they would need to be trained from scratch. But there will be a wide range of levels of sophistication / training effort in each category, and the ranges will overlap – a really sophisticated fine-tune might be more work to develop than a simple special-purpose model.
+In general, we imagine that special-purpose models would be harder to develop, because they would need to be trained from scratch. Such models might or might not be released as open source / open weights, and thus might or might not be available to attackers, with the exception of nation-state attackers who can develop their own tools. But there will be a wide range of levels of sophistication / training effort in each category, and the ranges will overlap – a really sophisticated fine-tune might be more work to develop than a simple special-purpose model.
 
 As with the broad agentic systems, these narrow technical systems might require some work to develop an enclosing scaffold that supplies instructions and data to the model and carries out actions. For instance, once a narrow model has produced a potential exploit for a particular piece of software, the framework might need to run the target program, apply the exploit, and see whether it works.
 
@@ -48,14 +43,10 @@ Ultimately, some attacks might require an agentic AI to orchestrate the overall 
 
 # Availability to Attackers
 
-GPT-4 class systems are universally available today. In particular, Llama 3.2 is an open-weights model; in practice anyone can use it for any purpose (even if some uses are technically against the licensing terms), and the filters that cause it to refuse certain harmful tasks can easily be removed.
+GPT-4 class systems are universally available today. For instance, DeepSeek-r1 is a capable, open-weights model; in practice anyone can use it for any purpose, and any filters that cause it to refuse certain harmful tasks can easily be removed.
 
 We presume that agentic AI and human-level AGI systems will require very large resources to develop, and will not be available to attackers unless / until some highly resourced organization chooses to release such a model. (Development costs come down over time, but the future where agentic AI is easily developed from scratch is beyond the scope of this report.)
 
 Once a system is released as open weights, the level of effort required to fine tune it or scaffold it for particular tasks will vary widely. The level of effort to develop or fine-tune systems for narrow technical tasks will also vary widely. A human-level AGI might require an amount of training data equivalent to what a skilled person would need to learn the task; less-capable systems (e.g. what we’re calling agentic AI) might need substantially more data to learn a complex task that is well beyond the skills of a standard LLM.
 
 Where possible, we will attempt to provide rough estimates of the level of attacker resources required to automate each relevant skill.
-
-# Internal / Working Notes (not part of the final report)
-
-[Offcuts](https://www.notion.so/Offcuts-1a54c916374a80999346ef928f12ae69?pvs=21)
