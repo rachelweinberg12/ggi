@@ -18,6 +18,7 @@ export const PostContent: React.FC<PostContentProps> = ({ content }) => {
             <p {...props} className="font-bold mt-12" />
           ),
           p: ({ node, ...props }) => <p {...props} className="mt-4" />,
+          a: ({ node, ...props }) => <a {...props} className="text-link" />,
         }}
       >
         {content}
