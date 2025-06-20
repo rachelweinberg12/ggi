@@ -16,8 +16,8 @@ export function Logo(props: {
         textClass,
       )}
     >
-      <div className="sm:text-[20px] text-[15px] font-bold display">
-        <span>THE CURVE</span>
+      <div className="sm:text-[20px] text-[15px] font-bold font-tc-display">
+        The Curve
       </div>
     </Link>
   );

@@ -18,7 +18,7 @@ export function Toggle({ title, children, className = "" }: ToggleProps) {
         onClick={() => setIsOpen(!isOpen)}
         className="w-full flex items-center justify-between py-2 text-left hover:cursor-pointer"
       >
-        <span className="md:text-lg">{title}</span>
+        <span className="md:text-lg font-tc-body">{title}</span>
         <ChevronDownIcon
           className={`w-5 h-5 rotate-90 transition-transform shrink-0 ${
             isOpen ? "rotate-none" : "rotate-90"

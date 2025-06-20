@@ -64,7 +64,7 @@ export function NavBar() {
                 <Row className="hidden sm:flex space-x-8 md:space-x-12 justify-end">
                   {pages.map((page) => (
                     <a
-                      className="text-base font-medium hover:underline"
+                      className="text-base font-medium hover:underline font-tc-display"
                       key={page.name}
                       href={page.href}
                     >
@@ -86,7 +86,7 @@ export function NavBar() {
 
           <DisclosurePanel
             transition
-            className="origin-left transition duration-500 ease-out data-closed:translate-x-full -z-10 theme-sand outline outline-black"
+            className="origin-left transition duration-500 ease-out data-closed:translate-x-full -z-10 theme-indigo outline outline-black"
           >
             <Col className="items-center justify-center space-y-12 h-dvh overflow-hidden">
               {pages.map((page) => (
