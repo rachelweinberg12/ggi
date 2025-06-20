@@ -9,7 +9,11 @@ export function About() {
         title="Our purpose"
         imageUrl="/the-curve/display/Elephant.png"
       >
-        <p className="mb-2">
+        <Testimonial
+          name="Kevin Roose, New York Times"
+          quote="It felt like an event where history was happening."
+        />
+        <p className="my-2">
           How can we achieve the best outcomes from advanced AI?
         </p>
         <p className="mb-2">
@@ -32,8 +36,12 @@ export function About() {
       <AboutSection
         textRight={true}
         title="The people"
-        imageUrl="/the-curve/display/PeopleOutside.png"
+        imageUrl="/the-curve/display/OutdoorFestival.png"
       >
+        <Testimonial
+          name="Nathan Labenz, Cognitive Revolution"
+          quote="Super high quality attendees. It did not feel like an awkward Thanksgiving, but a good faith meeting of the minds."
+        />
         <p className="mb-2">
           The participants, selected by invitation only, are curated to
           represent a mixture of views, areas of expertise, and spheres of
@@ -57,6 +65,10 @@ export function About() {
         title="The experience"
         imageUrl="/the-curve/display/FirePit.png"
       >
+        <Testimonial
+          name="Misha Glouberman, Consultant"
+          quote="So many conferences are thoughtlessly designed or run. This was such a remarkable exception."
+        />
         <p className="mb-2">
           We design the event to prioritize small group and one-on-one
           conversations. You're encouraged to skip sessions during the day in
@@ -104,9 +116,19 @@ export function AboutSection(props: {
           alt={title}
           width={800}
           height={600}
-          className="w-full h-full object-cover rounded aspect-4/3 lg:aspect-square xl:aspect-4/3 max-w-lg"
+          className="w-full h-full object-cover rounded aspect-square max-w-lg"
         />
       </div>
+    </Col>
+  );
+}
+
+function Testimonial(props: { name: string; quote: string }) {
+  return (
+    <Col className="gap-1 justify-between lg:max-w-sm text-indigo-700">
+      <p className="pull-quote my-3 rounded-r leading-snug">
+        "{props.quote}" <span className="text-nowrap">— {props.name}</span>
+      </p>
     </Col>
   );
 }

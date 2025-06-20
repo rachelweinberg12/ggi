@@ -13,7 +13,6 @@ const SPEAKERS = [
     affiliation: "Open Philanthropy",
     imageUrl: "AjeyaCotra.png",
   },
-  { name: "Lane Dilg", affiliation: "OpenAI", imageUrl: "SamHammond.png" },
   {
     name: "Helena Fu",
     affiliation: "Department of Energy",
@@ -41,6 +40,11 @@ const SPEAKERS = [
     imageUrl: "KlonKitchen.jpg",
   },
   { name: "Jason Kwon", affiliation: "OpenAI", imageUrl: "JasonKwon.jpg" },
+  {
+    name: "Alondra Nelson",
+    affiliation: "Institute for Advanced Study",
+    imageUrl: "AlondraNelson.jpg",
+  },
   {
     name: "Dylan Patel",
     affiliation: "SemiAnalysis",
