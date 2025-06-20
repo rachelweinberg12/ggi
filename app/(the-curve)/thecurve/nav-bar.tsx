@@ -35,13 +35,10 @@ export function NavBar() {
         <>
           <div
             className={clsx(
-              "border-b z-10 group",
+              "z-10 group outline-2 outline-b outline-offset-2",
               scrolled || open
-                ? "border-black theme-classic"
-                : clsx(
-                    "border-white text-white hover:border-black hover:bg-white hover:text-black",
-                    isHome ? "theme-indigo" : "theme-orange",
-                  ),
+                ? "outline-rose bg-indigo text-white hover:outline-indigo hover:bg-white hover:text-indigo"
+                : "outline-indigo bg-white text-indigo hover:outline-rose hover:bg-indigo hover:text-white",
             )}
             id="navbar"
           >
@@ -51,13 +48,13 @@ export function NavBar() {
                   <Logo
                     iconFillClass={clsx(
                       scrolled || open
-                        ? "fill-black"
-                        : "fill-white group-hover:fill-black",
+                        ? "fill-white group-hover:fill-indigo"
+                        : "fill-indigo group-hover:fill-white",
                     )}
                     textClass={clsx(
                       scrolled || open
-                        ? "text-black"
-                        : "text-white group-hover:text-black",
+                        ? "text-white group-hover:text-indigo"
+                        : "text-indigo group-hover:text-white",
                     )}
                   />
                 </Row>
