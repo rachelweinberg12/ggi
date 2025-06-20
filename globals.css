@@ -9,6 +9,8 @@
   --font-display: var(--font-the-seasons);
   --font-sans: var(--font-satoshi);
   --font-serif: var(--font-the-seasons);
+  --font-tc-body: var(--font-lora);
+  --font-tc-display: var(--font-tc-display);
   /* --font-serif: var(--font-source-serif); */
 
   /* Font Weights */
@@ -258,6 +260,33 @@
     --primary: var(--color-black);
     --highlight: var(--color-orange);
     --soft: var(--color-bley-500);
+    background-color: var(--bg);
+    color: var(--primary);
+  }
+
+  .theme-the-curve {
+    --bg: var(--color-white);
+    --primary: var(--color-black);
+    --highlight: var(--color-orange);
+    --soft: var(--color-bley-500);
+    background-color: var(--bg);
+    color: var(--primary);
+  }
+
+  .theme-the-curve h5,
+  .theme-the-curve p,
+  .theme-the-curve ul,
+  .theme-the-curve ol,
+  .theme-the-curve .info,
+  .theme-the-curve .pull-quote {
+    font-family: var(--font-lora);
+  }
+
+  .theme-indigo {
+    --bg: var(--color-indigo);
+    --primary: var(--color-white);
+    --highlight: var(--color-orange);
+    --soft: var(--color-gray-300);
     background-color: var(--bg);
     color: var(--primary);
   }

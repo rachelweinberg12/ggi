@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
-import { Source_Serif_4 } from "next/font/google";
+import { Lora, Plus_Jakarta_Sans, Source_Serif_4 } from "next/font/google";
 import "../../../globals.css";
 import { NavBar } from "./nav-bar";
 import { Footer } from "./footer";
@@ -42,15 +42,21 @@ const theSeasons = localFont({
   variable: "--font-the-seasons",
 });
 
-const sourceSerif = Source_Serif_4({
+const lora = Lora({
   subsets: ["latin"],
-  variable: "--font-source-serif",
+  variable: "--font-lora",
+  display: "swap",
+});
+
+const jakartaSans = Plus_Jakarta_Sans({
+  subsets: ["latin"],
+  variable: "--font-plus-jakarta-sans",
   display: "swap",
 });
 
 export const metadata: Metadata = {
   title: "The Curve",
-  description: "The big picture AI conference",
+  description: "The premier big picture AI conference",
   icons: {
     icon: "/the-curve-favicon.ico",
   },
@@ -64,7 +70,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${satoshi.variable} ${theSeasons.variable} ${sourceSerif.variable} font-sans antialiased theme-classic min-h-screen overscroll-none`}
+        className={`${lora.variable} ${jakartaSans.variable} antialiased theme-the-curve min-h-screen overscroll-none`}
       >
         <NavBar />
         <div>{children}</div>
