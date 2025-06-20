@@ -282,6 +282,13 @@
     font-family: var(--font-lora);
   }
 
+  .theme-the-curve h1,
+  .theme-the-curve h2,
+  .theme-the-curve h3,
+  .theme-the-curve h4 {
+    font-family: var(--font-plus-jakarta-sans);
+  }
+
   .theme-indigo {
     --bg: var(--color-indigo);
     --primary: var(--color-white);
