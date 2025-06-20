@@ -1,6 +1,11 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
-import { Lora, Plus_Jakarta_Sans, Source_Serif_4 } from "next/font/google";
+import {
+  Lora,
+  Plus_Jakarta_Sans,
+  Source_Serif_4,
+  Crimson_Pro,
+} from "next/font/google";
 import "../../../globals.css";
 import { NavBar } from "./nav-bar";
 import { Footer } from "./footer";
@@ -48,6 +53,12 @@ const lora = Lora({
   display: "swap",
 });
 
+const crimsonPro = Crimson_Pro({
+  subsets: ["latin"],
+  variable: "--font-crimson-pro",
+  display: "swap",
+});
+
 const jakartaSans = Plus_Jakarta_Sans({
   subsets: ["latin"],
   variable: "--font-plus-jakarta-sans",
@@ -70,7 +81,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${lora.variable} ${jakartaSans.variable} antialiased theme-the-curve min-h-screen overscroll-none`}
+        className={`${lora.variable} ${jakartaSans.variable} ${crimsonPro.variable} antialiased theme-the-curve min-h-screen overscroll-none`}
       >
         <NavBar />
         <div>{children}</div>
