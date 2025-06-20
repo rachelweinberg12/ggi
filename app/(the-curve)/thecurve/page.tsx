@@ -2,7 +2,9 @@ import Image from "next/image";
 import { About2024 } from "./about-2024";
 import { FAQ } from "./faq";
 import TypeformPopupButton from "@/components/typeform-popup";
-import { TYPEFORM_IDS } from "@/utils/constants";
+import { TC_APPLICATION, TYPEFORM_IDS } from "@/utils/constants";
+import { ArrowUpRightIcon } from "@heroicons/react/24/solid";
+
 export default function Home() {
   return (
     <main>
@@ -22,7 +24,7 @@ function Hero() {
     <div className="w-full theme-orange y-section-padding pt-24 md:pt-28">
       <div className="relative sm:h-[50dvw] sm:max-h-[400px] nav-section-padding">
         <div className="relative h-full z-10">
-          <h1 className="mt-5 text-5xl text-center sm:text-left">The Curve</h1>
+          <h1 className="mt-5 text-center sm:text-left">The Curve</h1>
           <h5 className="mt-1 text-center sm:text-left">
             October 3-5, 2025 | SF & Berkeley
           </h5>
@@ -31,12 +33,13 @@ function Hero() {
             biggest questions.
           </h2>
           <div className="flex justify-center bottom-0 left-0 w-full sm:block">
-            <TypeformPopupButton
-              formId={TYPEFORM_IDS.ANNOUNCEMENTS}
-              buttonText="Get notified when applications open"
-              buttonClassName="border border-white bg-white text-orange rounded px-6 py-2 hover:bg-orange hover:text-white"
-              withArrow
-            />
+            <a
+              href={TC_APPLICATION}
+              className="border border-white bg-white text-orange rounded px-6 py-2 hover:bg-orange hover:text-white flex items-center gap-x-2 w-fit font-tc-display"
+            >
+              Apply now
+              <ArrowUpRightIcon className="w-4 h-4" />
+            </a>
           </div>
         </div>
         <div className="hidden sm:flex absolute bottom-0 left-0 w-full  justify-center items-center nav-section-padding">

@@ -37,3 +37,9 @@ export const TEAM_MEMBERS = [
     socials: [{ network: "linkedin", url: "" }],
   },
 ];
+
+export const TC_APPLICATION =
+  "https://airtable.com/appwTFxHHUQl8Xcio/pagxh6pYeqzANbubz/form";
+export const TC_RECOMMENDATION =
+  "https://airtable.com/appwTFxHHUQl8Xcio/paghSjnFv90b1yMwM/form";
+export const TC_LAUNCH_POST_SLUG = "the-curve-2025";

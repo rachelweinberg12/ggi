@@ -1,9 +1,7 @@
 "use client"; // if you're using Next.js App Router
 
-import { useCallback } from "react";
-import { createPopup } from "@typeform/embed";
 import "@typeform/embed/build/css/popup.css";
-import { Popover, PopupButton } from "@typeform/embed-react";
+import { PopupButton } from "@typeform/embed-react";
 import { ArrowUpRightIcon } from "@heroicons/react/24/solid";
 import clsx from "clsx";
 
@@ -28,7 +26,7 @@ export default function TypeformPopupButton(props: {
       size={66}
       className={clsx(
         !overrideClass &&
-          "hover:cursor-pointer hover:underline flex items-center gap-x-1 text-nowrap md:text-lg",
+          "hover:cursor-pointer hover:underline flex items-center gap-x-2 text-nowrap md:text-lg",
         buttonClassName,
       )}
     >
