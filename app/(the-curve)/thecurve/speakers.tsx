@@ -1,0 +1,100 @@
+import { Col } from "@/components/blocks";
+import { ProfilePicture } from "@/components/profile-picture";
+import Image from "next/image";
+
+const SPEAKERS = [
+  {
+    name: "Dean Ball",
+    affiliation: "White House OSTP",
+    notes: "tentative",
+    imageUrl: "DeanBall.jpeg",
+  },
+  {
+    name: "Ajeya Cotra",
+    affiliation: "Open Philanthropy",
+    imageUrl: "AjeyaCotra.png",
+  },
+  { name: "Lane Dilg", affiliation: "OpenAI", imageUrl: "SamHammond.png" },
+  {
+    name: "Helena Fu",
+    affiliation: "Department of Energy",
+    imageUrl: "SayashKapoor.png",
+  },
+  {
+    name: "Keerthana Gopalakrishnan",
+    affiliation: "Google DeepMind",
+    imageUrl: "AjeyaCotra.png",
+  },
+  {
+    name: "Sam Hammond",
+    affiliation: "Foundation for American Innovation",
+    imageUrl: "SamHammond.png",
+  },
+  {
+    name: "Jedidah Isler",
+    affiliation: "Federation of American Scientists",
+    imageUrl: "JedidahIsler.jpg",
+  },
+  { name: "Chad Jones", affiliation: "Stanford", imageUrl: "ChadJones.jpg" },
+  {
+    name: "Klon Kitchen",
+    affiliation: "Consultant",
+    imageUrl: "KlonKitchen.jpg",
+  },
+  { name: "Jason Kwon", affiliation: "OpenAI", imageUrl: "JasonKwon.jpg" },
+  {
+    name: "Dylan Patel",
+    affiliation: "SemiAnalysis",
+    imageUrl: "DylanPatel.png",
+  },
+  {
+    name: "Geoff Ralston",
+    affiliation: "Safe AI Fund",
+    imageUrl: "GeoffRalston.jpg",
+  },
+  {
+    name: "Joshua Rothman",
+    affiliation: "The New Yorker",
+    imageUrl: "JoshuaRothman.webp",
+  },
+  { name: "Emmett Shear", affiliation: "Softmax", imageUrl: "EmmettShear.jpg" },
+  { name: "Jack Clark", affiliation: "Anthropic", imageUrl: "JackClark.jpeg" },
+  {
+    name: "Helen Toner",
+    affiliation: "Center for Security and Emerging Technology",
+    imageUrl: "HelenToner.jpg",
+  },
+  {
+    name: "Ari Weinstein",
+    affiliation: "Software Apps Inc",
+    imageUrl: "AriWeinstein.jpg",
+  },
+];
+
+export function Speakers() {
+  return (
+    <Col className="section-padding theme-classic">
+      <h2>Speakers</h2>
+      <div className="grid grid-cols-2 gap-x-4 gap-y-6 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
+        {SPEAKERS.map((speaker) => (
+          <Speaker key={speaker.name} speaker={speaker} />
+        ))}
+      </div>
+    </Col>
+  );
+}
+
+function Speaker(props: { speaker: (typeof SPEAKERS)[number] }) {
+  const { speaker } = props;
+  return (
+    <div className="flex flex-col gap-2 items-center">
+      <ProfilePicture
+        name={speaker.name}
+        imageUrl={`/the-curve/speakers/${speaker.imageUrl}`}
+      />
+      <h4 className="text-center">{speaker.name}</h4>
+      <p className="text-center">{speaker.affiliation}</p>
+      <span className="info text-xs text-center">{speaker.notes}</span>
+    </div>
+  );
+}

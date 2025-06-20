@@ -5,6 +5,7 @@ import TypeformPopupButton from "@/components/typeform-popup";
 import { TC_APPLICATION, TYPEFORM_IDS } from "@/utils/constants";
 import { ArrowUpRightIcon } from "@heroicons/react/24/solid";
 import { About } from "./about";
+import { Speakers } from "./speakers";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <Hero />
       <div id="about" className="relative bottom-10" />
       <About />
+      <Speakers />
       <div id="2024" className="relative bottom-10" />
       <About2024 />
       <div id="faq" className="relative bottom-10" />
