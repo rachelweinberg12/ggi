@@ -96,7 +96,6 @@ function Speaker(props: { speaker: (typeof SPEAKERS)[number] }) {
         <h5 className="font-extralight leading-none mt-2">
           {speaker.affiliation}
         </h5>
-        <span className="info text-xs font-light">{speaker.notes}</span>
       </div>
     </div>
   );
