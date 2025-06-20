@@ -1,12 +1,11 @@
 import { Col } from "@/components/blocks";
-import { ProfilePicture } from "@/components/profile-picture";
+import clsx from "clsx";
 import Image from "next/image";
 
 const SPEAKERS = [
   {
-    name: "Dean Ball",
+    name: "Dean Ball*",
     affiliation: "White House OSTP",
-    notes: "tentative",
     imageUrl: "DeanBall.jpeg",
   },
   {
@@ -75,7 +74,7 @@ export function Speakers() {
   return (
     <Col className="section-padding theme-classic">
       <h2>Speakers</h2>
-      <div className="grid grid-cols-2 gap-x-4 gap-y-6 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
+      <div className="grid grid-cols-2 gap-x-4 y-gap sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
         {SPEAKERS.map((speaker) => (
           <Speaker key={speaker.name} speaker={speaker} />
         ))}
@@ -87,14 +86,42 @@ export function Speakers() {
 function Speaker(props: { speaker: (typeof SPEAKERS)[number] }) {
   const { speaker } = props;
   return (
-    <div className="flex flex-col gap-2 items-center">
-      <ProfilePicture
+    <div className="flex flex-col items-center gap-4">
+      <SpeakerPicture
         name={speaker.name}
         imageUrl={`/the-curve/speakers/${speaker.imageUrl}`}
       />
-      <h4 className="text-center">{speaker.name}</h4>
-      <p className="text-center">{speaker.affiliation}</p>
-      <span className="info text-xs text-center">{speaker.notes}</span>
+      <div className="text-center w-30 xs:w-40 lg:w-50">
+        <h4 className="font-bold">{speaker.name}</h4>
+        <h5 className="font-extralight leading-none mt-2">
+          {speaker.affiliation}
+        </h5>
+        <span className="info text-xs font-light">{speaker.notes}</span>
+      </div>
+    </div>
+  );
+}
+
+export function SpeakerPicture(props: {
+  name: string;
+  imageUrl: string;
+  className?: string;
+}) {
+  const { name, imageUrl, className } = props;
+  return (
+    <div
+      className={clsx(
+        "w-30 h-30 xs:w-40 xs:h-40 lg:w-50 lg:h-50 rounded overflow-hidden",
+        className,
+      )}
+    >
+      <Image
+        src={imageUrl}
+        alt={name}
+        width={400}
+        height={400}
+        className="aspect-square object-cover"
+      />
     </div>
   );
 }
