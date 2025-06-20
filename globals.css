@@ -282,6 +282,15 @@
     font-family: var(--font-lora);
   }
 
+  .theme-the-curve p,
+  .theme-the-curve ul,
+  .theme-the-curve ol,
+  .theme-the-curve .info,
+  .theme-the-curve .pull-quote {
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
   .theme-the-curve h1,
   .theme-the-curve h2,
   .theme-the-curve h3,
