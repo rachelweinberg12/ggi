@@ -108,6 +108,22 @@
   --color-teal-50: #e4f7f5;
   /* main */
   --color-teal: #68a39d;
+
+  /* Indigo (600) */
+  --color-indigo-50: #f0f5fd;
+  --color-indigo-100: #e4edfb;
+  --color-indigo-200: #cdddf8;
+  --color-indigo-300: #afc5f2;
+  --color-indigo-400: #8ea6eb;
+  --color-indigo-500: #7387e1;
+  --color-indigo-600: #5865d3;
+  --color-indigo-700: #4953b9;
+  --color-indigo-800: #3d4696;
+  --color-indigo-900: #373f78;
+  --color-indigo-950: #202346;
+  /* main */
+  --color-indigo: #5865d3;
+
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
