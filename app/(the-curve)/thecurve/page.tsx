@@ -24,36 +24,32 @@ export default function Home() {
 
 function Hero() {
   return (
-    <div className="w-full theme-orange y-section-padding pt-24 md:pt-28">
-      <div className="relative sm:h-[50dvw] sm:max-h-[400px] nav-section-padding">
-        <div className="relative h-full z-10">
-          <h1 className="mt-5 text-center sm:text-left">The Curve</h1>
-          <h5 className="mt-1 text-center sm:text-left">
+    <div className="w-full h-dvh y-section-padding pt-24 md:pt-28">
+      <Image
+        className="object-cover h-dvh absolute top-0 left-0 sm:aspect-16/9 aspect-2/3"
+        src="/the-curve/display/CurveClouds.png"
+        alt="Hero image"
+        width={2000}
+        height={100}
+        priority
+      />
+      <div className="relative nav-section-padding h-full">
+        <div className="relative h-full z-10 sm:top-1/5 top-16">
+          <h5 className="mb-1 text-center sm:text-left text-indigo-500 text-lg sm:text-2xl font-light">
             October 3-5, 2025 | SF & Berkeley
           </h5>
-          <h2 className="my-12 xl:my-12 sm:my-8 sm:w-2/3 w-full text-center sm:text-left">
+          <h2 className="sm:w-7/12 w-full text-center sm:text-left text-indigo font-bold text-3xl sm:text-4xl lg:text-5xl">
             A conference where thinkers, builders, and leaders grapple with AI's
             biggest questions.
           </h2>
-          <div className="flex justify-center bottom-0 left-0 w-full sm:block">
-            <a
-              href={TC_APPLICATION}
-              className="border border-white bg-white text-orange rounded px-6 py-2 hover:bg-orange hover:text-white flex items-center gap-x-2 w-fit font-tc-display"
-            >
-              Apply now
-              <ArrowUpRightIcon className="w-4 h-4" />
-            </a>
-          </div>
         </div>
-        <div className="hidden sm:flex absolute bottom-0 left-0 w-full  justify-center items-center nav-section-padding">
-          <Image
-            className="object-contain text-white max-w-7xl w-full"
-            src="/WideCurve.svg"
-            alt="Curve"
-            width={2000}
-            height={1000}
-            priority
-          />
+        <div className="absolute bottom-16 sm:right-32 flex w-full justify-center sm:justify-end">
+          <a
+            href={TC_APPLICATION}
+            className="outline-2 outline-rose outline-offset-2 bg-white px-10 py-4 text-indigo hover:bg-rose hover:text-white flex items-center gap-x-2 w-fit font-tc-display rounded font-bold text-lg md:text-xl"
+          >
+            Apply now
+          </a>
         </div>
       </div>
     </div>

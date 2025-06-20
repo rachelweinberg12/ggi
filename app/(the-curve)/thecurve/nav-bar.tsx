@@ -40,7 +40,7 @@ export function NavBar() {
                 ? "border-black theme-classic"
                 : clsx(
                     "border-white text-white hover:border-black hover:bg-white hover:text-black",
-                    isHome ? "bg-transparent backdrop-blur-sm" : "theme-orange",
+                    isHome ? "theme-indigo" : "theme-orange",
                   ),
             )}
             id="navbar"
