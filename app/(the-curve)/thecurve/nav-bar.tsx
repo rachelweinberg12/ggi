@@ -71,6 +71,7 @@ export function NavBar() {
                   ))}
                   <a
                     href={TC_APPLICATION}
+                    target="_blank"
                     className="outline-2 outline-white ring-2 ring-indigo outline-offset-2 bg-white px-6 group-hover:bg-white group-hover:outline-white group-hover:text-indigo py-2 text-indigo hover:bg-rose hover:text-white hover:outline-rose hover:ring-0 flex items-center gap-x-2 w-fit font-tc-display rounded font-bold text-sm md:text-base"
                   >
                     Apply
@@ -90,7 +91,7 @@ export function NavBar() {
 
           <DisclosurePanel
             transition
-            className="origin-left transition duration-500 ease-out data-closed:translate-x-full -z-10 theme-indigo outline outline-black"
+            className="origin-left transition duration-500 ease-out data-closed:translate-x-full -z-10 theme-indigo"
           >
             <Col className="items-center justify-center space-y-12 h-dvh overflow-hidden">
               {pages.map((page) => (
@@ -100,6 +101,13 @@ export function NavBar() {
                   </p>
                 </DisclosureButton>
               ))}
+              <a
+                href={TC_APPLICATION}
+                target="_blank"
+                className="outline-2 outline-white ring-2 ring-indigo outline-offset-2 bg-white px-8 group-hover:bg-white group-hover:outline-white group-hover:text-indigo py-4 text-indigo hover:bg-rose hover:text-white hover:outline-rose hover:ring-0 font-tc-display rounded font-bold text-lg relative bottom-10"
+              >
+                Apply to join
+              </a>
             </Col>
           </DisclosurePanel>
         </>
