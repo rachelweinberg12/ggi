@@ -35,10 +35,13 @@ function Hero() {
       />
       <div className="relative nav-section-padding h-full">
         <div className="relative h-full z-10 sm:top-1/12 top-16">
-          <h5 className="mb-1 text-center sm:text-left text-indigo-500 text-lg sm:text-2xl font-light">
-            October 3-5, 2025 | SF & Berkeley
+          <h1 className="tracking-normal text-indigo text-5xl sm:text-6xl lg:text-7xl text-center sm:text-left">
+            The Curve
+          </h1>
+          <h5 className="mb-1 text-center sm:text-left text-indigo-400 text-xl sm:text-2xl lg:text-3xl font-light">
+            October 3-5, 2025 | Berkeley, CA
           </h5>
-          <h2 className="sm:w-7/12 w-full text-center sm:text-left text-indigo font-bold text-3xl sm:text-4xl lg:text-5xl">
+          <h2 className="sm:w-7/12 w-full text-center sm:text-left text-indigo font-bold text-2xl sm:text-3xl lg:text-4xl">
             A conference where thinkers, builders, and leaders grapple with AI's
             biggest questions.
           </h2>
