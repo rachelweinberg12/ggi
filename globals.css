@@ -112,19 +112,19 @@
   --color-teal: #68a39d;
 
   /* Indigo (600) */
-  --color-indigo-50: #f0f5fd;
-  --color-indigo-100: #e4edfb;
-  --color-indigo-200: #cdddf8;
-  --color-indigo-300: #afc5f2;
-  --color-indigo-400: #8ea6eb;
-  --color-indigo-500: #7387e1;
-  --color-indigo-600: #5865d3;
-  --color-indigo-700: #4953b9;
-  --color-indigo-800: #3d4696;
-  --color-indigo-900: #373f78;
-  --color-indigo-950: #202346;
+  --color-indigo-50: #eff3fe;
+  --color-indigo-100: #e1eafe;
+  --color-indigo-200: #cad7fb;
+  --color-indigo-300: #a9bdf8;
+  --color-indigo-400: #8799f2;
+  --color-indigo-500: #6a76ea;
+  --color-indigo-600: #4c4edd;
+  --color-indigo-700: #403fc3;
+  --color-indigo-800: #36379d;
+  --color-indigo-900: #32347d;
+  --color-indigo-950: #1d1d49;
   /* main */
-  --color-indigo: #5865d3;
+  --color-indigo: #4c4edd;
 
   /* Peach (400) */
   --color-peach-50: #fef5f2;

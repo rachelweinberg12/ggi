@@ -27,7 +27,7 @@ function Hero() {
     <div className="w-full h-dvh y-section-padding pt-24 md:pt-28 outline-b outline-rose outline-2 outline-offset-2">
       <Image
         className="object-cover h-dvh absolute top-0 left-0 sm:aspect-16/9 aspect-2/3"
-        src="/the-curve/display/CurveClouds.png"
+        src="/the-curve/display/CurveClouds2.png"
         alt="Hero image"
         width={2000}
         height={100}
