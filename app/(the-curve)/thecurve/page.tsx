@@ -4,6 +4,7 @@ import { TC_APPLICATION, TYPEFORM_IDS } from "@/utils/constants";
 import { About } from "./about";
 import { Speakers } from "./speakers";
 import { Col } from "@/components/blocks";
+import { Logo } from "@/components/logo";
 
 export default function Home() {
   return (
@@ -33,7 +34,7 @@ function Divider(props: { num: string }) {
         alt="Divider"
         width={3072}
         height={1152}
-        className="object-cover w-full"
+        className="object-contain w-full"
       />
     </div>
   );
@@ -76,8 +77,8 @@ function Hero() {
           </div>
         </div>
       </div>
-      <div className="w-full p-3 mt-1 outline-b outline-rose outline-2 outline-offset-2 text-rose">
-        <h3 className="text-center">
+      <div className="w-full p-3 lg:p-5 mt-1 bg-rose outline-b outline-rose outline-2 outline-offset-2 text-rose">
+        {/* <h3 className="text-center">
           Hosted by the{" "}
           <a
             href="goldengateinstitute.org"
@@ -95,7 +96,39 @@ function Hero() {
             Manifund
           </a>
           .
-        </h3>
+        </h3> */}
+        <div className="flex flex-col sm:flex-row items-center gap-x-8 gap-y-3 justify-around sm:max-w-3xl lg:max-w-5xl mx-auto">
+          <h5 className="text-white text-base sm:text-xl lg:text-2xl">
+            Hosted by:
+          </h5>
+          <a
+            href="https://goldengateinstitute.org"
+            target="_blank"
+            className="h-5 lg:h-8 w-auto"
+          >
+            <Image
+              src="/GGILogoWhiteHorizontal.png"
+              alt="Golden Gate Institute logo"
+              className="object-contain h-full w-auto"
+              width={200}
+              height={40}
+            />
+          </a>
+
+          <a
+            href="https://manifund.org"
+            target="_blank"
+            className="h-5 lg:h-8 w-auto"
+          >
+            <Image
+              src="/ManifundLogo.png"
+              alt="Manifund logo"
+              className="object-contain h-full w-auto"
+              width={200}
+              height={40}
+            />
+          </a>
+        </div>
       </div>
     </div>
   );
