@@ -26,7 +26,7 @@ function Hero() {
   return (
     <div className="w-full h-dvh y-section-padding pt-24 md:pt-28 outline-b outline-rose outline-2 outline-offset-2">
       <Image
-        className="object-cover h-dvh absolute top-0 left-0 sm:aspect-16/9 aspect-2/3"
+        className="object-cover h-dvh absolute top-0 w-full left-0 sm:aspect-16/9 aspect-2/3"
         src="/the-curve/display/CurveClouds2.png"
         alt="Hero image"
         width={2000}
@@ -34,7 +34,7 @@ function Hero() {
         priority
       />
       <div className="relative nav-section-padding h-full">
-        <div className="relative h-full z-10 sm:top-1/5 top-16">
+        <div className="relative h-full z-10 sm:top-1/12 top-16">
           <h5 className="mb-1 text-center sm:text-left text-indigo-500 text-lg sm:text-2xl font-light">
             October 3-5, 2025 | SF & Berkeley
           </h5>
