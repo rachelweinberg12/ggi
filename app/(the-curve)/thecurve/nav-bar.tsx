@@ -37,8 +37,8 @@ export function NavBar() {
             className={clsx(
               "z-10 group outline-2 outline-b outline-offset-2",
               scrolled || open
-                ? "outline-rose bg-indigo text-white hover:outline-indigo hover:bg-white hover:text-indigo"
-                : "outline-indigo bg-white text-indigo hover:outline-rose hover:bg-indigo hover:text-white",
+                ? "outline-indigo bg-white text-indigo hover:outline-rose hover:bg-indigo hover:text-white"
+                : "outline-rose bg-indigo text-white hover:outline-indigo hover:bg-white hover:text-indigo",
             )}
             id="navbar"
           >
@@ -48,13 +48,13 @@ export function NavBar() {
                   <Logo
                     iconFillClass={clsx(
                       scrolled || open
-                        ? "fill-white group-hover:fill-indigo"
-                        : "fill-indigo group-hover:fill-white",
+                        ? "fill-indigo group-hover:fill-white"
+                        : "fill-white group-hover:fill-indigo",
                     )}
                     textClass={clsx(
                       scrolled || open
-                        ? "text-white group-hover:text-indigo"
-                        : "text-indigo group-hover:text-white",
+                        ? "text-indigo group-hover:text-white"
+                        : "text-white group-hover:text-indigo",
                     )}
                   />
                 </Row>
