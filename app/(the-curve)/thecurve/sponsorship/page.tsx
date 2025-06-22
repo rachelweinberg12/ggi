@@ -18,7 +18,7 @@ const SPONSORSHIP_TIERS: SponsorshipTier[] = [
     numAvailable: "1 available",
     emoji: "🏆",
     benefits: [
-      "1 prime-time, main-stage session slot",
+      "1 prime-time, main-stage session",
       "8 general admission tickets",
       "4 VIP tickets",
       "Office hours slot",
@@ -35,7 +35,7 @@ const SPONSORSHIP_TIERS: SponsorshipTier[] = [
     emoji: "🥇",
     numAvailable: "3 available",
     benefits: [
-      "1 prime-time, secondary-stage session slot",
+      "1 prime-time, secondary-stage session",
       "4 general admission tickets",
       "2 VIP tickets",
       "Office hours slot",
@@ -51,7 +51,7 @@ const SPONSORSHIP_TIERS: SponsorshipTier[] = [
     emoji: "🥈",
     numAvailable: "4 available",
     benefits: [
-      "1 session slot",
+      "1 session",
       "2 general admission tickets",
       "1 VIP ticket",
       "Office hours slot",
@@ -72,62 +72,65 @@ const SPONSORSHIP_TIERS: SponsorshipTier[] = [
 export default function SponsorshipPage() {
   return (
     <main>
-      <div className="top-section-padding">
-        <div className="text-width-pos mt-8">
-          <h1>About sponsorship</h1>
-          <p className="mt-6">
-            The Curve brings together ~250 carefully selected thinkers,
-            builders, and decision-makers for 2.5-days of high quality dialogue
-            on the most contentious and consequential questions about AI.
-          </p>
-          <p className="mt-3">
-            When you sponsor The Curve, you support our mission, and get the
-            opportunity to engage with all sorts of exceptional people shaping
-            the future of AI:
-          </p>
-          <ul className="list-disc list-inside mt-3 text-">
-            <li>
-              Researchers, engineers, and executives at AI labs - pushing the
-              frontier forward
-            </li>
-            <li>
-              Policy researchers, advocates, and government officials - shaping
-              AI regulation and strategy
-            </li>
-            <li>
-              Startup founders and operators - building applications with and
-              for AI
-            </li>
-            <li>
-              Journalists and bloggers - shaping the narrative among AI insiders
-              and the public
-            </li>
-            <li>Academics - studying AI and its impact on society</li>
-            <li>Grantmakers and VCs - funding all this work</li>
-          </ul>
-          <p className="font-bold mt-3">
-            If you're interested in pursuing sponsorship, get in touch with our
-            lead organizer at{" "}
-            <a
-              href="mailto:rachel@goldengateinsitute.org"
-              className="text-link"
-            >
-              rachel@goldengateinsitute.org
-            </a>
-            .
-          </p>
-        </div>
-      </div>
-      <div className="section-padding theme-indigo outline-2 outline-rose outline-offset-2">
-        <h2>Packages</h2>
-        <p>
+      <div className="top-section-padding max-w-[1572px]">
+        <h1 className="text-center mt-8">Packages</h1>
+        <p className="mt-2 text-center">
           The options laid out below are flexible. We can tailor packages to the
           specific needs of individual sponsors.
         </p>
-        <div className="grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-4 y-gap x-gap mt-8 sm:mt-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-4 y-gap x-gap mt-8 sm:mt-12 max-w-[1572px] mx-auto">
           {SPONSORSHIP_TIERS.map((tier) => (
             <SponsorshipCard key={tier.name} sponsorshipTier={tier} />
           ))}
+        </div>
+      </div>
+      <div className="section-padding">
+        <div className="max-w-[1572px] grid grid-cols-1 lg:grid-cols-2 mx-auto">
+          <h1 className="mb-4">About sponsorship</h1>
+          <div>
+            <p>
+              The Curve brings together ~250 carefully selected thinkers,
+              builders, and decision-makers for 2.5-days of high quality
+              dialogue on the most contentious and consequential questions about
+              AI.
+            </p>
+            <p className="mt-3">
+              When you sponsor The Curve, you support our mission, and get the
+              opportunity to engage with all sorts of exceptional people shaping
+              the future of AI:
+            </p>
+            <ul className="list-disc list-inside mt-3 text-">
+              <li>
+                Researchers, engineers, and executives at AI labs - pushing the
+                frontier forward
+              </li>
+              <li>
+                Policy researchers, advocates, and government officials -
+                shaping AI regulation and strategy
+              </li>
+              <li>
+                Startup founders and operators - building applications with and
+                for AI
+              </li>
+              <li>
+                Journalists and bloggers - shaping the narrative among AI
+                insiders and the public
+              </li>
+              <li>Academics - studying AI and its impact on society</li>
+              <li>Grantmakers and VCs - funding all this work</li>
+            </ul>
+            <p className="font-bold mt-3">
+              If you're interested in pursuing sponsorship, get in touch with
+              the Golden Gate Institute's Director of Events at{" "}
+              <a
+                href="mailto:rachel@goldengateinsitute.org"
+                className="text-link"
+              >
+                rachel@goldengateinsitute.org
+              </a>
+              .
+            </p>
+          </div>
         </div>
       </div>
     </main>
@@ -137,7 +140,7 @@ export default function SponsorshipPage() {
 function SponsorshipCard(props: { sponsorshipTier: SponsorshipTier }) {
   const { name, cost, benefits, emoji, numAvailable } = props.sponsorshipTier;
   return (
-    <div className="overflow-hidden rounded theme-classic">
+    <div className="overflow-hidden">
       <div className="flex flex-row items-center justify-between gap-3 px-6 pt-4 pb-2">
         <div className="flex flex-row items-center gap-2">
           <h3>{emoji}</h3>
