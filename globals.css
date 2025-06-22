@@ -332,6 +332,10 @@
     font-family: var(--font-plus-jakarta-sans);
   }
 
+  .theme-the-curve .text-link {
+    color: var(--color-indigo);
+  }
+
   .theme-indigo {
     --bg: var(--color-indigo);
     --primary: var(--color-white);

@@ -12,30 +12,22 @@ type SponsorshipTier = {
 };
 const SPONSORSHIP_TIERS: SponsorshipTier[] = [
   {
-    name: "Bronze",
-    cost: "$8k",
-    emoji: "🥉",
-    color: "bg-sand",
-    numAvailable: "unlimited",
-    benefits: ["1 VIP ticket", "Small logo", "Available to individuals"],
-  },
-
-  {
-    name: "Silver",
-    cost: "$20k",
-    color: "bg-bley",
-    emoji: "🥈",
-    numAvailable: "4 available",
+    name: "Platinum",
+    cost: "$80k",
+    color: "bg-teal",
+    numAvailable: "1 available",
+    emoji: "🏆",
     benefits: [
-      "1 session slot",
-      "2 general admission tickets",
-      "1 VIP ticket",
+      "1 prime-time, main-stage session slot",
+      "8 general admission tickets",
+      "4 VIP tickets",
       "Office hours slot",
-      "Group announcement on X",
-      "Medium logo",
-      "Acknowledgement at one special event",
+      "Dedicated announcement on X",
+      "Extra large logo",
+      "Acknowledgement at opening and closing ceremonies",
     ],
   },
+
   {
     name: "Gold",
     cost: "$40k",
@@ -53,27 +45,35 @@ const SPONSORSHIP_TIERS: SponsorshipTier[] = [
     ],
   },
   {
-    name: "Platinum",
-    cost: "$80k",
-    color: "bg-teal",
-    numAvailable: "1 available",
-    emoji: "🏆",
+    name: "Silver",
+    cost: "$20k",
+    color: "bg-bley",
+    emoji: "🥈",
+    numAvailable: "4 available",
     benefits: [
-      "1 prime-time, main-stage session slot",
-      "8 general admission tickets",
-      "4 VIP tickets",
+      "1 session slot",
+      "2 general admission tickets",
+      "1 VIP ticket",
       "Office hours slot",
-      "Dedicated announcement on X",
-      "Extra large logo",
-      "Acknowledgement at opening and closing ceremonies",
+      "Group announcement on X",
+      "Medium logo",
+      "Acknowledgement at one special event",
     ],
+  },
+  {
+    name: "Bronze",
+    cost: "$8k",
+    emoji: "🥉",
+    color: "bg-sand",
+    numAvailable: "unlimited",
+    benefits: ["1 VIP ticket", "Small logo", "Available to individuals"],
   },
 ];
 export default function SponsorshipPage() {
   return (
     <main>
       <div className="top-section-padding">
-        <div className="text-width-pos">
+        <div className="text-width-pos mt-8">
           <h1>About sponsorship</h1>
           <p className="mt-6">
             The Curve brings together ~250 carefully selected thinkers,
@@ -118,9 +118,9 @@ export default function SponsorshipPage() {
           </p>
         </div>
       </div>
-      <div className="section-padding theme-sand border-t border-black">
-        <h2 className="text-center">Packages</h2>
-        <p className="mt-3 text-center">
+      <div className="section-padding theme-indigo outline-2 outline-rose outline-offset-2">
+        <h2>Packages</h2>
+        <p>
           The options laid out below are flexible. We can tailor packages to the
           specific needs of individual sponsors.
         </p>
@@ -135,21 +135,21 @@ export default function SponsorshipPage() {
 }
 
 function SponsorshipCard(props: { sponsorshipTier: SponsorshipTier }) {
-  const { name, cost, color, benefits, emoji, numAvailable } =
-    props.sponsorshipTier;
+  const { name, cost, benefits, emoji, numAvailable } = props.sponsorshipTier;
   return (
-    <div className="overflow-hidden border rounded border-black">
-      <div className="p-4 flex flex-row items-center justify-between gap-3 border-b border-black">
+    <div className="overflow-hidden rounded theme-classic">
+      <div className="flex flex-row items-center justify-between gap-3 px-6 pt-4 pb-2">
         <div className="flex flex-row items-center gap-2">
-          <h2>{emoji}</h2>
-          <h2>{name}</h2>
+          <h3>{emoji}</h3>
+          <h3>{name}</h3>
         </div>
         <div className="flex flex-col items-end">
           <h4>{cost}</h4>
           <p className="info">{numAvailable}</p>
         </div>
       </div>
-      <ul className="list-disc list-inside p-4 pb-6">
+      <div className="border-t-2 border-rose w-11/12 mx-auto pb-1" />
+      <ul className="list-disc list-inside pb-6">
         {benefits.map((benefit) => (
           <Row className="gap-3 py-1" key={benefit}>
             <CheckIcon className="w-3 h-3 flex-none relative top-2" />
