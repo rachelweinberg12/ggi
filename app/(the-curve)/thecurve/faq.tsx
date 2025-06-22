@@ -4,7 +4,7 @@ import { TYPEFORM_IDS } from "@/utils/constants";
 import Link from "next/link";
 export function FAQ() {
   return (
-    <div className="section-padding theme-classic">
+    <div className="section-padding pt-0 theme-classic">
       <div className="text-width-pos">
         <h2 className="mb-4">FAQ</h2>
         <Toggle title="How much does it cost to attend?">
