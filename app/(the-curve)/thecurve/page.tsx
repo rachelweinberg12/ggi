@@ -13,12 +13,31 @@ export default function Home() {
       <Hero />
       <div id="about" className="relative bottom-10" />
       <About />
+      <div className="w-full">
+        <Divider num="1" />
+      </div>
       <Speakers />
-      <div id="2024" className="relative bottom-10" />
-      <About2024 />
+      <div className="w-full">
+        <Divider num="2" />
+      </div>
       <div id="faq" className="relative bottom-10" />
       <FAQ />
     </main>
+  );
+}
+
+function Divider(props: { num: string }) {
+  const src = `/the-curve/display/Divider${props.num}.png`;
+  return (
+    <div className="w-full">
+      <Image
+        src={src}
+        alt="Divider"
+        width={3072}
+        height={1152}
+        className="object-cover w-full"
+      />
+    </div>
   );
 }
 

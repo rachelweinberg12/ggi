@@ -4,7 +4,7 @@ import clsx from "clsx";
 
 export function About() {
   return (
-    <Col className="section-padding theme-classic gap-y-16">
+    <Col className="section-padding pb-0 pt-16 md:pt-24 theme-classic gap-y-16">
       <AboutSection
         title="Our purpose"
         imageUrl="/the-curve/display/Elephant.png"
