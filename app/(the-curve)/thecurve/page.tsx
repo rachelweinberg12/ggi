@@ -6,6 +6,7 @@ import { TC_APPLICATION, TYPEFORM_IDS } from "@/utils/constants";
 import { ArrowUpRightIcon } from "@heroicons/react/24/solid";
 import { About } from "./about";
 import { Speakers } from "./speakers";
+import { Col } from "@/components/blocks";
 
 export default function Home() {
   return (
@@ -65,13 +66,15 @@ function Hero() {
             biggest questions.
           </h2>
         </div>
-        <div className="absolute bottom-16 sm:right-32 flex w-full justify-center sm:justify-end">
-          <a
-            href={TC_APPLICATION}
-            className="outline-2 outline-rose outline-offset-2 bg-white px-10 py-4 text-indigo hover:bg-rose hover:text-white flex items-center gap-x-2 w-fit font-tc-display rounded font-bold text-lg md:text-xl"
-          >
-            Apply now
-          </a>
+        <div className="absolute bottom-12 sm:right-28 flex w-full justify-center sm:justify-end z-10">
+          <Col className="items-center gap-2">
+            <a
+              href={TC_APPLICATION}
+              className="outline-2 outline-rose outline-offset-2 bg-white px-10 py-4 text-indigo hover:bg-rose hover:text-white flex items-center gap-x-2 w-fit font-tc-display rounded font-bold text-lg md:text-xl"
+            >
+              Apply to join
+            </a>
+          </Col>
         </div>
       </div>
     </div>

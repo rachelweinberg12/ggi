@@ -10,6 +10,7 @@ import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 import { Logo } from "./logo";
 import clsx from "clsx";
+import { TC_APPLICATION } from "@/utils/constants";
 
 const pages = [
   { name: "About", href: "/#about" },
@@ -58,7 +59,7 @@ export function NavBar() {
                     )}
                   />
                 </Row>
-                <Row className="hidden sm:flex space-x-8 md:space-x-12 justify-end">
+                <Row className="hidden md:flex space-x-8 md:space-x-12 justify-end items-center">
                   {pages.map((page) => (
                     <a
                       className="text-base font-medium hover:underline font-tc-display"
@@ -68,8 +69,14 @@ export function NavBar() {
                       {page.name}
                     </a>
                   ))}
+                  <a
+                    href={TC_APPLICATION}
+                    className="outline-2 outline-white outline-offset-2 bg-white px-6 group-hover:bg-indigo group-hover:outline-indigo group-hover:text-white py-2 text-indigo hover:bg-rose hover:text-white hover:outline-rose flex items-center gap-x-2 w-fit font-tc-display rounded font-bold text-sm md:text-base"
+                  >
+                    Apply
+                  </a>
                 </Row>
-                <Row className="-mr-2 flex items-center sm:hidden">
+                <Row className="-mr-2 flex items-center md:hidden">
                   {/* Mobile menu button */}
                   <DisclosureButton className="group relative inline-flex items-center justify-center hover:cursor-pointer">
                     <span className="absolute -inset-0.5" />

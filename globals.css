@@ -142,19 +142,19 @@
   --color-peach: #f68b69;
 
   /* Rose (600) */
-  --color-rose-50: #fdf3f3;
-  --color-rose-100: #fce8e7;
-  --color-rose-200: #f8d3d3;
-  --color-rose-300: #f2afb0;
-  --color-rose-400: #e98384;
-  --color-rose-500: #dd565c;
-  --color-rose-600: #c83644;
-  --color-rose-700: #a82837;
-  --color-rose-800: #8d2434;
-  --color-rose-900: #792232;
-  --color-rose-950: #430e16;
+  --color-rose-50: #fff1f2;
+  --color-rose-100: #fee5e7;
+  --color-rose-200: #fdced5;
+  --color-rose-300: #fba6b3;
+  --color-rose-400: #f7758a;
+  --color-rose-500: #f04d6c;
+  --color-rose-600: #dc224f;
+  --color-rose-700: #b91741;
+  --color-rose-800: #9b163e;
+  --color-rose-900: #85163a;
+  --color-rose-950: #4a071b;
   /* main */
-  --color-rose: #c83644;
+  --color-rose: #dc224f;
 
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);
