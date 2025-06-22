@@ -71,7 +71,7 @@ export function NavBar() {
                   ))}
                   <a
                     href={TC_APPLICATION}
-                    className="outline-2 outline-white outline-offset-2 bg-white px-6 group-hover:bg-indigo group-hover:outline-indigo group-hover:text-white py-2 text-indigo hover:bg-rose hover:text-white hover:outline-rose flex items-center gap-x-2 w-fit font-tc-display rounded font-bold text-sm md:text-base"
+                    className="outline-2 outline-white ring-2 ring-indigo outline-offset-2 bg-white px-6 group-hover:bg-white group-hover:outline-white group-hover:text-indigo py-2 text-indigo hover:bg-rose hover:text-white hover:outline-rose hover:ring-0 flex items-center gap-x-2 w-fit font-tc-display rounded font-bold text-sm md:text-base"
                   >
                     Apply
                   </a>
