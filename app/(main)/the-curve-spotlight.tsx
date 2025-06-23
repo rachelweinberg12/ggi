@@ -22,7 +22,7 @@ const testimonials = [
 export function TheCurveSpotlight() {
   return (
     <div
-      className="section-padding border-y border-black theme-classic"
+      className="section-padding border-t border-black theme-orange"
       id="the-curve"
     >
       <div className="grid lg:grid-cols-2 x-gap items-start">
@@ -37,12 +37,14 @@ export function TheCurveSpotlight() {
             <LinkButton
               href="https://thecurve.goldengateinstitute.org"
               title="Learn more"
-              className="px-6 py-2 bg-orange text-white hover:bg-white hover:text-orange rounded border"
+              className="px-6 py-2 bg-white text-orange hover:bg-orange hover:text-white rounded border"
+              newTab
             />
             <LinkButton
               href={TC_APPLICATION}
               title="Apply to join"
-              className="px-6 py-2 bg-white text-orange hover:bg-orange hover:text-white rounded border"
+              className="px-6 py-2 bg-orange text-white hover:bg-white hover:text-orange rounded border"
+              newTab
             />
           </Row>
         </div>

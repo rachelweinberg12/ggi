@@ -41,7 +41,7 @@ export function EventsSpotlight() {
   const numUpcomingEvents = upcomingEvents.length;
   const numRecentEvents = recentEvents.length;
   return (
-    <div>
+    <div className="theme-classic">
       {numUpcomingEvents !== 0 ? (
         <Col className="nav-section-padding y-section-padding pt-0">
           <h2>Upcoming events</h2>

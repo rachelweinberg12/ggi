@@ -18,41 +18,43 @@ export function WritingSpotlight() {
   const primaryPostSlug = postSlugs[0];
   const secondaryPostSlugs = postSlugs.slice(1, 3);
   return (
-    <Col className="nav-section-padding y-section-padding border-t border-black">
-      <Row className="justify-between items-end flex-row">
-        <h2>Recent writing</h2>
-        <LinkButton
-          href={SUBSTACK_URL}
-          title="See all writing"
-          className="hidden xs:flex"
-        />
-      </Row>
-      <div className="xl:grid grid-cols-12 x-gap hidden">
-        <div className="col-span-5">
-          <PostPreview slug={primaryPostSlug} vertical />
+    <div className="border-t border-black theme-classic">
+      <Col className="nav-section-padding y-section-padding">
+        <Row className="justify-between items-end flex-row">
+          <h2>Recent writing</h2>
+          <LinkButton
+            href={SUBSTACK_URL}
+            title="See all writing"
+            className="hidden xs:flex"
+          />
+        </Row>
+        <div className="xl:grid grid-cols-12 x-gap hidden">
+          <div className="col-span-5">
+            <PostPreview slug={primaryPostSlug} vertical />
+          </div>
+          <Col className="h-full justify-between col-span-7">
+            {secondaryPostSlugs.map((slug, i) => (
+              <PostPreview slug={slug} key={i} />
+            ))}
+          </Col>
         </div>
-        <Col className="h-full justify-between col-span-7">
+        <div className="hidden xs:grid grid-rows-3 y-gap xl:hidden">
+          <PostPreview slug={primaryPostSlug} />
           {secondaryPostSlugs.map((slug, i) => (
             <PostPreview slug={slug} key={i} />
           ))}
-        </Col>
-      </div>
-      <div className="hidden xs:grid grid-rows-3 y-gap xl:hidden">
-        <PostPreview slug={primaryPostSlug} />
-        {secondaryPostSlugs.map((slug, i) => (
-          <PostPreview slug={slug} key={i} />
-        ))}
-      </div>
-      <div className="grid grid-rows-3 y-gap xs:hidden">
-        <PostPreview slug={primaryPostSlug} vertical />
-        {secondaryPostSlugs.map((slug, i) => (
-          <PostPreview slug={slug} key={i} vertical />
-        ))}
-      </div>
-      <Row className="justify-end xs:hidden">
-        <LinkButton href={SUBSTACK_URL} title="See all writing" />
-      </Row>
-    </Col>
+        </div>
+        <div className="grid grid-rows-3 y-gap xs:hidden">
+          <PostPreview slug={primaryPostSlug} vertical />
+          {secondaryPostSlugs.map((slug, i) => (
+            <PostPreview slug={slug} key={i} vertical />
+          ))}
+        </div>
+        <Row className="justify-end xs:hidden">
+          <LinkButton href={SUBSTACK_URL} title="See all writing" />
+        </Row>
+      </Col>
+    </div>
   );
 }
 

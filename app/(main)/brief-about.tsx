@@ -4,7 +4,7 @@ import { LinkButton } from "@/components/link-button";
 export function BriefAbout() {
   return (
     <div
-      className="section-padding border-y border-black theme-sand"
+      className="section-padding border-t border-black theme-sand"
       id="about"
     >
       <div className="text-width-pos">
