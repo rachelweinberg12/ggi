@@ -5,10 +5,11 @@ import Image from "next/image";
 
 const SPEAKERS = [
   {
-    name: "Dean Ball*",
+    name: "Dean Ball",
     affiliation: "White House OSTP",
     imageUrl: "DeanBall.jpeg",
     role: "Senior Policy Advisor",
+    notes: "tentative",
   },
   {
     name: "Ajeya Cotra",
@@ -115,11 +116,15 @@ const SPEAKERS = [
 ];
 
 export function Speakers() {
+  const sortedSpeakers = [...SPEAKERS].sort((a, b) =>
+    a.name.localeCompare(b.name),
+  );
+
   return (
     <Col className="section-padding theme-classic py-0">
       <h1>Speakers</h1>
       <div className="grid grid-cols-2 gap-x-8 y-gap sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 mt-4">
-        {SPEAKERS.map((speaker) => (
+        {sortedSpeakers.map((speaker) => (
           <Speaker key={speaker.name} speaker={speaker} />
         ))}
         <div className="col-span-2 sm:col-span-3 lg:col-span-2 px-5">
@@ -147,13 +152,14 @@ function Speaker(props: { speaker: (typeof SPEAKERS)[number] }) {
         name={speaker.name}
         imageUrl={`/the-curve/speakers/${speaker.imageUrl}`}
       />
-      <div className="text-center">
+      <div className="text-center w-full">
         <h4 className="font-bold">{speaker.name}</h4>
         <div className="w-1/3 mx-auto border-t-2 mt-3 border-rose" />
         <h5 className="leading-none mt-2 font-normal">{speaker.affiliation}</h5>
         <p className="leading-none mt-2 font-extralight text-gray-600">
           {speaker.role}
         </p>
+        <p className="italic text-sm mt-1 info">{speaker.notes}</p>
       </div>
     </div>
   );

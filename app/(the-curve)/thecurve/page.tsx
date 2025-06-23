@@ -1,10 +1,9 @@
 import Image from "next/image";
 import { FAQ } from "./faq";
-import { TC_APPLICATION, TYPEFORM_IDS } from "@/utils/constants";
+import { TC_APPLICATION } from "@/utils/constants";
 import { About } from "./about";
 import { Speakers } from "./speakers";
 import { Col } from "@/components/blocks";
-import { Logo } from "@/components/logo";
 import { Divider } from "./divider";
 
 export default function Home() {
