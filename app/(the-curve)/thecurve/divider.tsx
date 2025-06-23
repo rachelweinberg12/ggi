@@ -3,7 +3,7 @@ import Image from "next/image";
 export function Divider(props: { num: string }) {
   const src = `/the-curve/display/Divider${props.num}.png`;
   return (
-    <div className="w-full">
+    <div className="w-full my-10 sm:my-0">
       <Image
         src={src}
         alt="Divider"
