@@ -103,7 +103,7 @@ const SPEAKERS = [
   },
   {
     name: "Randi Weingarten",
-    affiliation: "American Federation of Teachers",
+    affiliation: "AFT",
     imageUrl: "RandiWeingarten.jpg",
     role: "President",
   },
