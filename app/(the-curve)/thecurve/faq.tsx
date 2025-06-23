@@ -1,20 +1,54 @@
 import { Toggle } from "@/components/toggle";
-import TypeformPopupButton from "@/components/typeform-popup";
-import { TYPEFORM_IDS } from "@/utils/constants";
+import {
+  TC_APPLICATION,
+  TC_RECOMMENDATION,
+  TC_SESSION_PROPOSAL,
+} from "@/utils/constants";
 import Link from "next/link";
 export function FAQ() {
   return (
     <div className="section-padding pt-0 theme-classic">
       <div className="text-width-pos">
-        <h2 className="mb-4">FAQ</h2>
+        <h1 className="md:mb-6 mb-4">FAQ</h1>
+        <Toggle title="When is the deadline to apply?">
+          <p className="mb-2">We have deadlines for each pricing tier:</p>
+          <ul className="list-disc list-inside mb-2">
+            <li>Early bird: July 4th (-33%)</li>
+            <li>Regular: August 22nd (-0%)</li>
+            <li>Late: September 5th (+50%)</li>
+          </ul>
+          <p className="mb-2">
+            We may not review applications submitted after the late deadline.
+          </p>
+        </Toggle>
         <Toggle title="How much does it cost to attend?">
           <p className="mb-2">
             If you’re invited to the conference, you’ll be allowed to choose
-            your ticket price among a few options and asked to do so based on
-            your ability to pay. Pricing isn’t finalized yet, but we’ll likely
-            suggest: $100 for students, $300 for non-profit or government
-            employees, $600 for academics and early-career industry, and $900
-            for late-career industry.
+            your ticket price among a few options:
+          </p>
+          <ul className="list-disc list-inside mb-2">
+            <li>
+              <b>Individual: $450</b> - if you’re paying personally, or out of a
+              nonprofit, startup, or academic budget where price is a concern.
+            </li>
+            <li>
+              <b>Institutional: $900</b> - if your company is covering
+              registration, and price is not a primary concern.
+            </li>
+            <li>
+              <b>Supporter: $3000</b> - if you want to pitch in extra to support
+              our event. Includes admission to speaker reception.
+            </li>
+          </ul>
+          <p className="mb-2">
+            Early bird pricing, which is 33% off the standard ticket prices
+            listed above, is available for those who apply by July 4th.
+          </p>
+          <p className="mb-2">
+            <b>Do not let price stop you from applying!</b> We also offer
+            further discounts, or in rare cases, travel support, to attendees
+            who are unable to afford the full price of admission. We prioritize
+            bringing in great people, regardless of their ability to pay.
           </p>
           <p className="mb-2">
             Tickets include 7 meals (dinner Friday, and three meals Saturday and
@@ -22,47 +56,55 @@ export function FAQ() {
             access, and conference swag.
           </p>
         </Toggle>
-        <Toggle title="What is the refund policy?">
+        <Toggle title="How long after I am invited will I have to register?">
           <p className="mb-2">
-            Cancel before September 1, 2025, and we’ll refund your ticket price,
-            minus a ~3% processing fee.
+            We ask that all invitees puchase their tickets to confirm their
+            registration within two weeks of being invited. This is because
+            future admissions decisions depend on how many spots we have for
+            each of our various audiences.
+          </p>
+          <p className="mb-2">
+            If you'll need longer to make a decision, please just let us know!
+            We gladly offer extensions for those who need them.
           </p>
         </Toggle>
-        <Toggle title="When will I be able to apply?">
+        <Toggle title="What is your cancellation policy?">
           <p className="mb-2">
-            We plan to publish the application and an initial speaker list in
-            June.{" "}
-            <TypeformPopupButton
-              formId={TYPEFORM_IDS.ANNOUNCEMENTS}
-              buttonText="Sign up to our announcements list here"
-              buttonClassName="inline text-link"
-              overrideClass
-            />{" "}
-            to be notified when that happens!
+            We offer a full refunds at any time, minus the payment processor's
+            fee of 3%. Note that it may take us a while to process requests for
+            refunds that are submitted close to the date of the conference.
           </p>
         </Toggle>
-        {/* TODO: Add these blocks back in with the new forms */}
-        {/* <Toggle title="What if I'd like to host an event or workshop?">
+        <Toggle title="Will sessions be recorded and posted online?">
           <p className="mb-2">
-            You can fill out this form. Note that the vast majority, and
-            possibly all, of our main content will be initiated by us, but we
-            are open to suggestions!
+            Some sessions will be recoreded and the videos will be posted. Other
+            sessions will not be recorded, and some will even be under the
+            Chatham House Rule.
+          </p>
+        </Toggle>
+        <Toggle title="What if I'd like to speak or host a session?">
+          <p className="mb-2">
+            You can fill out{" "}
+            <a target="_blank" href={TC_SESSION_PROPOSAL} className="text-link">
+              this submit session proposal form
+            </a>
+            .
           </p>
           <p className="mb-2">
-            There may also be an unconference component of the event, in which
-            case attendees will be welcome to host whatever side sessions they
-            like.
+            There will also be an unconference component of the event, where
+            attendees will be welcome to host whatever side sessions they like.
           </p>
-        </Toggle> */}
+        </Toggle>
         <Toggle title="What can I do if I have a friend or colleague who I think should attend?">
           <p className="mb-2">
             Fill out{" "}
-            <TypeformPopupButton
-              formId={TYPEFORM_IDS.TC_PPL_RECS}
-              buttonText="this recommendation form"
-              buttonClassName="inline text-link"
-              overrideClass
-            />
+            <a
+              target="_blank"
+              href={TC_RECOMMENDATION}
+              className="inline text-link"
+            >
+              this recommendation form
+            </a>
             ! You can also nudge them to apply themselves.
           </p>
         </Toggle>
@@ -79,15 +121,12 @@ export function FAQ() {
           <p className="mb-2">
             Thank you for asking! Here are a couple ways you can help:
           </p>
-          <ul className="text-base">
+          <ul>
             <li>
-              Point us towards great people through our{" "}
-              <TypeformPopupButton
-                formId={TYPEFORM_IDS.TC_PPL_RECS}
-                buttonText="recommendation form"
-                buttonClassName="inline text-link"
-                overrideClass
-              />
+              Point us toward great people through our{" "}
+              <a target="_blank" href={TC_APPLICATION} className="text-link">
+                recommendation form
+              </a>
               . Events are nothing without their people, as they say, so any
               help bringing in fantastic attendees is extremely appreciated.
             </li>
@@ -99,6 +138,7 @@ export function FAQ() {
               </Link>{" "}
               to learn more, and reach out to Rachel at{" "}
               <a
+                target="_blank"
                 href="mailto:rachel@goldengateinstitute.org"
                 className="text-link"
               >
@@ -106,6 +146,7 @@ export function FAQ() {
               </a>{" "}
               or schedule a call with her{" "}
               <a
+                target="_blank"
                 className="text-link"
                 href="https://calendly.com/rachel-weinberg/30min"
               >
@@ -115,25 +156,22 @@ export function FAQ() {
             </li>
           </ul>
         </Toggle>
-        <Toggle title="What do you mean the event is in SF and Berkeley?">
-          <p className="mb-2">
-            The main conference will be held in Berkeley at{" "}
-            <a href="https://lighthaven.space" className="text-link">
-              Lighthaven
-            </a>
-            . However, we'll most likely host our opening reception on Friday
-            night in San Francisco, and may have extra side events in San
-            Francisco in the week leading up to the main event.
-          </p>
-        </Toggle>
         <Toggle title="Who's running this event?">
           <p className="mb-2">
             The Curve 2025 is co-hosted by the{" "}
-            <a href="https://goldengateinstitute.org" className="text-link">
+            <a
+              target="_blank"
+              href="https://goldengateinstitute.org"
+              className="text-link"
+            >
               Golden Gate Institute for AI
             </a>{" "}
             and{" "}
-            <a href="https://manifund.org" className="text-link">
+            <a
+              target="_blank"
+              href="https://manifund.org"
+              className="text-link"
+            >
               Manifund
             </a>
             .

@@ -330,6 +330,7 @@
   .theme-the-curve h3,
   .theme-the-curve h4 {
     font-family: var(--font-plus-jakarta-sans);
+    letter-spacing: 0em;
   }
 
   .theme-the-curve .text-link {
