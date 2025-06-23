@@ -69,7 +69,7 @@ export const metadata: Metadata = {
   title: "The Curve",
   description: "The premier big picture AI conference",
   icons: {
-    icon: "/the-curve-favicon.ico",
+    icon: "/the-curve-favicon.svg",
   },
 };
 

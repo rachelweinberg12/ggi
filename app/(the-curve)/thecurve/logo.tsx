@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import clsx from "clsx";
 
 export function Logo(props: {
@@ -16,6 +17,12 @@ export function Logo(props: {
         textClass,
       )}
     >
+      <Image
+        src="/the-curve-favicon.svg"
+        alt="The Curve Logo"
+        width={32}
+        height={32}
+      />
       <div className="sm:text-[20px] text-[15px] font-bold font-tc-display">
         The Curve
       </div>
