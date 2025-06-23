@@ -1,5 +1,6 @@
 import { Col, Row } from "@/components/blocks";
 import { LinkButton } from "@/components/link-button";
+import { ProfilePicture } from "@/components/profile-picture";
 import TypeformPopupButton from "@/components/typeform-popup";
 import { TC_APPLICATION, TYPEFORM_IDS } from "@/utils/constants";
 const testimonials = [
@@ -19,14 +20,37 @@ const testimonials = [
   },
 ];
 
+const featuredSpeakers = [
+  {
+    name: "Jack Clark",
+    affiliation: "Head of Policy, Anthropic",
+    imageUrl: "/the-curve/speakers/JackClark.jpeg",
+  },
+  {
+    name: "Jason Kwon",
+    affiliation: "CSO, OpenAI",
+    imageUrl: "/the-curve/speakers/JasonKwon.jpg",
+  },
+  {
+    name: "Alondra Nelson",
+    affiliation: "Professor, Institute for Advanced Study",
+    imageUrl: "/the-curve/speakers/AlondraNelson.jpg",
+  },
+  {
+    name: "Dylan Patel",
+    affiliation: "CEO, SemiAnalysis",
+    imageUrl: "/the-curve/speakers/DylanPatel.png",
+  },
+];
+
 export function TheCurveSpotlight() {
   return (
     <div
       className="section-padding border-t border-black theme-orange"
       id="the-curve"
     >
-      <div className="grid lg:grid-cols-2 x-gap items-start">
-        <div className="text-width-pos">
+      <div className="grid lg:grid-cols-8 x-gap items-start">
+        <div className="text-width-pos lg:col-span-3">
           <h1>The Curve</h1>
           <h5 className="mt-1">October 3-5, 2025 | Berkeley, CA</h5>
           <h2 className="mt-6">
@@ -48,7 +72,7 @@ export function TheCurveSpotlight() {
             />
           </Row>
         </div>
-        <Col className="mt-8 lg:mt-0 gap-2 text-width-pos">
+        <Col className="mt-8 text-width-pos lg:mt-0 gap-2 lg:col-span-5 lg:pl-6">
           <p>
             <b>Purpose:</b> The Curve creates a space for the people building
             and steering AI to share knowledge, explore disagreements, build
@@ -71,6 +95,26 @@ export function TheCurveSpotlight() {
             implications does AI have for national security and global balance
             of power? And of course: What should we do about it?
           </p>
+          <p>
+            <b>Speakers include:</b>
+          </p>
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-x-4 gap-y-6 mt-4 w-full">
+            {featuredSpeakers.map((speaker) => (
+              <Col className="items-center gap-0" key={speaker.name}>
+                <ProfilePicture
+                  name={speaker.name}
+                  imageUrl={speaker.imageUrl}
+                  className="w-30! h-36! rounded overflow-hidden"
+                />
+                <h4 className="mt-2 text-sm sm:text-base text-center">
+                  {speaker.name}
+                </h4>
+                <p className="font-light text-center leading-tight mt-1 text-xs sm:text-sm">
+                  {speaker.affiliation}
+                </p>
+              </Col>
+            ))}
+          </div>
           <Col className="y-gap x-gap mt-8">
             {testimonials.map((t) => (
               <Testimonial quote={t.quote} name={t.name} key={t.name} />
