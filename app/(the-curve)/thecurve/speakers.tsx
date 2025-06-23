@@ -20,13 +20,13 @@ const SPEAKERS = [
   {
     name: "Helena Fu",
     affiliation: "Department of Energy",
-    imageUrl: "SayashKapoor.png",
+    imageUrl: "HelenaFu.jpg",
     role: "Director of Critical and Emerging Technologies",
   },
   {
     name: "Keerthana Gopalakrishnan",
     affiliation: "Google DeepMind",
-    imageUrl: "AjeyaCotra.png",
+    imageUrl: "KeerthanaGopalakrishnan.jpg",
     role: "Research Scientist",
   },
   {
