@@ -115,7 +115,6 @@ function EventPreview(props: { event: Event; vertical?: boolean }) {
 
 function ThreeCardLayout(props: { events: Event[] }) {
   const { events } = props;
-  console.log(events);
   return (
     <>
       <div className="xl:grid grid-cols-12 x-gap hidden">
