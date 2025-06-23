@@ -316,6 +316,10 @@
     font-family: var(--font-crimson-pro);
   }
 
+  .theme-the-curve .pull-quote {
+    border-left: 2px solid var(--color-indigo);
+  }
+
   .theme-the-curve p,
   .theme-the-curve ul,
   .theme-the-curve ol,
