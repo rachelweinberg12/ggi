@@ -4,7 +4,11 @@ import {
   DisclosureButton,
   DisclosurePanel,
 } from "@headlessui/react";
-import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
+import {
+  ArrowUpRightIcon,
+  Bars3Icon,
+  XMarkIcon,
+} from "@heroicons/react/20/solid";
 import { Col, Row } from "@/components/blocks";
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
@@ -14,6 +18,7 @@ import { TC_APPLICATION } from "@/utils/constants";
 
 const pages = [
   { name: "About", href: "/#about" },
+  { name: "Speakers", href: "/#speakers" },
   { name: "FAQ", href: "/#faq" },
   { name: "Sponsorship", href: "/sponsorship" },
 ];
@@ -59,10 +64,10 @@ export function NavBar() {
                     )}
                   />
                 </Row>
-                <Row className="hidden md:flex space-x-8 md:space-x-12 justify-end items-center">
+                <Row className="hidden md:flex space-x-4 md:space-x-6 justify-end items-center">
                   {pages.map((page) => (
                     <a
-                      className="text-base font-medium hover:underline font-tc-display"
+                      className="text-lg font-medium hover:underline"
                       key={page.name}
                       href={page.href}
                     >
@@ -72,9 +77,10 @@ export function NavBar() {
                   <a
                     href={TC_APPLICATION}
                     target="_blank"
-                    className="outline-2 outline-white ring-2 ring-indigo outline-offset-2 bg-white px-6 group-hover:bg-white group-hover:outline-white group-hover:text-indigo py-2 text-indigo hover:bg-rose hover:text-white hover:outline-rose hover:ring-0 flex items-center gap-x-2 w-fit font-tc-display rounded font-bold text-sm md:text-base"
+                    className="outline-2 outline-white ring-2 ring-indigo outline-offset-2 bg-white px-6 group-hover:bg-white group-hover:outline-white group-hover:text-indigo py-2 text-indigo hover:bg-rose hover:text-white hover:outline-rose hover:ring-0 flex items-center w-fit font-tc-display rounded font-bold text-sm md:text-base"
                   >
                     Apply
+                    <ArrowUpRightIcon className="size-6 stroke-3 relative left-1" />
                   </a>
                 </Row>
                 <Row className="-mr-2 flex items-center md:hidden">

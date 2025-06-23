@@ -5,38 +5,21 @@ import { About } from "./about";
 import { Speakers } from "./speakers";
 import { Col } from "@/components/blocks";
 import { Logo } from "@/components/logo";
+import { Divider } from "./divider";
 
 export default function Home() {
   return (
     <main>
       <Hero />
-      <div id="about" className="relative bottom-10" />
+      <div id="about" className="relative bottom-12" />
       <About />
-      <div className="w-full">
-        <Divider num="1" />
-      </div>
+      <Divider num="1" />
+      <div id="speakers" className="relative bottom-24" />
       <Speakers />
-      <div className="w-full">
-        <Divider num="2" />
-      </div>
-      <div id="faq" className="relative bottom-10" />
+      <Divider num="2" />
+      <div id="faq" className="relative bottom-24" />
       <FAQ />
     </main>
-  );
-}
-
-function Divider(props: { num: string }) {
-  const src = `/the-curve/display/Divider${props.num}.png`;
-  return (
-    <div className="w-full">
-      <Image
-        src={src}
-        alt="Divider"
-        width={3072}
-        height={1152}
-        className="object-contain w-full"
-      />
-    </div>
   );
 }
 
