@@ -1,7 +1,7 @@
 import { Col, Row } from "@/components/blocks";
 import { LinkButton } from "@/components/link-button";
 import TypeformPopupButton from "@/components/typeform-popup";
-import { TYPEFORM_IDS } from "@/utils/constants";
+import { TC_APPLICATION, TYPEFORM_IDS } from "@/utils/constants";
 const testimonials = [
   {
     quote: "It felt like an event where history was happening.",
@@ -22,27 +22,27 @@ const testimonials = [
 export function TheCurveSpotlight() {
   return (
     <div
-      className="section-padding border-y border-black theme-teal"
+      className="section-padding border-y border-black theme-classic"
       id="the-curve"
     >
       <div className="grid lg:grid-cols-2 x-gap items-start">
         <div className="text-width-pos">
           <h1>The Curve</h1>
-          <h5 className="mt-1">October 3-5, 2025 | SF & Berkeley</h5>
+          <h5 className="mt-1">October 3-5, 2025 | Berkeley, CA</h5>
           <h2 className="mt-6">
             A conference for thinkers, builders, and leaders to tackle the AI
             big picture.
           </h2>
-          <Row className="mt-6 hidden xs:flex">
+          <Row className="mt-6 hidden xs:flex gap-x-4">
             <LinkButton
               href="https://thecurve.goldengateinstitute.org"
               title="Learn more"
-              className="px-6 py-2 bg-white text-teal hover:bg-teal hover:text-white rounded border"
+              className="px-6 py-2 bg-orange text-white hover:bg-white hover:text-orange rounded border"
             />
-            <TypeformPopupButton
-              formId={TYPEFORM_IDS.ANNOUNCEMENTS}
-              buttonText="Hear when applications open"
-              withArrow
+            <LinkButton
+              href={TC_APPLICATION}
+              title="Apply to join"
+              className="px-6 py-2 bg-white text-orange hover:bg-orange hover:text-white rounded border"
             />
           </Row>
         </div>
@@ -61,7 +61,7 @@ export function TheCurveSpotlight() {
             our application opens in June.
           </p>
           <p>
-            <b>Topics:</b> Our content will get at questions like — How can we
+            <b>Topics:</b> Sessions will focus on questions like — How can we
             unlock the benefits of AI for scientific discovery? How might AI
             concentrate or distribute power? Does AI pose catastrophic or
             existential risks? How quickly will AI development progress? What
@@ -82,7 +82,7 @@ export function TheCurveSpotlight() {
             <LinkButton
               href="https://thecurve.goldengateinstitute.org"
               title="Learn more"
-              className="px-6 py-2 bg-white text-teal rounded border"
+              className="px-6 py-2 bg-white text-orange rounded border"
             />
           </Col>
         </Col>

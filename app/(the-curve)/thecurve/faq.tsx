@@ -1,9 +1,5 @@
 import { Toggle } from "@/components/toggle";
-import {
-  TC_APPLICATION,
-  TC_RECOMMENDATION,
-  TC_SESSION_PROPOSAL,
-} from "@/utils/constants";
+import { TC_RECOMMENDATION, TC_SESSION_PROPOSAL } from "@/utils/constants";
 import Link from "next/link";
 export function FAQ() {
   return (
@@ -124,7 +120,7 @@ export function FAQ() {
           <ul>
             <li>
               Point us toward great people through our{" "}
-              <a target="_blank" href={TC_APPLICATION} className="text-link">
+              <a target="_blank" href={TC_RECOMMENDATION} className="text-link">
                 recommendation form
               </a>
               . Events are nothing without their people, as they say, so any
