@@ -39,9 +39,7 @@ const recentEvents: Event[] = [
 
 export function EventsSpotlight() {
   const numUpcomingEvents = upcomingEvents.length;
-  console.log("numUpcomingEvents", numUpcomingEvents);
   const numRecentEvents = recentEvents.length;
-  console.log("numRecentEvents", numRecentEvents);
   return (
     <div>
       {numUpcomingEvents !== 0 ? (
