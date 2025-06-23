@@ -51,10 +51,10 @@ export function TheCurveSpotlight() {
         <Col className="mt-8 lg:mt-0 gap-2 text-width-pos">
           <p>
             <b>Purpose:</b> The Curve creates a space for the people building
-            and steering AI to share knowledge, explore disagreements, and
-            coordinate on strategy. No single cohort or discipline has all that
-            it takes to make the best of transformative AI. We aim to help them
-            work together.
+            and steering AI to share knowledge, explore disagreements, build
+            bridges, and make progress towards solutions. No single group or
+            discipline has all that it takes to ensure the best outcomes from
+            transformative AI. We aim to help them work together.
           </p>
           <p>
             <b>Attendees:</b> We bring in participants from frontier AI labs,
