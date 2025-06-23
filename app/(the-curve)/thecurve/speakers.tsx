@@ -1,4 +1,5 @@
 import { Col } from "@/components/blocks";
+import { TC_SESSION_PROPOSAL } from "@/utils/constants";
 import clsx from "clsx";
 import Image from "next/image";
 
@@ -121,6 +122,18 @@ export function Speakers() {
         {SPEAKERS.map((speaker) => (
           <Speaker key={speaker.name} speaker={speaker} />
         ))}
+        <div className="col-span-2 sm:col-span-3 lg:col-span-2 px-5">
+          <div className="h-1/4" />
+          <h3 className="text-center">And more coming soon!</h3>
+          <div className="w-1/4 mx-auto border-t-2 my-5 border-rose" />
+          <h5 className="text-center max-w-md mx-auto">
+            If you have an idea for a session (talk, workshop, fireside chat,
+            etc), fill out this{" "}
+            <a className="text-link" href={TC_SESSION_PROPOSAL} target="_blank">
+              proposal form.
+            </a>
+          </h5>
+        </div>
       </div>
     </Col>
   );
