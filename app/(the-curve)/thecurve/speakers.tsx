@@ -100,6 +100,12 @@ const SPEAKERS = [
     role: "Director of Strategy",
   },
   {
+    name: "Randi Weingarten",
+    affiliation: "American Federation of Teachers",
+    imageUrl: "RandiWeingarten.jpg",
+    role: "President",
+  },
+  {
     name: "Ari Weinstein",
     affiliation: "Software Apps Inc",
     imageUrl: "AriWeinstein.jpg",
