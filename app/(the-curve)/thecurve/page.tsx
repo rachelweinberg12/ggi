@@ -60,26 +60,7 @@ function Hero() {
           </div>
         </div>
       </div>
-      <div className="w-full p-3 lg:p-5 mt-1 bg-rose outline-b outline-rose outline-2 outline-offset-2 text-rose">
-        {/* <h3 className="text-center">
-          Hosted by the{" "}
-          <a
-            href="goldengateinstitute.org"
-            target="_blank"
-            className="font-tc-display hover:underline text-indigo"
-          >
-            Golden Gate Institute for AI
-          </a>{" "}
-          and{" "}
-          <a
-            href="manifund.org"
-            target="_blank"
-            className="font-tc-display hover:underline text-indigo"
-          >
-            Manifund
-          </a>
-          .
-        </h3> */}
+      <div className="w-full p-3 lg:p-5 bg-rose outline-b outline-rose outline-2 outline-offset-2 text-rose">
         <div className="flex flex-col sm:flex-row items-center gap-x-8 gap-y-3 justify-around sm:max-w-3xl lg:max-w-5xl mx-auto">
           <h5 className="text-white text-base sm:text-xl lg:text-2xl">
             Hosted by:
