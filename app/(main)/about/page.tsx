@@ -16,9 +16,10 @@ export default function About() {
 function AboutHero() {
   return (
     <div className="top-section-padding pt-48 pb-36 theme-sand">
-      <h1 className="text-center mb-16 max-w-3xl mx-auto">
-        Bringing AI's toughest questions into focus
-      </h1>
+      <h2 className="text-center mb-16 max-w-3xl mx-auto">
+        We are a think tank bridging disciplines, convening experts, and
+        publishing accessible analysis of AI’s toughest questions
+      </h2>
       <Row className="flex-col sm:flex-row items-center justify-center gap-4">
         <Link className="btn hover:underline" href="#team">
           Meet the team

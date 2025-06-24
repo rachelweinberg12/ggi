@@ -11,15 +11,10 @@ export function BriefAbout() {
         <h1>About us</h1>
         <Col className="mt-3 gap-2">
           <p>
-            We expect AI to be transformative, with the potential for enormous
-            upside and downside, but don't think society is on track to make the
-            most of it.
-          </p>
-          <p>
-            Our mission is to support leaders as they navigate this high-stakes
-            period of rapid AI advancement by bridging disciplines, convening
-            experts, and publishing accessible analysis of AI’s toughest
-            questions. When conflicting perspectives emerge on crucial
+            We are a think tank that supports leaders as they navigate this
+            high-stakes period of rapid AI advancement by bridging disciplines,
+            convening experts, and publishing accessible analysis of AI’s
+            toughest questions. When conflicting perspectives emerge on crucial
             questions, we serve as the organization you can turn to for clarity
             and insight.
           </p>
