@@ -18,18 +18,6 @@ const SPEAKERS = [
     role: "Senior Advisor",
   },
   {
-    name: "Helena Fu",
-    affiliation: "Department of Energy",
-    imageUrl: "HelenaFu.jpg",
-    role: "Director of Critical and Emerging Technologies",
-  },
-  {
-    name: "Keerthana Gopalakrishnan",
-    affiliation: "Google DeepMind",
-    imageUrl: "KeerthanaGopalakrishnan.jpg",
-    role: "Research Scientist",
-  },
-  {
     name: "Sam Hammond",
     affiliation: "Foundation for American Innovation",
     imageUrl: "SamHammond.png",
@@ -123,11 +111,11 @@ export function Speakers() {
   return (
     <Col className="section-padding theme-classic py-0">
       <h1>Speakers</h1>
-      <div className="grid grid-cols-2 gap-x-8 y-gap sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 mt-4">
+      <div className="grid grid-cols-2 gap-x-8 y-gap sm:grid-cols-3 lg:grid-cols-4 2xl:grid-cols-6 mt-4">
         {sortedSpeakers.map((speaker) => (
           <Speaker key={speaker.name} speaker={speaker} />
         ))}
-        <div className="col-span-2 sm:col-span-3 lg:col-span-2 px-5">
+        <div className="col-span-2 sm:col-span-2 lg:col-span-4 2xl:col-span-2 px-5">
           <div className="h-1/4" />
           <h3 className="text-center">And more coming soon!</h3>
           <div className="w-1/4 mx-auto border-t-2 my-5 border-rose" />
