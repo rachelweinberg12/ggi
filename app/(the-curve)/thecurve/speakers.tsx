@@ -93,7 +93,7 @@ const SPEAKERS = [
   {
     name: "Helen Toner",
     affiliation: "Center for Security and Emerging Technology",
-    imageUrl: "HelenToner.jpg",
+    imageUrl: "HelenToner.jpeg",
     role: "Director of Strategy",
   },
   {
@@ -124,7 +124,7 @@ export function Speakers() {
   return (
     <Col className="section-padding theme-classic py-0">
       <h1>Speakers</h1>
-      <div className="grid grid-cols-2 gap-x-8 y-gap sm:grid-cols-3 lg:grid-cols-4 2xl:grid-cols-6 mt-4">
+      <div className="grid grid-cols-2 gap-x-8 y-gap sm:grid-cols-3 lg:grid-cols-4 2xl:grid-cols-6 mt-4 max-w-7xl">
         {sortedSpeakers.map((speaker) => (
           <Speaker key={speaker.name} speaker={speaker} />
         ))}
