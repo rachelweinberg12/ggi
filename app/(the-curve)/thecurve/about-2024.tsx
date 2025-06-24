@@ -59,7 +59,7 @@ const testimonials = [
   {
     name: "Misha Glouberman",
     quote:
-      "So many conferences are thoughtlessly run or designed. This was such a remarkable exception.",
+      "So many conferences are thoughtlessly designed or run. This was such a remarkable exception.",
   },
   {
     name: "Sam Hammond",

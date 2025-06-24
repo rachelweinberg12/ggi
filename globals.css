@@ -9,6 +9,8 @@
   --font-display: var(--font-the-seasons);
   --font-sans: var(--font-satoshi);
   --font-serif: var(--font-the-seasons);
+  --font-tc-body: var(--font-crimson-pro);
+  --font-tc-display: var(--font-plus-jakarta-sans);
   /* --font-serif: var(--font-source-serif); */
 
   /* Font Weights */
@@ -108,6 +110,52 @@
   --color-teal-50: #e4f7f5;
   /* main */
   --color-teal: #68a39d;
+
+  /* Indigo (600) */
+  --color-indigo-50: #eff3fe;
+  --color-indigo-100: #e1eafe;
+  --color-indigo-200: #cad7fb;
+  --color-indigo-300: #a9bdf8;
+  --color-indigo-400: #8799f2;
+  --color-indigo-500: #6a76ea;
+  --color-indigo-600: #4c4edd;
+  --color-indigo-700: #403fc3;
+  --color-indigo-800: #36379d;
+  --color-indigo-900: #32347d;
+  --color-indigo-950: #1d1d49;
+  /* main */
+  --color-indigo: #4c4edd;
+
+  /* Peach (400) */
+  --color-peach-50: #fef5f2;
+  --color-peach-100: #fee9e2;
+  --color-peach-200: #fdd7cb;
+  --color-peach-300: #fbbaa6;
+  --color-peach-400: #f68b69;
+  --color-peach-500: #ed6e46;
+  --color-peach-600: #da5328;
+  --color-peach-700: #b7431e;
+  --color-peach-800: #983a1c;
+  --color-peach-900: #7e351e;
+  --color-peach-950: #44190b;
+  /* main */
+  --color-peach: #f68b69;
+
+  /* Rose (600) */
+  --color-rose-50: #fff1f2;
+  --color-rose-100: #fee5e7;
+  --color-rose-200: #fdced5;
+  --color-rose-300: #fba6b3;
+  --color-rose-400: #f7758a;
+  --color-rose-500: #f04d6c;
+  --color-rose-600: #dc224f;
+  --color-rose-700: #b91741;
+  --color-rose-800: #9b163e;
+  --color-rose-900: #85163a;
+  --color-rose-950: #4a071b;
+  /* main */
+  --color-rose: #dc224f;
+
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
@@ -242,6 +290,62 @@
     --primary: var(--color-black);
     --highlight: var(--color-orange);
     --soft: var(--color-bley-500);
+    background-color: var(--bg);
+    color: var(--primary);
+  }
+
+  .theme-the-curve {
+    --bg: var(--color-white);
+    --primary: var(--color-black);
+    --highlight: var(--color-orange);
+    --soft: var(--color-bley-500);
+    background-color: var(--bg);
+    color: var(--primary);
+  }
+
+  .theme-the-curve h5,
+  .theme-the-curve p,
+  .theme-the-curve ul,
+  .theme-the-curve ol,
+  .theme-the-curve a,
+  .theme-the-curve .text-link,
+  .theme-the-curve .btn,
+  .theme-the-curve span,
+  .theme-the-curve .info,
+  .theme-the-curve .pull-quote {
+    font-family: var(--font-crimson-pro);
+  }
+
+  .theme-the-curve .pull-quote {
+    border-left: 2px solid var(--color-indigo);
+  }
+
+  .theme-the-curve p,
+  .theme-the-curve ul,
+  .theme-the-curve ol,
+  .theme-the-curve .info,
+  .theme-the-curve .pull-quote {
+    font-size: 17px;
+    line-height: 1.7;
+  }
+
+  .theme-the-curve h1,
+  .theme-the-curve h2,
+  .theme-the-curve h3,
+  .theme-the-curve h4 {
+    font-family: var(--font-plus-jakarta-sans);
+    letter-spacing: 0em;
+  }
+
+  .theme-the-curve .text-link {
+    color: var(--color-indigo);
+  }
+
+  .theme-indigo {
+    --bg: var(--color-indigo);
+    --primary: var(--color-white);
+    --highlight: var(--color-orange);
+    --soft: var(--color-gray-300);
     background-color: var(--bg);
     color: var(--primary);
   }

@@ -4,15 +4,21 @@ import {
   DisclosureButton,
   DisclosurePanel,
 } from "@headlessui/react";
-import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
+import {
+  ArrowUpRightIcon,
+  Bars3Icon,
+  XMarkIcon,
+} from "@heroicons/react/20/solid";
 import { Col, Row } from "@/components/blocks";
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 import { Logo } from "./logo";
 import clsx from "clsx";
+import { TC_APPLICATION } from "@/utils/constants";
 
 const pages = [
   { name: "About", href: "/#about" },
+  { name: "Speakers", href: "/#speakers" },
   { name: "FAQ", href: "/#faq" },
   { name: "Sponsorship", href: "/sponsorship" },
 ];
@@ -35,13 +41,10 @@ export function NavBar() {
         <>
           <div
             className={clsx(
-              "border-b z-10 group",
+              "z-10 group outline-2 outline-b outline-offset-2",
               scrolled || open
-                ? "border-black theme-classic"
-                : clsx(
-                    "border-white text-white hover:border-black hover:bg-white hover:text-black",
-                    isHome ? "bg-transparent backdrop-blur-sm" : "theme-orange",
-                  ),
+                ? "outline-indigo bg-white text-indigo hover:outline-rose hover:bg-indigo hover:text-white"
+                : "outline-rose bg-indigo text-white hover:outline-indigo hover:bg-white hover:text-indigo",
             )}
             id="navbar"
           >
@@ -51,28 +54,36 @@ export function NavBar() {
                   <Logo
                     iconFillClass={clsx(
                       scrolled || open
-                        ? "fill-black"
-                        : "fill-white group-hover:fill-black",
+                        ? "fill-indigo group-hover:fill-white"
+                        : "fill-white group-hover:fill-indigo",
                     )}
                     textClass={clsx(
                       scrolled || open
-                        ? "text-black"
-                        : "text-white group-hover:text-black",
+                        ? "text-indigo group-hover:text-white"
+                        : "text-white group-hover:text-indigo",
                     )}
                   />
                 </Row>
-                <Row className="hidden sm:flex space-x-8 md:space-x-12 justify-end">
+                <Row className="hidden md:flex space-x-4 md:space-x-6 justify-end items-center">
                   {pages.map((page) => (
                     <a
-                      className="text-base font-medium hover:underline"
+                      className="text-lg font-medium hover:underline"
                       key={page.name}
                       href={page.href}
                     >
                       {page.name}
                     </a>
                   ))}
+                  <a
+                    href={TC_APPLICATION}
+                    target="_blank"
+                    className="outline-2 outline-white ring-2 ring-indigo outline-offset-2 bg-white px-6 group-hover:bg-white group-hover:outline-white group-hover:text-indigo py-2 text-indigo hover:bg-rose hover:text-white hover:outline-rose hover:ring-0 flex items-center w-fit font-tc-display rounded font-bold text-sm md:text-base"
+                  >
+                    Apply
+                    <ArrowUpRightIcon className="size-6 stroke-3 relative left-1" />
+                  </a>
                 </Row>
-                <Row className="-mr-2 flex items-center sm:hidden">
+                <Row className="-mr-2 flex items-center md:hidden">
                   {/* Mobile menu button */}
                   <DisclosureButton className="group relative inline-flex items-center justify-center hover:cursor-pointer">
                     <span className="absolute -inset-0.5" />
@@ -86,7 +97,7 @@ export function NavBar() {
 
           <DisclosurePanel
             transition
-            className="origin-left transition duration-500 ease-out data-closed:translate-x-full -z-10 theme-sand outline outline-black"
+            className="origin-left transition duration-500 ease-out data-closed:translate-x-full -z-10 theme-indigo"
           >
             <Col className="items-center justify-center space-y-12 h-dvh overflow-hidden">
               {pages.map((page) => (
@@ -96,6 +107,13 @@ export function NavBar() {
                   </p>
                 </DisclosureButton>
               ))}
+              <a
+                href={TC_APPLICATION}
+                target="_blank"
+                className="outline-2 outline-white ring-2 ring-indigo outline-offset-2 bg-white px-8 group-hover:bg-white group-hover:outline-white group-hover:text-indigo py-4 text-indigo hover:bg-rose hover:text-white hover:outline-rose hover:ring-0 font-tc-display rounded font-bold text-lg relative bottom-10"
+              >
+                Apply to join
+              </a>
             </Col>
           </DisclosurePanel>
         </>

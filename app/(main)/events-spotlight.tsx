@@ -12,17 +12,9 @@ type Event = {
   openness: string;
 };
 
-const events: Event[] = [
-  // {
-  //   title: "AI & Democracy Coworking Day",
-  //   subtitle:
-  //     "Come cowork and meet other people who think about how AI can bolster democracy and how to democratically govern AI.",
-  //   url: "https://lu.ma/rm2nli40",
-  //   date: "All day, May 12, 2025",
-  //   location: "San Francisco",
-  //   imageUrl: "/event-images/AIDemocracyCoworking.png",
-  //   openness: "Open invite",
-  // },
+const upcomingEvents: Event[] = [];
+
+const recentEvents: Event[] = [
   {
     title: "Reimagining the Economy in the Age of AI",
     subtitle:
@@ -33,29 +25,53 @@ const events: Event[] = [
     imageUrl: "/event-images/TheGuarantee.png",
     openness: "Open invite",
   },
+  {
+    title: "AI & Democracy Coworking Day",
+    subtitle:
+      "Come cowork and meet other people who think about how AI can bolster democracy and how to democratically govern AI.",
+    url: "https://lu.ma/rm2nli40",
+    date: "All day, May 12, 2025",
+    location: "San Francisco",
+    imageUrl: "/event-images/AIDemocracyCoworking.png",
+    openness: "Open invite",
+  },
 ];
 
 export function EventsSpotlight() {
-  const numEvents = events.length;
+  const numUpcomingEvents = upcomingEvents.length;
+  const numRecentEvents = recentEvents.length;
   return (
-    <div>
-      <Col className="nav-section-padding y-section-padding pt-0">
-        <h2>Upcoming events</h2>
-        {numEvents === 1 ? (
-          <OneCardLayout event={events[0]} />
-        ) : numEvents === 2 ? (
-          <TwoCardLayout events={events} />
-        ) : (
-          <ThreeCardLayout events={events} />
-        )}
-      </Col>
+    <div className="theme-classic">
+      {numUpcomingEvents !== 0 ? (
+        <Col className="nav-section-padding y-section-padding pt-0">
+          <h2>Upcoming events</h2>
+          {numUpcomingEvents === 1 ? (
+            <OneCardLayout event={upcomingEvents[0]} />
+          ) : numUpcomingEvents === 2 ? (
+            <TwoCardLayout events={upcomingEvents} />
+          ) : (
+            <ThreeCardLayout events={upcomingEvents} />
+          )}
+        </Col>
+      ) : null}
+      {numRecentEvents !== 0 && (
+        <Col className="nav-section-padding y-section-padding pt-0">
+          <h2>Recent events</h2>
+          {numRecentEvents === 1 ? (
+            <OneCardLayout event={recentEvents[0]} />
+          ) : numRecentEvents === 2 ? (
+            <TwoCardLayout events={recentEvents} />
+          ) : (
+            <ThreeCardLayout events={recentEvents} />
+          )}
+        </Col>
+      )}
     </div>
   );
 }
 
 function EventPreview(props: { event: Event; vertical?: boolean }) {
   const { event, vertical } = props;
-
   return (
     <a
       className={clsx(
