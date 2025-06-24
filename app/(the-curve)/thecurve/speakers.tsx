@@ -18,6 +18,12 @@ const SPEAKERS = [
     role: "Senior Advisor",
   },
   {
+    name: "Keerthana Gopalakrishnan",
+    affiliation: "Google DeepMind",
+    imageUrl: "KeerthanaGopalakrishnan.jpg",
+    role: "Research Scientist",
+  },
+  {
     name: "Sam Hammond",
     affiliation: "Foundation for American Innovation",
     imageUrl: "SamHammond.png",
@@ -63,7 +69,7 @@ const SPEAKERS = [
     name: "Geoff Ralston",
     affiliation: "Safe AI Fund",
     imageUrl: "GeoffRalston.jpg",
-    role: "Founder, former President of YC",
+    role: "Former President of YC",
   },
   {
     name: "Joshua Rothman",
@@ -75,7 +81,7 @@ const SPEAKERS = [
     name: "Emmett Shear",
     affiliation: "Softmax",
     imageUrl: "EmmettShear.jpg",
-    role: "CEO, former CEO of Twitch",
+    role: "Former CEO of Twitch",
   },
   {
     name: "Jack Clark",
@@ -92,7 +98,7 @@ const SPEAKERS = [
   {
     name: "Randi Weingarten",
     affiliation: "AFT",
-    imageUrl: "RandiWeingarten.jpg",
+    imageUrl: "RandiWeingarten.webp",
     role: "President",
   },
   {
@@ -104,10 +110,16 @@ const SPEAKERS = [
 ];
 
 export function Speakers() {
-  const sortedSpeakers = [...SPEAKERS].sort((a, b) =>
-    a.name.localeCompare(b.name),
-  );
+  const sortedSpeakers = SPEAKERS.sort((a, b) => {
+    // Put speakers with notes last
+    if (!a.notes && b.notes) return -1;
+    if (a.notes && !b.notes) return 1;
 
+    // Sort by last name
+    const aLastName = a.name.split(" ").pop() || "";
+    const bLastName = b.name.split(" ").pop() || "";
+    return aLastName.localeCompare(bLastName);
+  });
   return (
     <Col className="section-padding theme-classic py-0">
       <h1>Speakers</h1>
