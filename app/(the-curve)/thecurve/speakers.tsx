@@ -77,12 +77,13 @@ const SPEAKERS = [
     imageUrl: "JoshuaRothman.webp",
     role: "Ideas Editor & Writer",
   },
-  {
-    name: "Emmett Shear",
-    affiliation: "Softmax",
-    imageUrl: "EmmettShear.jpg",
-    role: "Former CEO of Twitch",
-  },
+  // hold until Emmett confirms
+  //   {
+  //     name: "Emmett Shear",
+  //     affiliation: "Softmax",
+  //     imageUrl: "EmmettShear.jpg",
+  //     role: "Former CEO of Twitch",
+  //   },
   {
     name: "Jack Clark",
     affiliation: "Anthropic",
