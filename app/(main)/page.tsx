@@ -4,6 +4,7 @@ import { WritingSpotlight } from "./writing-spotlight";
 import { EventsSpotlight } from "./events-spotlight";
 import { TheCurveSpotlight } from "./the-curve-spotlight";
 import { BriefAbout } from "./brief-about";
+import { MediaSpotlight } from "./media";
 import { LinkButton } from "@/components/link-button";
 import { SUBSTACK_URL } from "@/utils/constants";
 
@@ -17,6 +18,8 @@ export default function Home() {
       <WritingSpotlight />
       <div id="events" className="relative bottom-24" />
       <EventsSpotlight />
+      <div id="media" className="relative bottom-24" />
+      <MediaSpotlight />
       <BriefAbout />
     </main>
   );
