@@ -130,7 +130,7 @@ export function Speakers() {
   return (
     <Col className="section-padding theme-classic py-0">
       <h1>Speakers</h1>
-      <div className="grid grid-cols-2 gap-x-8 y-gap sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 mt-4 max-w-7xl">
+      <div className="grid grid-cols-2 gap-x-8 y-gap sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 mt-4">
         {sortedSpeakers.map((speaker) => (
           <Speaker key={speaker.name} speaker={speaker} />
         ))}
