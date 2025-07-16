@@ -5,10 +5,53 @@ import { About } from "./about";
 import { Speakers } from "./speakers";
 import { Col } from "@/components/blocks";
 import { Divider } from "./divider";
+import Script from "next/script";
 
 export default function Home() {
   return (
     <main>
+      <Script
+        id="event-structured-data"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Event",
+            name: "The Curve",
+            description:
+              "The premier big picture AI conference where thinkers, builders, and leaders grapple with AI's biggest questions.",
+            startDate: "2025-10-03T09:00:00-07:00",
+            endDate: "2025-10-05T18:00:00-07:00",
+            location: {
+              "@type": "Place",
+              name: "Berkeley, CA",
+              address: {
+                "@type": "PostalAddress",
+                addressLocality: "Berkeley",
+                addressRegion: "CA",
+                addressCountry: "US",
+              },
+            },
+            organizer: {
+              "@type": "Organization",
+              name: "Golden Gate Institute for AI",
+              url: "https://goldengateinstitute.org",
+            },
+            performer: {
+              "@type": "Organization",
+              name: "Golden Gate Institute for AI",
+            },
+            eventStatus: "https://schema.org/EventScheduled",
+            eventAttendanceMode:
+              "https://schema.org/OfflineEventAttendanceMode",
+            url: "https://thecurve.goldengateinstitute.org",
+            image:
+              "https://thecurve.goldengateinstitute.org/the-curve/display/CurveClouds2.png",
+            keywords:
+              "AI conference, artificial intelligence, machine learning, AI ethics, AI policy",
+          }),
+        }}
+      />
       <Hero />
       <div id="about" className="relative bottom-12" />
       <About />
