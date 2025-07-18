@@ -42,3 +42,20 @@ export const PostContent: React.FC<PostContentProps> = ({ content }) => {
     </div>
   );
 };
+
+interface PostPageBodyProps {
+  title: string;
+  content: string;
+  date?: string;
+  themeClass?: string;
+}
+
+export const PostPageBody: React.FC<PostPageBodyProps> = ({ title, content, date, themeClass = "theme-classic" }) => (
+  <div className={`top-section-padding ${themeClass}`}>
+    <article className="mx-auto max-w-3xl">
+      <h2>{title}</h2>
+      {date && <p className="text-gray-500 mb-8">{date}</p>}
+      <PostContent content={content} />
+    </article>
+  </div>
+);

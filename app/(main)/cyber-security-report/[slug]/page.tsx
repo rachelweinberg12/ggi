@@ -1,9 +1,6 @@
-import { Row } from "@/components/blocks";
-import Link from "next/link";
-import { SUBSTACK_URL } from "@/utils/constants";
-import getPost from "@/utils/getPost";
-import { PostContent } from "@/components/post-content";
+import { PostPageBody } from "@/components/post-content";
 import { notFound } from "next/navigation";
+import getPost from "@/utils/getPost";
 
 export default async function Page({
   params,
@@ -17,12 +14,5 @@ export default async function Page({
     notFound();
   }
 
-  return (
-    <div className="top-section-padding theme-classic">
-      <article className="mx-auto max-w-3xl">
-        <h2>{post.title}</h2>
-        <PostContent content={post.content} />
-      </article>
-    </div>
-  );
+  return <PostPageBody title={post.title} content={post.content} themeClass="theme-classic" />;
 }
