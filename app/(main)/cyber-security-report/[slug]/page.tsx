@@ -18,8 +18,8 @@ export default async function Page({
   }
 
   return (
-    <div className="top-section-padding">
-      <article className="text-width-pos">
+    <div className="top-section-padding theme-classic">
+      <article className="mx-auto max-w-3xl">
         <h2>{post.title}</h2>
         <PostContent content={post.content} />
       </article>
