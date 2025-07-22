@@ -1,27 +1,6 @@
-import { Row } from "@/components/blocks";
-import Link from "next/link";
-import { SUBSTACK_URL } from "@/utils/constants";
-import fs from "fs";
-import path from "path";
-import matter from "gray-matter";
-import { PostContent } from "@/components/post-content";
+import { PostPageBody } from "@/components/post-content";
 import { notFound } from "next/navigation";
-
-async function getPost(slug: string) {
-  const filePath = path.join(process.cwd(), "mdx-pages", slug + ".mdx");
-  try {
-    const fileContent = fs.readFileSync(filePath, "utf-8");
-    const { data: frontmatter, content } = matter(fileContent);
-    return {
-      title: frontmatter.title,
-      date: frontmatter.date,
-      content,
-    };
-  } catch (error) {
-    console.error(error);
-    return null; // file not found
-  }
-}
+import getPost from "@/utils/getPost";
 
 export default async function Page({
   params,
@@ -35,12 +14,5 @@ export default async function Page({
     notFound();
   }
 
-  return (
-    <div className="top-section-padding">
-      <article className="text-width-pos">
-        <h2>{post.title}</h2>
-        <PostContent content={post.content} />
-      </article>
-    </div>
-  );
+  return <PostPageBody title={post.title} content={post.content} themeClass="theme-classic" />;
 }
