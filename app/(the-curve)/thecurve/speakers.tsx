@@ -12,6 +12,12 @@ const SPEAKERS = [
     notes: "tentative",
   },
   {
+    name: "Brad Carson",
+    affiliation: "Americans for Responsible Innovation",
+    imageUrl: "BradCarson.png",
+    role: "Former Congressman",
+  },
+  {
     name: "Ajeya Cotra",
     affiliation: "Open Philanthropy",
     imageUrl: "AjeyaCotra.png",
@@ -52,6 +58,12 @@ const SPEAKERS = [
     affiliation: "Princeton",
     imageUrl: "SayashKapoor.png",
     role: "Co-author of AI as Normal Technology",
+  },
+  {
+    name: "Daniel Kokotajlo",
+    affiliation: "AI Futures Project",
+    imageUrl: "DanielKokotajlo.jpg",
+    role: "Co-author of AI 2027",
   },
   {
     name: "Klon Kitchen",
@@ -140,7 +152,7 @@ export function Speakers() {
         {sortedSpeakers.map((speaker) => (
           <Speaker key={speaker.name} speaker={speaker} />
         ))}
-        <div className="col-span-2 sm:col-span-3 lg:col-span-2 xl:col-span-2 px-5">
+        <div className="col-span-2 sm:col-span-1 lg:col-span-4 xl:col-span-5 px-5">
           <div className="h-1/4" />
           <h3 className="text-center">And more coming soon!</h3>
           <div className="w-1/4 mx-auto border-t-2 my-5 border-rose" />
