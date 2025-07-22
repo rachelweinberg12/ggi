@@ -98,7 +98,7 @@ const SPEAKERS = [
   {
     name: "Joshua Rothman",
     affiliation: "The New Yorker",
-    imageUrl: "JoshuaRothman.webp",
+    imageUrl: "JoshuaRothman.jpeg",
     role: "Ideas Editor & Writer",
   },
   // hold until Emmett confirms
