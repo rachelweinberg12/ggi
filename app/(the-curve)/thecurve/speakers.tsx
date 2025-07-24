@@ -18,16 +18,28 @@ const SPEAKERS = [
     role: "Former Congressman",
   },
   {
-    name: "Ajeya Cotra",
-    affiliation: "Open Philanthropy",
-    imageUrl: "AjeyaCotra.png",
-    role: "Senior Advisor",
+    name: "Aparna Chennapragada",
+    affiliation: "Microsoft",
+    imageUrl: "AparnaChennapragada.jpg",
+    role: "Chief Product Officer, Experiences and Devices",
   },
   {
     name: "Ted Chiang",
     affiliation: "Author",
     imageUrl: "TedChiang.jpg",
     role: "Stories of Your Life and Others, Exhalation",
+  },
+  {
+    name: "Greg Corrado",
+    affiliation: "Google",
+    imageUrl: "GregCorrado.png",
+    role: "Distinguished Scientist",
+  },
+  {
+    name: "Ajeya Cotra",
+    affiliation: "Open Philanthropy",
+    imageUrl: "AjeyaCotra.png",
+    role: "Senior Advisor",
   },
   {
     name: "Keerthana Gopalakrishnan",
@@ -101,13 +113,6 @@ const SPEAKERS = [
     imageUrl: "JoshuaRothman.jpeg",
     role: "Ideas Editor & Writer",
   },
-  // hold until Emmett confirms
-  //   {
-  //     name: "Emmett Shear",
-  //     affiliation: "Softmax",
-  //     imageUrl: "EmmettShear.jpg",
-  //     role: "Former CEO of Twitch",
-  //   },
   {
     name: "Jack Clark",
     affiliation: "Anthropic",
@@ -152,7 +157,7 @@ export function Speakers() {
         {sortedSpeakers.map((speaker) => (
           <Speaker key={speaker.name} speaker={speaker} />
         ))}
-        <div className="col-span-2 sm:col-span-1 lg:col-span-4 xl:col-span-5 px-5">
+        <div className="col-span-2 sm:col-span-2 lg:col-span-2 xl:col-span-3 px-5">
           <div className="h-1/4" />
           <h3 className="text-center">And more coming soon!</h3>
           <div className="w-1/4 mx-auto border-t-2 my-5 border-rose" />
