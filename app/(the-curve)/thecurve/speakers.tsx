@@ -90,6 +90,12 @@ const SPEAKERS = [
     role: "Chief Strategy Officer",
   },
   {
+    name: "Nathan Lambert",
+    affiliation: "Allen Institute for AI",
+    imageUrl: "NathanLambert.jpeg",
+    role: "Senior Research Scientist",
+  },
+  {
     name: "Alondra Nelson",
     affiliation: "Institute for Advanced Study",
     imageUrl: "AlondraNelson.jpg",
@@ -157,7 +163,7 @@ export function Speakers() {
         {sortedSpeakers.map((speaker) => (
           <Speaker key={speaker.name} speaker={speaker} />
         ))}
-        <div className="col-span-2 sm:col-span-2 lg:col-span-2 xl:col-span-3 px-5">
+        <div className="col-span-1 sm:col-span-1 lg:col-span-1 xl:col-span-2 px-5">
           <div className="h-1/4" />
           <h3 className="text-center">And more coming soon!</h3>
           <div className="w-1/4 mx-auto border-t-2 my-5 border-rose" />
