@@ -12,6 +12,12 @@ const SPEAKERS = [
     notes: "tentative",
   },
   {
+    name: "Yoshua Bengio",
+    affiliation: "University of Montreal",
+    imageUrl: "YoshuaBengio.jpg",
+    role: "Professor, Turing Award Winner",
+  },
+  {
     name: "Brad Carson",
     affiliation: "Americans for Responsible Innovation",
     imageUrl: "BradCarson.png",
@@ -163,7 +169,7 @@ export function Speakers() {
         {sortedSpeakers.map((speaker) => (
           <Speaker key={speaker.name} speaker={speaker} />
         ))}
-        <div className="col-span-1 sm:col-span-1 lg:col-span-1 xl:col-span-2 px-5">
+        <div className="col-span-2 sm:col-span-3 lg:col-span-4 xl:col-span-1 px-5">
           <div className="h-1/4" />
           <h3 className="text-center">And more coming soon!</h3>
           <div className="w-1/4 mx-auto border-t-2 my-5 border-rose" />
