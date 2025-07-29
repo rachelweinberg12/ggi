@@ -15,7 +15,7 @@ const SPEAKERS = [
     name: "Yoshua Bengio",
     affiliation: "University of Montreal",
     imageUrl: "YoshuaBengio.jpg",
-    role: "Professor, Turing Award Winner",
+    role: "Professor, Turing Award Laureate",
   },
   {
     name: "Brad Carson",
