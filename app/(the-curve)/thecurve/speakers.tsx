@@ -18,6 +18,12 @@ const SPEAKERS = [
     role: "Professor, Turing Award Laureate",
   },
   {
+    name: "Lukas Biewald",
+    affiliation: "Weights & Biases",
+    imageUrl: "LukasBiewald.jpg",
+    role: "Co-founder & CEO",
+  },
+  {
     name: "Brad Carson",
     affiliation: "Americans for Responsible Innovation",
     imageUrl: "BradCarson.png",
@@ -126,6 +132,12 @@ const SPEAKERS = [
     role: "Ideas Editor & Writer",
   },
   {
+    name: "Richard Socher",
+    affiliation: "You.com",
+    imageUrl: "RichardSocher.jpg",
+    role: "Founder & CEO",
+  },
+  {
     name: "Jack Clark",
     affiliation: "Anthropic",
     imageUrl: "JackClark.jpeg",
@@ -169,7 +181,7 @@ export function Speakers() {
         {sortedSpeakers.map((speaker) => (
           <Speaker key={speaker.name} speaker={speaker} />
         ))}
-        <div className="col-span-2 sm:col-span-3 lg:col-span-4 xl:col-span-1 px-5">
+        <div className="col-span-2 sm:col-span-1 lg:col-span-2 xl:col-span-4 px-5">
           <div className="h-1/4" />
           <h3 className="text-center">And more coming soon!</h3>
           <div className="w-1/4 mx-auto border-t-2 my-5 border-rose" />
