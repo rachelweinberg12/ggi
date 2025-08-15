@@ -6,10 +6,9 @@ import Image from "next/image";
 const SPEAKERS = [
   {
     name: "Dean Ball",
-    affiliation: "White House OSTP",
+    affiliation: "Foundation for American Innovation",
     imageUrl: "DeanBall.jpeg",
-    role: "Senior Policy Advisor",
-    notes: "tentative",
+    role: "Former White House OSTP",
   },
   {
     name: "Yoshua Bengio",
