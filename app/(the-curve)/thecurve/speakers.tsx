@@ -4,12 +4,23 @@ import clsx from "clsx";
 import Image from "next/image";
 
 const SPEAKERS = [
+  // {
+  //   name: "Joshua Achiam",
+  //   affiliation: "OpenAI",
+  //   imageUrl: "JoshuaAchiam.avif",
+  //   role: "Head of Mission Alignment",
+  // },
   {
     name: "Dean Ball",
     affiliation: "White House OSTP",
     imageUrl: "DeanBall.jpeg",
     role: "Senior Policy Advisor",
-    notes: "tentative",
+  },
+  {
+    name: "Annette Bernhardt",
+    affiliation: "UC Berkeley Labor Center",
+    imageUrl: "AnnetteBernhardt.webp",
+    role: "Director, Technology & Work Program",
   },
   {
     name: "Yoshua Bengio",
@@ -22,6 +33,12 @@ const SPEAKERS = [
     affiliation: "Weights & Biases",
     imageUrl: "LukasBiewald.jpg",
     role: "Co-founder & CEO",
+  },
+  {
+    name: "Catherine Bracy",
+    affiliation: "TechEquity",
+    imageUrl: "CatherineBracy.png",
+    role: "Founder & CEO",
   },
   {
     name: "Brad Carson",
@@ -94,6 +111,12 @@ const SPEAKERS = [
     affiliation: "Beacon Global Strategies",
     imageUrl: "KlonKitchen.jpg",
     role: "Managing Director",
+  },
+  {
+    name: "Jason Clinton",
+    affiliation: "Anthropic",
+    imageUrl: "JasonClinton.jpg",
+    role: "Chief Information Security Officer",
   },
   {
     name: "Jason Kwon",
