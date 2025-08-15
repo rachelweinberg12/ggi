@@ -25,7 +25,6 @@ const pages = [
 
 export function NavBar() {
   const pathname = usePathname();
-  const isHome = pathname == "/";
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -107,13 +106,18 @@ export function NavBar() {
                   </p>
                 </DisclosureButton>
               ))}
-              <a
-                href={TC_APPLICATION}
-                target="_blank"
-                className="outline-2 outline-white ring-2 ring-indigo outline-offset-2 bg-white px-8 group-hover:bg-white group-hover:outline-white group-hover:text-indigo py-4 text-indigo hover:bg-rose hover:text-white hover:outline-rose hover:ring-0 font-tc-display rounded font-bold text-lg relative bottom-10"
-              >
-                Apply to join
-              </a>
+              <div className="flex flex-col items-center gap-4 relative bottom-10">
+                <a
+                  href={TC_APPLICATION}
+                  target="_blank"
+                  className="outline-2 outline-white ring-2 ring-indigo outline-offset-2 bg-white px-8 group-hover:bg-white group-hover:outline-white group-hover:text-indigo py-4 text-indigo hover:bg-rose hover:text-white hover:outline-rose hover:ring-0 font-tc-display rounded font-bold text-lg"
+                >
+                  Apply to join
+                </a>
+                <div className="px-4 py-0.5 rounded-full bg-rose">
+                  <p className="text-white">+50% prices after Aug 22nd</p>
+                </div>
+              </div>
             </Col>
           </DisclosurePanel>
         </>
