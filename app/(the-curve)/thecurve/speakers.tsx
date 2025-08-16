@@ -164,10 +164,6 @@ const SPEAKERS = [
 
 export function Speakers() {
   const sortedSpeakers = SPEAKERS.sort((a, b) => {
-    // Put speakers with notes last
-    if (!a.notes && b.notes) return -1;
-    if (a.notes && !b.notes) return 1;
-
     // Sort by last name
     const aLastName = a.name.split(" ").pop() || "";
     const bLastName = b.name.split(" ").pop() || "";
@@ -212,7 +208,6 @@ function Speaker(props: { speaker: (typeof SPEAKERS)[number] }) {
         <p className="leading-none mt-2 font-extralight text-gray-600">
           {speaker.role}
         </p>
-        <p className="italic text-sm mt-1 info">{speaker.notes}</p>
       </div>
     </div>
   );
