@@ -80,7 +80,7 @@ export const metadata: Metadata = {
     siteName: "The Curve",
     images: [
       {
-        url: "/the-curve/display/CurveClouds2.png",
+        url: "/the-curve/display/Preview.png",
         width: 1200,
         height: 630,
         alt: "The Curve AI Conference - October 3-5, 2025",
