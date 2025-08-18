@@ -73,14 +73,14 @@ export const metadata: Metadata = {
     "AI conference, artificial intelligence, The Curve, Berkeley, AI ethics, AI policy, machine learning, AI research, AI governance, AI safety, economics, national security",
   authors: [{ name: "Golden Gate Institute for AI" }],
   openGraph: {
-    title: "The Curve - Premier AI Conference",
+    title: "The Curve - Transformative AI Conference",
     description:
       "Where thinkers, builders, and leaders grapple with AI's biggest questions — from timelines and risks, to impacts on economic growth and national security, to transformative applications and the future of work.",
     url: "https://thecurve.goldengateinstitute.org",
     siteName: "The Curve",
     images: [
       {
-        url: "/the-curve/display/CurveClouds2.png",
+        url: "/the-curve/display/Preview.png",
         width: 1200,
         height: 630,
         alt: "The Curve AI Conference - October 3-5, 2025",

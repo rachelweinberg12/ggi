@@ -12,15 +12,9 @@ const SPEAKERS = [
   // },
   {
     name: "Dean Ball",
-    affiliation: "White House OSTP",
+    affiliation: "Foundation for American Innovation",
     imageUrl: "DeanBall.jpeg",
-    role: "Senior Policy Advisor",
-  },
-  {
-    name: "Annette Bernhardt",
-    affiliation: "UC Berkeley Labor Center",
-    imageUrl: "AnnetteBernhardt.webp",
-    role: "Director, Technology & Work Program",
+    role: "Former White House OSTP",
   },
   {
     name: "Yoshua Bengio",
