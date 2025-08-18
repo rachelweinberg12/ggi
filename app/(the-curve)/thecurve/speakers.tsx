@@ -55,7 +55,7 @@ const SPEAKERS = [
   {
     name: "James Cham",
     affiliation: "Bloomberg Beta",
-    imageUrl: "JamesCham.png",
+    imageUrl: "JamesCham.jpg",
     role: "Partner",
   },
   {
@@ -134,7 +134,7 @@ const SPEAKERS = [
     name: "Andy Konwinski",
     affiliation: "Laude",
     role: "Co-founder of Databricks, Perplexity",
-    imageUrl: "AndyKonwinski.jpg",
+    imageUrl: "AndyKonwinski.jpeg",
   },
   {
     name: "Frank Li",
