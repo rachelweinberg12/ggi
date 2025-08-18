@@ -4,6 +4,12 @@ import clsx from "clsx";
 import Image from "next/image";
 
 const SPEAKERS = [
+  // {
+  //   name: "Joshua Achiam",
+  //   affiliation: "OpenAI",
+  //   imageUrl: "JoshuaAchiam.avif",
+  //   role: "Head of Mission Alignment",
+  // },
   {
     name: "Dean Ball",
     affiliation: "Foundation for American Innovation",
@@ -23,10 +29,28 @@ const SPEAKERS = [
     role: "Co-founder & CEO",
   },
   {
+    name: "Catherine Bracy",
+    affiliation: "TechEquity",
+    imageUrl: "CatherineBracy.png",
+    role: "Founder & CEO",
+  },
+  {
     name: "Brad Carson",
     affiliation: "Americans for Responsible Innovation",
     imageUrl: "BradCarson.png",
     role: "Former Congressman",
+  },
+  {
+    name: "Ben Buchanan",
+    affiliation: "Johns Hopkins University",
+    imageUrl: "BenBuchanan.jpg",
+    role: "Former White House Special Advisor on AI",
+  },
+  {
+    name: "James Cham",
+    affiliation: "Bloomberg Beta",
+    imageUrl: "JamesCham.jpg",
+    role: "Partner",
   },
   {
     name: "Aparna Chennapragada",
@@ -83,6 +107,12 @@ const SPEAKERS = [
     role: "Co-author of AI as Normal Technology",
   },
   {
+    name: "Divyansh Kaushik",
+    affiliation: "Beacon Global Strategies",
+    imageUrl: "DivyanshKaushik.jpg",
+    role: "Vice President",
+  },
+  {
     name: "Daniel Kokotajlo",
     affiliation: "AI Futures Project",
     imageUrl: "DanielKokotajlo.jpg",
@@ -93,6 +123,24 @@ const SPEAKERS = [
     affiliation: "Beacon Global Strategies",
     imageUrl: "KlonKitchen.jpg",
     role: "Managing Director",
+  },
+  {
+    name: "Andy Konwinski",
+    affiliation: "Laude",
+    role: "Co-founder of Databricks, Perplexity",
+    imageUrl: "AndyKonwinski.jpeg",
+  },
+  {
+    name: "Frank Li",
+    affiliation: "Stately Bio",
+    imageUrl: "FrankLi.jpg",
+    role: "Founder & CEO",
+  },
+  {
+    name: "Jason Clinton",
+    affiliation: "Anthropic",
+    imageUrl: "JasonClinton.jpg",
+    role: "Chief Information Security Officer",
   },
   {
     name: "Jason Kwon",
@@ -125,16 +173,40 @@ const SPEAKERS = [
     role: "Former President of YC",
   },
   {
+    name: "Krish Ramadurai",
+    affiliation: "AIX Ventures",
+    imageUrl: "KrishRamadurai.jpg",
+    role: "Partner",
+  },
+  {
+    name: "Sam Rodriques",
+    affiliation: "FutureHouse",
+    imageUrl: "SamRodriques.jpg",
+    role: "Co-founder & CEO",
+  },
+  {
     name: "Joshua Rothman",
     affiliation: "The New Yorker",
     imageUrl: "JoshuaRothman.jpeg",
     role: "Ideas Editor & Writer",
   },
   {
+    name: "Divya Siddarth",
+    affiliation: "Collective Intelligence Project",
+    imageUrl: "DivyaSiddarth.jpg",
+    role: "Co-founder & Executive Director",
+  },
+  {
     name: "Richard Socher",
     affiliation: "You.com",
     imageUrl: "RichardSocher.jpg",
     role: "Founder & CEO",
+  },
+  {
+    name: "Audrey Tang",
+    affiliation: "Taiwan",
+    imageUrl: "AudreyTang.jpg",
+    role: "Cyber Ambassador, 1st Digital Minister",
   },
   {
     name: "Jack Clark",
@@ -176,7 +248,7 @@ export function Speakers() {
         {sortedSpeakers.map((speaker) => (
           <Speaker key={speaker.name} speaker={speaker} />
         ))}
-        <div className="col-span-2 sm:col-span-1 lg:col-span-2 xl:col-span-4 px-5">
+        <div className="col-span-1 sm:col-span-2 lg:col-span-3 xl:col-span-3 px-5">
           <div className="h-1/4" />
           <h3 className="text-center">And more coming soon!</h3>
           <div className="w-1/4 mx-auto border-t-2 my-5 border-rose" />
