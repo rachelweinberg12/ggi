@@ -47,6 +47,18 @@ const SPEAKERS = [
     role: "Former Congressman",
   },
   {
+    name: "Ben Buchanan",
+    affiliation: "Johns Hopkins University",
+    imageUrl: "BenBuchanan.jpg",
+    role: "Former White House Special Advisor on AI",
+  },
+  {
+    name: "James Cham",
+    affiliation: "Bloomberg Beta",
+    imageUrl: "JamesCham.png",
+    role: "Partner",
+  },
+  {
     name: "Aparna Chennapragada",
     affiliation: "Microsoft",
     imageUrl: "AparnaChennapragada.jpg",
@@ -101,6 +113,12 @@ const SPEAKERS = [
     role: "Co-author of AI as Normal Technology",
   },
   {
+    name: "Divyansh Kaushik",
+    affiliation: "Beacon Global Strategies",
+    imageUrl: "DivyanshKaushik.jpg",
+    role: "Vice President",
+  },
+  {
     name: "Daniel Kokotajlo",
     affiliation: "AI Futures Project",
     imageUrl: "DanielKokotajlo.jpg",
@@ -111,6 +129,18 @@ const SPEAKERS = [
     affiliation: "Beacon Global Strategies",
     imageUrl: "KlonKitchen.jpg",
     role: "Managing Director",
+  },
+  {
+    name: "Andy Konwinski",
+    affiliation: "Laude",
+    role: "Co-founder of Databricks, Perplexity",
+    imageUrl: "AndyKonwinski.jpg",
+  },
+  {
+    name: "Frank Li",
+    affiliation: "Stately Bio",
+    imageUrl: "FrankLi.jpg",
+    role: "Founder & CEO",
   },
   {
     name: "Jason Clinton",
@@ -149,16 +179,40 @@ const SPEAKERS = [
     role: "Former President of YC",
   },
   {
+    name: "Krish Ramadurai",
+    affiliation: "AIX Ventures",
+    imageUrl: "KrishRamadurai.jpg",
+    role: "Partner",
+  },
+  {
+    name: "Sam Rodriques",
+    affiliation: "FutureHouse",
+    imageUrl: "SamRodriques.jpg",
+    role: "Co-founder & CEO",
+  },
+  {
     name: "Joshua Rothman",
     affiliation: "The New Yorker",
     imageUrl: "JoshuaRothman.jpeg",
     role: "Ideas Editor & Writer",
   },
   {
+    name: "Divya Siddarth",
+    affiliation: "Collective Intelligence Project",
+    imageUrl: "DivyaSiddarth.jpg",
+    role: "Co-founder & Executive Director",
+  },
+  {
     name: "Richard Socher",
     affiliation: "You.com",
     imageUrl: "RichardSocher.jpg",
     role: "Founder & CEO",
+  },
+  {
+    name: "Audrey Tang",
+    affiliation: "Taiwan",
+    imageUrl: "AudreyTang.jpg",
+    role: "Cyber Ambassador, 1st Digital Minister",
   },
   {
     name: "Jack Clark",
@@ -188,10 +242,6 @@ const SPEAKERS = [
 
 export function Speakers() {
   const sortedSpeakers = SPEAKERS.sort((a, b) => {
-    // Put speakers with notes last
-    if (!a.notes && b.notes) return -1;
-    if (a.notes && !b.notes) return 1;
-
     // Sort by last name
     const aLastName = a.name.split(" ").pop() || "";
     const bLastName = b.name.split(" ").pop() || "";
@@ -204,7 +254,7 @@ export function Speakers() {
         {sortedSpeakers.map((speaker) => (
           <Speaker key={speaker.name} speaker={speaker} />
         ))}
-        <div className="col-span-2 sm:col-span-1 lg:col-span-2 xl:col-span-4 px-5">
+        <div className="col-span-2 sm:col-span-1 lg:col-span-2 xl:col-span-2 px-5">
           <div className="h-1/4" />
           <h3 className="text-center">And more coming soon!</h3>
           <div className="w-1/4 mx-auto border-t-2 my-5 border-rose" />
@@ -236,7 +286,6 @@ function Speaker(props: { speaker: (typeof SPEAKERS)[number] }) {
         <p className="leading-none mt-2 font-extralight text-gray-600">
           {speaker.role}
         </p>
-        <p className="italic text-sm mt-1 info">{speaker.notes}</p>
       </div>
     </div>
   );
