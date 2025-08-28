@@ -99,7 +99,7 @@ function Hero() {
                 Apply to join
               </a>
               <div className="px-4 py-0.5 rounded-full bg-rose">
-                <p className="text-white">+50% prices after Aug 22nd</p>
+                <p className="text-white">Deadline September 5th</p>
               </div>
             </Col>
           </div>
