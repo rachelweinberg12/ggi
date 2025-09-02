@@ -15,10 +15,10 @@ const SPONSORSHIP_TIERS: SponsorshipTier[] = [
     name: "Platinum",
     cost: "$80k",
     color: "bg-teal",
-    numAvailable: "1 available",
+    numAvailable: "1 of 1 available",
     emoji: "🏆",
     benefits: [
-      "1 prime-time, main-stage session",
+      "1/1 prime-time, main-stage session",
       "8 general admission tickets",
       "4 VIP tickets",
       "Office hours slot",
@@ -33,7 +33,7 @@ const SPONSORSHIP_TIERS: SponsorshipTier[] = [
     cost: "$40k",
     color: "bg-orange",
     emoji: "🥇",
-    numAvailable: "3 available",
+    numAvailable: "1 of 3 available",
     benefits: [
       "1 prime-time, secondary-stage session",
       "4 general admission tickets",
@@ -49,7 +49,7 @@ const SPONSORSHIP_TIERS: SponsorshipTier[] = [
     cost: "$20k",
     color: "bg-bley",
     emoji: "🥈",
-    numAvailable: "4 available",
+    numAvailable: "1 of 5 available",
     benefits: [
       "1 session",
       "2 general admission tickets",
