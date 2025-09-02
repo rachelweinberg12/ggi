@@ -31,7 +31,7 @@ export function OurWork() {
           you can turn to for clarity and insight.
         </p>
         <h2 className="my-4">Our approach</h2>
-        <p className="mb-2">We focus on two complementary activies:</p>
+        <p className="mb-2">We focus on two complementary activities:</p>
         <p className="mb-2">
           <b>Convenings:</b> We bring together people with diverse viewpoints
           and expertise to engage in productive dialogue. Building on the
