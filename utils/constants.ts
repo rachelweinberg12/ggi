@@ -38,7 +38,7 @@ export const TEAM_MEMBERS = [
   },
   {
     name: "Abi Olvera",
-    title: "Director of Research",
+    title: "Research Director",
     imageUrl: "/team/Abi.jpg",
     email: "abi@goldengateinstitute.org",
     socials: [{ network: "linkedin", url: "" }],
