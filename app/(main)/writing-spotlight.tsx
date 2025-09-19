@@ -9,10 +9,9 @@ import { LinkButton } from "@/components/link-button";
 import { SUBSTACK_URL } from "@/utils/constants";
 
 const postSlugs = [
-  "ai-coding-slowdown",
-  "ai-as-normal-technology",
-  "ai-2027",
-  "first-they-came-for-the-software",
+  "ai-agent-security",
+  "gpt-5-the-case-of-the-missing-agent",
+  "thoughts-about-agi-and-gpt-5",
 ];
 
 export function WritingSpotlight() {
