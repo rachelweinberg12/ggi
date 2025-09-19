@@ -36,6 +36,13 @@ export const TEAM_MEMBERS = [
     email: "rachel@goldengateinstitute.org",
     socials: [{ network: "linkedin", url: "" }],
   },
+  {
+    name: "Abi Olvera",
+    title: "Director of Research",
+    imageUrl: "/team/Abi.jpg",
+    email: "abi@goldengateinstitute.org",
+    socials: [{ network: "linkedin", url: "" }],
+  },
 ];
 
 export const TC_APPLICATION =
