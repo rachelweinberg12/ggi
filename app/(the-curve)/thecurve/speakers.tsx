@@ -11,6 +11,12 @@ const SPEAKERS = [
     role: "Head of Mission Alignment",
   },
   {
+    name: "Joe Allen",
+    affiliation: "War Room",
+    imageUrl: "JoeAllen.png",
+    role: "Author of Dark Aeon",
+  },
+  {
     name: "Dean Ball",
     affiliation: "Foundation for American Innovation",
     imageUrl: "DeanBall.jpeg",
@@ -77,12 +83,6 @@ const SPEAKERS = [
     role: "Distinguished Scientist",
   },
   {
-    name: "Ajeya Cotra",
-    affiliation: "Open Philanthropy",
-    imageUrl: "AjeyaCotra.png",
-    role: "Senior Advisor",
-  },
-  {
     name: "Keerthana Gopalakrishnan",
     affiliation: "Google DeepMind",
     imageUrl: "KeerthanaGopalakrishnan.jpg",
@@ -137,12 +137,6 @@ const SPEAKERS = [
     imageUrl: "AndyKonwinski.jpeg",
   },
   {
-    name: "Frank Li",
-    affiliation: "Stately Bio",
-    imageUrl: "FrankLi.jpg",
-    role: "Founder & CEO",
-  },
-  {
     name: "Jason Clinton",
     affiliation: "Anthropic",
     imageUrl: "JasonClinton.jpg",
@@ -161,12 +155,6 @@ const SPEAKERS = [
     role: "Senior Research Scientist",
   },
   {
-    name: "Alondra Nelson",
-    affiliation: "Institute for Advanced Study",
-    imageUrl: "AlondraNelson.jpg",
-    role: "Harold F. Linder Professor",
-  },
-  {
     name: "Dylan Patel",
     affiliation: "SemiAnalysis",
     imageUrl: "DylanPatel.png",
@@ -177,12 +165,6 @@ const SPEAKERS = [
     affiliation: "Safe AI Fund",
     imageUrl: "GeoffRalston.jpg",
     role: "Former President of YC",
-  },
-  {
-    name: "Krish Ramadurai",
-    affiliation: "AIX Ventures",
-    imageUrl: "KrishRamadurai.jpg",
-    role: "Partner",
   },
   {
     name: "Sam Rodriques",
@@ -201,12 +183,6 @@ const SPEAKERS = [
     affiliation: "Collective Intelligence Project",
     imageUrl: "DivyaSiddarth.jpg",
     role: "Co-founder & Executive Director",
-  },
-  {
-    name: "Richard Socher",
-    affiliation: "You.com",
-    imageUrl: "RichardSocher.jpg",
-    role: "Founder & CEO",
   },
   {
     name: "Audrey Tang",
@@ -233,10 +209,100 @@ const SPEAKERS = [
     role: "President",
   },
   {
-    name: "Ari Weinstein",
-    affiliation: "Software Apps Inc",
-    imageUrl: "AriWeinstein.jpg",
-    role: "Co-founder & CEO",
+    name: "Alexandra Reeve Givens",
+    affiliation: "Center for Democracy and Technology",
+    imageUrl: "AlexandraReeveGivens.jpeg",
+    role: "President & CEO",
+  },
+  {
+    name: "Saif Khan",
+    affiliation: "Institute for Progress",
+    imageUrl: "SaifKhan.jpeg",
+    role: "Distinguished Technology Fellow",
+  },
+  {
+    name: "Tim O'Reilly",
+    affiliation: "O'Reilly Media",
+    imageUrl: "TimOReilly.jpg",
+    role: "Founder & CEO",
+  },
+  {
+    name: "Joseph Gordon-Levitt",
+    affiliation: "AI Futures Project",
+    imageUrl: "JosephGordonLevitt.jpg",
+    role: "Co-founder & Executive Director",
+  },
+  {
+    name: "Zoë Hitzig",
+    affiliation: "OpenAI",
+    imageUrl: "ZoeHitzig.webp",
+    role: "Research Scientist",
+  },
+  {
+    name: "Alex Rives",
+    affiliation: "EvolutionaryScale",
+    imageUrl: "AlexRives.jpg",
+    role: "Chief Scientist",
+  },
+  {
+    name: "Allan Dafoe",
+    affiliation: "Google DeepMind",
+    imageUrl: "AllanDafoe.jpg",
+    role: "Director",
+  },
+  {
+    name: "Ian Bassin",
+    affiliation: "Protect Democracy",
+    imageUrl: "IanBassin.png",
+    role: "Co-founder & Executive Director",
+  },
+  {
+    name: "Neil Chilson",
+    affiliation: "Abundance Institute",
+    imageUrl: "NeilChilson.jpeg",
+    role: "Head of AI Policy",
+  },
+  {
+    name: "Roy Bahat",
+    affiliation: "Bloomberg Beta",
+    imageUrl: "RoyBahat.png",
+    role: "Head",
+  },
+  {
+    name: "Timothy Lee",
+    affiliation: "Understanding AI",
+    imageUrl: "TimothyLee.jpg",
+    role: "Writer",
+  },
+  {
+    name: "Ronnie Chatterji",
+    affiliation: "OpenAI",
+    imageUrl: "RonnieChatterji.jpg",
+    role: "Chief Economist",
+  },
+  {
+    name: "Kyla Scanlon",
+    affiliation: "Bread",
+    imageUrl: "KylaScanlon.png",
+    role: 'Founder, Author of "In this Economy?"',
+  },
+  {
+    name: "Helena Fu",
+    affiliation: "US Department of Energy",
+    imageUrl: "HelenaFu.jpg",
+    role: "Director, Office of Critical and Emerging Technologies",
+  },
+  {
+    name: "Mike Kubzansky",
+    affiliation: "Omidyar Network",
+    imageUrl: "MikeKubzansky.jpg",
+    role: "CEO",
+  },
+  {
+    name: "Gary Marcus",
+    affiliation: "NYU",
+    role: "Professor",
+    imageUrl: "GaryMarcus.jpg",
   },
 ];
 
@@ -254,7 +320,7 @@ export function Speakers() {
         {sortedSpeakers.map((speaker) => (
           <Speaker key={speaker.name} speaker={speaker} />
         ))}
-        <div className="col-span-1 sm:col-span-3 lg:col-span-1 xl:col-span-1 px-5">
+        {/* <div className="col-span-1 sm:col-span-3 lg:col-span-1 xl:col-span-1 px-5">
           <div className="h-1/4" />
           <h3 className="text-center">And more coming soon!</h3>
           <div className="w-1/4 mx-auto border-t-2 my-5 border-rose" />
@@ -265,7 +331,7 @@ export function Speakers() {
               proposal form.
             </a>
           </h5>
-        </div>
+        </div> */}
       </div>
     </Col>
   );
