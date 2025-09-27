@@ -32,9 +32,9 @@ const featuredSpeakers = [
     imageUrl: "/the-curve/speakers/JasonKwon.jpg",
   },
   {
-    name: "Alondra Nelson",
-    affiliation: "Professor, Institute for Advanced Study",
-    imageUrl: "/the-curve/speakers/AlondraNelson.jpg",
+    name: "Randi Weingarten",
+    affiliation: "President, AFT",
+    imageUrl: "/the-curve/speakers/RandiWeingarten.webp",
   },
   {
     name: "Dylan Patel",
@@ -62,12 +62,6 @@ export function TheCurveSpotlight() {
               href="https://thecurve.goldengateinstitute.org"
               title="Learn more"
               className="px-6 py-2 bg-white text-orange hover:bg-orange hover:text-white rounded border"
-              newTab
-            />
-            <LinkButton
-              href={TC_APPLICATION}
-              title="Apply to join"
-              className="px-6 py-2 bg-orange text-white hover:bg-white hover:text-orange rounded border"
               newTab
             />
           </Row>
