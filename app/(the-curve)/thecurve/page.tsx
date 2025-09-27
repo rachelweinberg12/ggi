@@ -91,7 +91,7 @@ function Hero() {
             </h2>
           </div>
           <div className="absolute bottom-12 sm:right-28 flex w-full justify-center sm:justify-end z-10">
-            <Col className="items-center gap-3">
+            {/* <Col className="items-center gap-3">
               <a
                 href={TC_APPLICATION}
                 className="outline-2 outline-rose outline-offset-2 bg-white px-12 py-4 text-indigo hover:bg-rose hover:text-white flex items-center gap-x-2 font-tc-display rounded font-bold text-lg md:text-xl justify-center"
@@ -101,7 +101,7 @@ function Hero() {
               <div className="px-4 py-0.5 rounded-full bg-rose">
                 <p className="text-white">Deadline September 5th</p>
               </div>
-            </Col>
+            </Col> */}
           </div>
         </div>
       </div>
