@@ -73,14 +73,14 @@ export function NavBar() {
                       {page.name}
                     </a>
                   ))}
-                  <a
+                  {/* <a
                     href={TC_APPLICATION}
                     target="_blank"
                     className="outline-2 outline-white ring-2 ring-indigo outline-offset-2 bg-white px-6 group-hover:bg-white group-hover:outline-white group-hover:text-indigo py-2 text-indigo hover:bg-rose hover:text-white hover:outline-rose hover:ring-0 flex items-center w-fit font-tc-display rounded font-bold text-sm md:text-base"
                   >
                     Apply
                     <ArrowUpRightIcon className="size-6 stroke-3 relative left-1" />
-                  </a>
+                  </a> */}
                 </Row>
                 <Row className="-mr-2 flex items-center md:hidden">
                   {/* Mobile menu button */}
