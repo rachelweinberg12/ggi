@@ -242,7 +242,7 @@ const SPEAKERS = [
     name: "Alex Rives",
     affiliation: "EvolutionaryScale",
     imageUrl: "AlexRives.jpg",
-    role: "Chief Scientist",
+    role: "Co-founder &Chief Scientist",
   },
   {
     name: "Allan Dafoe",
