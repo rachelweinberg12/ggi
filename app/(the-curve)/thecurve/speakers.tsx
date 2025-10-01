@@ -228,9 +228,9 @@ const SPEAKERS = [
   },
   {
     name: "Joseph Gordon-Levitt",
-    affiliation: "AI Futures Project",
+    affiliation: "Inception, Don Jon, HITRECORD",
     imageUrl: "JosephGordonLevitt.jpg",
-    role: "Co-founder & Executive Director",
+    role: "Actor / Filmmaker / Entrepreneur",
   },
   {
     name: "Zoë Hitzig",
