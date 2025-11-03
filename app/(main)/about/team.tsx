@@ -3,6 +3,11 @@ import { ProfilePicture } from "@/components/profile-picture";
 import { TEAM_MEMBERS } from "@/utils/constants";
 const advisors = [
   {
+    name: "Dean Ball",
+    title: "Foundation for American Innovation",
+    imageUrl: "/advisors/DeanBall.jpeg",
+  },
+  {
     name: "Roy Bahat",
     title: "Bloomberg Beta",
     imageUrl: "/advisors/RoyBahat.png",
